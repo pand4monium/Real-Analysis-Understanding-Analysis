@@ -1,0 +1,10 @@
+#ignores files produced when generating pdf
+.aux
+.fdb_latexmk
+.fls
+.log
+.gz
+.out
+.synctex.gz
+.thm
+.toc
