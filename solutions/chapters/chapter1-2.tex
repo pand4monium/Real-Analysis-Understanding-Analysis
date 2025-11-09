@@ -42,3 +42,23 @@
         \end{proof}
     }
 }
+
+\bx{
+    Decide which of the following represent true statements about the nature of sets. For any that are false, provide a specific example where the statement in question does not hold.
+    \ea{
+        \item If $A_1\supseteq A_2\subseteq A_3\subseteq A_4 \dots$ are all sets containing an infinite number of elements, then the intersections $\bigcap^\infty_{n=1}A_n$ is infinite as well.
+        \item If $A_1\supseteq A_2\subseteq A_3\subseteq A_4 \dots$ are all finite, nonempty sets of real numbers, then the intersection $\bigcap^\infty_{n=1}A_n$ is finite and non-empty.
+        \item $A\cap(B\cup C) = (A \cap B) \cup C$.
+        \item $A \cap (B \cap C) = (A \cap B) \cap C$.
+        \item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+    }
+    \sol{
+        \ea{
+            \item False. Consider $A_n = \{n, n+1, n+2, \dots\}$, then $\bigcap^\infty_{n=1}A_n = \emptyset$.
+            \item True. Since all $A_n$ are nonempty, $\exists n \in \mathbb{N}$ such that $A_n = \{x\}$ for some real $x$. Hence $\bigcap^\infty_{n=1}A_n \subseteq \{x\}$ which is empty. Since $A_1$ is finite, $\bigcap^\infty_{n=1}A_n \subseteq \{x\} \subset A_1$ is finite.
+            \item False. If $A=\emptyset$, then $\emptyset = C$
+            \item True. Intersection is associative as evident that both LHS and RHS implies the $x \in A, B, C$
+            \item True. Drawing a Venn Diagram illustrates this.
+        }
+    }
+}
