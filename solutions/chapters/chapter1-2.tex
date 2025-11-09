@@ -1,0 +1,35 @@
+\section{Some Preliminaries}
+
+\bx{
+    \ea{
+        \item Prove that $\sqrt{3}$ is irrational. Does a similar argument work to show $\sqrt{6}$ is rational?
+        \item Where does the proof break down if we try to prove $\sqrt{4}$ is irrational?
+    }
+    \sol{
+    \ea{
+        \item 
+
+        \begin{proof}
+            \AFSOC that $\sqrt{3}$ is rational, so $\exists m, n \in \mathbb{Z}$, such that 
+            \begin{equation*}
+                \sqrt{3} = \frac{m}{n},
+            \end{equation*}
+            where $\frac{m}{n}$ is in the lowest reduced terms. By squaring both sides, we obtain $3 = (\frac{m}{n})^2 \implies 3n^2 = m^2$. Now, we know that $m^2$ is a multiple of 3 and thus $m$ must also be a multiple of 3. We can then write $m=3k$, deriving 
+            \begin{align*}
+                (\sqrt3)^2 &= \pa{\frac{3k}{n}}^2 \\
+                3n^2&=9k^2 \\
+                n^2 &= 3k^2
+            \end{align*}
+
+            Similar to above, we can conclude that n is a multiple of 3. However this is a contradiction since $m,n$ are both multiples of 3 but we assumed that $\frac{m}{n}$ was in its lowest reduced term. Thus we conclude that $\sqrt3$ is irrational.
+        \end{proof}
+        The same proof for $\sqrt3$ works for $\sqrt6$ as well.
+
+            \item We cannot conclude that $\sqrt{4} = \frac{m}{n}$ imply that $m$ is a multiple of $4$, as we have 
+        \begin{equation*}
+            4n^2 = m^2 \implies 2n=m,
+        \end{equation*}
+        preventing us from reaching our contradiction that $m/n$ is not in its lowest terms.
+    }
+    }
+}
