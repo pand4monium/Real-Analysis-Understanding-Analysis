@@ -34,6 +34,7 @@
     }
 }
 
+
 \bx{
     Show that there is no rational number $r$ satisfying $2^r = 3$.
     \sol{
@@ -42,6 +43,7 @@
         \end{proof}
     }
 }
+
 
 \bx{
     Decide which of the following represent true statements about the nature of sets. For any that are false, provide a specific example where the statement in question does not hold.
@@ -63,6 +65,7 @@
     }
 }
 
+
 \bx{
     Produce an infinite collection of sets $A_1, A_2, A_3, \dots$ with the property that every $A_i$ has an infinite number of elements, $A_i \cap A_j = \emptyset$ for all $i \neq j$, and $\bigcup^\infty_{i=1}A_i = \mathbb{N}$.
 
@@ -79,5 +82,27 @@
         \end{matrix}
         \]
         By letting $A_i$ being the set of all natural numbers in the $i$-th row, we have satisfied the above conditions above.
+    }
+}
+
+
+\bx{
+    \textbf{(De Morgan's Law)} Let $A$ and $B$ be subsets of $\mathbb{R}$.
+    \ea{
+        \item If $x \in (A \cap B)^c$, explain why $x \in A^c \cup B^c$. THis shows that $(A \cap B)^c \subseteq A^c \cup B^c$.
+        \item Prove the reverse inclusion $(A \cap B)^c \sqsubseteq A^c \cup B^c$, and conclude that $(A \cap B)^c = A^c \cup B^c$.
+        \item Show $(A \cup B)^c = A^c \cup B^c$ by demonstrating inclusion both ways.
+    }
+
+    \sol{
+        \ea{
+            \item If $x \in (A \cap B)^c$, then $x \notin A \cap B$, so $x \notin A$ or $x \notin B$, implying $x \in A^c$ or $x \in B^c$, therfore $x \in A^c \cup B^c$.
+            \item If $x \in A^c \cup B^c$, then $x \in A^c$ or $x \in B^c$, so $x \notin A$ and $x \notin B$, implying $x \notin A \cap B$, therefore $x \in (A \cap B)^c$.
+            Since $(A \cap B)^c \subseteq A^c \cup B^c$ and $(A \cap B)^c \sqsubseteq A^c \cup B^c$, we can conclude that both sets are equal.
+            \item To show that $(A \cap B)^c = A^c \cup B^c$, we need to demonstrate inclusion both ways. \er{
+                \item If $x \in (A \cup B)^c$, then $x \notin A \cup B$, so $x \notin A$ or $x \notin B$, implying $x \in A^c$ or $x \in B^c$, therefore $x \in A^c \cup B^c$.
+                \item If $x \in A^c \cap B^c$, then $x \in A^c$ and $x \in B^c$, so $x \notin A$ and $x \notin B$, implying $x \notin A \cup B$, which is just $x \in (A \cup B)^c$.
+            }
+        }
     }
 }
