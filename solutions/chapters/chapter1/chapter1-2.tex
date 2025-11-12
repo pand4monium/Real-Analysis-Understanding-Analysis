@@ -1,6 +1,6 @@
 \section{Some Preliminaries}
 
-\bx{
+\bx{ %Exercise 1.2.1
     \ea{
         \item Prove that $\sqrt{3}$ is irrational. Does a similar argument work to show $\sqrt{6}$ is rational?
         \item Where does the proof break down if we try to prove $\sqrt{4}$ is irrational?
@@ -35,7 +35,7 @@
 }
 
 
-\bx{
+\bx{ %Exercise 1.2.2
     Show that there is no rational number $r$ satisfying $2^r = 3$.
     \sol{
         \begin{proof}
@@ -45,7 +45,7 @@
 }
 
 
-\bx{
+\bx{ %Exercise 1.2.3
     Decide which of the following represent true statements about the nature of sets. For any that are false, provide a specific example where the statement in question does not hold.
     \ea{
         \item If $A_1\supseteq A_2\subseteq A_3\subseteq A_4 \dots$ are all sets containing an infinite number of elements, then the intersections $\bigcap^\infty_{n=1}A_n$ is infinite as well.
@@ -66,7 +66,7 @@
 }
 
 
-\bx{
+\bx{ %Exercise 1.2.4
     Produce an infinite collection of sets $A_1, A_2, A_3, \dots$ with the property that every $A_i$ has an infinite number of elements, $A_i \cap A_j = \emptyset$ for all $i \neq j$, and $\bigcup^\infty_{i=1}A_i = \mathbb{N}$.
 
     \sol{
@@ -86,7 +86,7 @@
 }
 
 
-\bx{
+\bx{ %Exercise 1.2.5
     \textbf{(De Morgan's Law)} Let $A$ and $B$ be subsets of $\mathbb{R}$.
     \ea{
         \item If $x \in (A \cap B)^c$, explain why $x \in A^c \cup B^c$. THis shows that $(A \cap B)^c \subseteq A^c \cup B^c$.
@@ -107,7 +107,7 @@
     }
 }
 
-\bx{
+\bx{ %Exercise 1.2.6
     \ea{
         \item Verify the triangle inequality in the special case where $a$ and $b$ have the same sign.
         \item Find an efficient proof for all the cases at once by first demonstrating $(a+b)^2 \leq (|a|+|b|)^2$.
@@ -124,6 +124,27 @@
         \item Since $||a|-|b|| = ||b|-|a||$, WLOG, we can assume that $|a| \ge |b|$. Then \[
             ||a|-|b|| = |a| - |b| = |(a-b)+b|-|b| \leq |a-b| + |b| - |b| = |a-b|
         \]
+        }
+    }
+}
+
+bx{%Exercise 1.2.7
+    Given a function $f$ and a subset $A$ of its domain, let $f(A)$ represent the range of $f$ over the set $A$; that is, $f(A) = \{f(x): x\in A\}$.
+    \ea{
+        \item Let $f(x)=x^2$. If $A = [0,2]$ (the closed interval $\{x \in \mathbb{R}: 0 \leq x \leq 2 \}$) and $B = [1,4]$, find $f(A)$ and $f(B)$. Does $f(A\cap B) = f(A)\cap f(B)$ in this case? Does $f(A\cup B)=f(A) \cup f(B)$?
+        \item Find two sets $A$ and $B$ for which $f(A\cap B) \neq f(A) \cap f(B)$.
+        \item Show that, for an arbituary function $g: \mathbb{R} \rightarrow \mathbb{R}$, it is always true that $g(A \cap B) \subseteq g(A) \cap g(B)$ for all sets $A,B \subseteq \mathbb{R}$.
+        \item Form and prove a conjecture about the relationship between $g(A \cup B)$ and $g(A) \cup g(B)$ for an arbituary function $g$.
+    }
+
+    \sol{
+        \ea{
+            \item For $f(x)=x^2$, $f(A)=f([0,2])=[0,4]$ and $f(B) = f([1,4]) = [1, 16]$. \begin{align*}
+                f(A\cap B) = f([0,2]\cap [1, 4]) = f([1, 2]) = [1,&4] = [0, 4] \cap [1, 16] = f([1, 2]) \cap f([2, 4]) =f(A) \cap f(B) \\
+                f(A \cup B) = f([0,2]\cup [1,4]) = f([0,4]) = [0,&16] = [0, 4] \cup [1, 16] = f([0,2]) \cup f([1, 4]) = f(A) \cup f(B)
+            \end{align*}
+            \item Consider $A = [0, 2]$ and $B = [-2, 0]$. $f(A \cap B) = \{0\}$, but $f(A) \cap f(B) = [0, 4]$.
+            \item Suppose $y \in g(A \cap B)$, then $\exists x \in A \cap B$ such that $g(x) = y$. This implies that $x \in A$ and $x \in B$, so $x \in A \cap B$, hence $y \in g(A \cap B)$. Note that contrary may not always be true as it is possible for $x_1 \in A \backslash B$ and $x_2 \in B \backslash A$ such that $g(x_1) = g(x_2)$.
         }
     }
 }
