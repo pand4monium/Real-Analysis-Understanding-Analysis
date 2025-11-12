@@ -145,6 +145,10 @@ bx{%Exercise 1.2.7
             \end{align*}
             \item Consider $A = [0, 2]$ and $B = [-2, 0]$. $f(A \cap B) = \{0\}$, but $f(A) \cap f(B) = [0, 4]$.
             \item Suppose $y \in g(A \cap B)$, then $\exists x \in A \cap B$ such that $g(x) = y$. This implies that $x \in A$ and $x \in B$, so $x \in A \cap B$, hence $y \in g(A \cap B)$. Note that contrary may not always be true as it is possible for $x_1 \in A \backslash B$ and $x_2 \in B \backslash A$ such that $g(x_1) = g(x_2)$.
+            \item I conjecture that $g(A \cup B) = g(A) \cup g(B)$. To prove this, we have to show inclusion both ways: \er{
+                \item Let $y \in g(A\cup B)$, then $\exists x \in A \cup B$ such that $y=g(x)$. This implies that $x \in A$ or $x \in B$, so $y \in g(A)$ or $y \in g(B)$, hence $y \in g(A) \cup g(B)$.
+                \item Let $y \in g(A) \cup g(B)$, then $y \in g(A)$ or $y \in g(B)$, implying $x \in A$ or $x \in B$ such that $y =g(x)$. So $x \in A \cup B$, hence $y \in g(A \cup B)$.
+            }
         }
     }
 }
