@@ -190,3 +190,20 @@
         }
     }
 }
+
+\bx{ % Exercise 1.2.10
+    Decide which of the following are true statements. Provide a short justification for those that are valid and a counterexample for those that are not:
+    \ea{
+        \item Two real numbers satisfy $a < b$ if and only if $a < b + \epsilon$ for every $\epsilon > 0$.
+        \item Two real numbers satisfy $a < b$ if $a < b + \epsilon$ for every $\epsilon > 0$.
+        \item Two real numbers satisfy $a \leq b$ if and only if $a < b + \epsilon$ for every $\epsilon > 0$.
+    }
+    \sol{
+        \ea{
+            \item False. Consider the case where $a<b+\epsilon$ is true but $a = b$.
+            \item False. Same reasoning as above.
+            \item True. Firsly suppose $a < b + \epsilon$ for all $\epsilon > 0$. We need to show this implies $a \leq b$. We either have $a \leq b$ or $a > b$. However, $a > b$ is not possible as this implies there exists an $\epsilon$ small enough such that $a > b+ \epsilon$.
+            Secondly, suppose $a \leq b$. It is obvious that $a < b + \epsilon$ for all $\epsilon > 0$.
+        }
+    }
+}
