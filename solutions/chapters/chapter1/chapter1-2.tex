@@ -170,3 +170,23 @@
         }
     }
 }
+
+\bx{%Exercise 1.2.9
+    Given a function $f: D \rightarrow \mathbb{R}$ and a subset $B \subseteq \mathbb{R}$, let $f^{-1}(B)$ be the set of all points from the domain $D$ that get mapped into $B$; that is $f^{-1}(B) = \{x\in D:f(x) \in B\}$. This set is called the \textit{preimage} of $B$.
+    \ea{
+        \item Let $f(x) = x^2$. If $A$ is the closed interval $[0,4]$ and $B$ is the closed interval $[-1, 1]$, find $f^{-1}(A)$ and $f^{-1}(B)$. Does $f^{-1}(A\cap B) = f^{-1}(A) \cap f^{-1}(B)$ in this case? Does $f^{-1}(A \cup B) = f^{-1}(A) \cup f^{-1}(B)$?
+        \item The good behaviour of preimages demonstrated in (a) is completely general. Show that for an arbituary function $g: \mathbb{R} \rightarrow \mathbb{R}$, it is always true that $g^{-1}(A \cap B) = g^{-1}(A) \cap g^{-1}(B)$ and $g^{-1}(A \cup B) = g^{-1}(A) \cup g^{-1}(B)$ for all sets $A,B \subseteq \mathbb{R}$.
+    }
+
+    \sol{
+        \ea{
+            \item For $f(x) = x^2$, $f^{-1}(A) = [-2, 2]$ and $f^{-1}(B)=[-1, 1]$. $f^{-1}(A \cap B) = f^{-1}([0, 1]) = [-1, 1] = f^{-1}(A) \cap f^{-1}(B)$. Similarly, $f^{-1}(A \cup B) = f^{-1}([-1, 4]) = [-2, 2] = f^{-1}(A) \cup f^{-1}(B)$.
+            \item To show that $g^{-1}(A \cap B) = g^{-1}(A) \cap g^{-1}(B)$, we have to show inclusion both ways: \er{
+                \item Let $x \in g^{-1}(A \cap B)$, so $g(x) \in A \cap B$, which implies $g(x) \in A$ and $g(x) \in B$. This shows that $x \in g^{-1}(A)$ and $x \in g^{-1}(B)$, hence $x \in g^{-1}(A) \cap g^{-1}(B)$.
+                \item Let $x \in g^{-1}(A) \cap g^{-1}(B)$, so $x \in g^{-1}(A)$ and $x\in g^{-1}(B)$, then $g(x) \in A$ and $g(x) \in B$. This implies that $g(x) \in A \cap B$, so $x \in g^{-1}(A \cap B)$.
+            }
+
+            Showing $g^{-1}(A \cup B) = g^{-1}(A) \cup g^{-1}(B)$ is obvious using Exercise 1.2.7 (d).
+        }
+    }
+}
