@@ -106,3 +106,24 @@
         }
     }
 }
+
+\bx{
+    \ea{
+        \item Verify the triangle inequality in the special case where $a$ and $b$ have the same sign.
+        \item Find an efficient proof for all the cases at once by first demonstrating $(a+b)^2 \leq (|a|+|b|)^2$.
+        \item Prove $|a-b| \leq |a-c|+|c-d|+|d-b|$ for all $a$, $b$, $c$ and $d$.
+        \item Prove $||a|-|b|| \leq |a-b|$. (The unremarkable identity $a = a - b + b$ may be useful.)
+    }
+    \sol{
+        \ea{
+        \item With both $a$ and $b$ having the same sign, then $|a| + |b| = |a+b|$, which satisfies $|a| + |b| \geq |a+b|$.
+        \item Note that $(a+b)^2 \leq (|a|+|b|)^2$ reduces to $ab \leq |a||b|$, which is true as LHS can be negative while RHS cannot. Since squaring preserves inequality, this implies that $|a+b| \leq |a| + |b|$.
+        \item Notice that $a - b = (a-c) + (c-d) + (d-b)$. Hence by triangle inequality, \[
+        |a-b| = |(a-c)+(c-d)+(d-b)|\leq |a-c| + |c-d| + |d-b|
+        \] for all $a$, $b$, $c$ and $d$.
+        \item Since $||a|-|b|| = ||b|-|a||$, WLOG, we can assume that $|a| \ge |b|$. Then \[
+            ||a|-|b|| = |a| - |b| = |(a-b)+b|-|b| \leq |a-b| + |b| - |b| = |a-b|
+        \]
+        }
+    }
+}
