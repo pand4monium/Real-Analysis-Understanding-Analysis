@@ -245,3 +245,30 @@
         }
     }
 }
+
+\bx{ %Exercise 1.2.13
+    For this exercise, assume Exercise 1.2.5 has been successfully completed.
+    \ea{
+        \item Show how induction can be used to conclude that \[
+        (A_1 \cup A_2 \cup \dots \cup A_n)^c = A_1^c \cap A_2^c \cap \dots \cap A_n^c 
+        \] for any finite $n \in \mathbb{N}$.
+        \item It is tempting to appeal to induction to conclude \[
+            \left( \bigcup^\infty_{i=1}A_i\right)^c = \bigcap_{i=1}^\infty A_i^c
+        \] but induction does not apply here. Induction is used to prove that a particular statement holds for every value of $n \in \mathbb{N}$, but this does not imply the validity of the infinite case. To illustrate this point, find an example of a collection of sets $B_1,B_2,B_3,\dots$ where $\bigcap^n_{i=1}B_i \neq \emptyset$ is true for every $n \in \mathbb{N}$, but $\bigcap^\infty_{i=1}B_i \neq \emptyset$ fails.
+        \item Nevertheless, the infinite version of De Morgan's Law stated in (b) is a valid statement. Provide a proof that does not use induction.
+    }
+    \sol{
+        \ea{
+            \item Using Exercise 1.2.5 as the base case. Suppose $(A_1 \cup \dots \cup A_n)^c = A_1^c \cup \dots \cup A_n^c$ is true. Using associative law on the $n+1$c case, \begin{align*}
+                ((A_1 \cup \dots \cup A_n) \cup A_{n+1})^c &= (A_1 \cup \dots \cup A_n)^c \cap A_{n+1}^c \\
+                &= (A_1^c \cap \dots \cap A_n^c) \cap A_{n+1}^c \\
+                &= A_1^c \cap \dots \cap A_n^c \cap A_{n+1}^c
+            \end{align*}
+            \item Consider $B_1 = \{1, 2, \dots\}, B_2 = \{2, 3, \dots\}, B_n = \{x: x\in \mathbb{N} \cap [n, \infty)\}$.
+            \item To prove the infinite version of De Morgan's Law, we need to show inclusion both ways. \er{
+                \item Suppose $x \in (\bigcup_{i=1}^\infty A_i)^c$, then $x \notin \bigcup_{i=1}^\infty A_i$. This implies that $x \notin A_i \hspace{1ex}\forall i \in \mathbb{N}$, so $x \in A_i^c \hspace{1ex}\forall i \in \mathbb{N}$. Hence $x \in \bigcap^\infty_{i=1} A_i^c$.
+                \item Suppose $x \in \bigcap_{i=1}^\infty A_i^c$, then $x \in A_i^c \hspace{1ex}\forall i \in \mathbb{N}$, so $x \notin A_i \hspace{1ex} \forall i \in \mathbb{N}$. This implies that $x \notin \bigcup_{i=1}^\infty A_i$, hence $x \in (\bigcup_{i=1}^\infty A_i)^c$.
+            }
+        }
+    }
+}
