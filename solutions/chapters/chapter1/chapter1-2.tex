@@ -128,7 +128,7 @@
     }
 }
 
-bx{%Exercise 1.2.7
+\bx{%Exercise 1.2.7
     Given a function $f$ and a subset $A$ of its domain, let $f(A)$ represent the range of $f$ over the set $A$; that is, $f(A) = \{f(x): x\in A\}$.
     \ea{
         \item Let $f(x)=x^2$. If $A = [0,2]$ (the closed interval $\{x \in \mathbb{R}: 0 \leq x \leq 2 \}$) and $B = [1,4]$, find $f(A)$ and $f(B)$. Does $f(A\cap B) = f(A)\cap f(B)$ in this case? Does $f(A\cup B)=f(A) \cup f(B)$?
@@ -149,6 +149,24 @@ bx{%Exercise 1.2.7
                 \item Let $y \in g(A\cup B)$, then $\exists x \in A \cup B$ such that $y=g(x)$. This implies that $x \in A$ or $x \in B$, so $y \in g(A)$ or $y \in g(B)$, hence $y \in g(A) \cup g(B)$.
                 \item Let $y \in g(A) \cup g(B)$, then $y \in g(A)$ or $y \in g(B)$, implying $x \in A$ or $x \in B$ such that $y =g(x)$. So $x \in A \cup B$, hence $y \in g(A \cup B)$.
             }
+        }
+    }
+}
+
+\bx{%Exercise 1.2.8
+    Here are two important definitions related to a function $f: A \rightarrow B$. The function $f$ is \textit{one-to-one} $(1-1)$ if $a_1 \neq a_2$ in $A$ implies that $f(a_1) \neq f(a_2)$ in $B$. The function $f$ is \textit{onto} if, given any $b \in B$, it is possible to find an element $a \in A$ for which $f(a) = b$
+    Give an example of each or state that the request is impossible:
+    \ea{
+        \item $f: \mathbb{N} \rightarrow \mathbb{N}$ that is 1-1 but not onto.
+        \item $f: \mathbb{N} \rightarrow \mathbb{N}$ that is onto but not 1-1.
+        \item $f: \mathbb{N} \rightarrow \mathbb{Z}$ that is 1-1 and onto.
+    }
+
+    \sol{
+        \ea{
+            \item Let $f(x) = x+1$, which is 1-1 but does not have a solution to $f(x) = 1$, hence not onto.
+            \item Let $f(x) = 1$ for $x=1$ and $f(x) = x-1$ for $x > 1$, which is onto but not 1-1 as $f(1) = f(2) = 1$.
+            \item Let $f(x) = n/2$ when $n$ is even and $f(x) = - \frac{x-1}{2}$ when $n$ is odd.
         }
     }
 }
