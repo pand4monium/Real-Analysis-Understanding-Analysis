@@ -207,3 +207,19 @@
         }
     }
 }
+
+\bx{ % Exercise 1.2.11
+    Form the logical negation of each claim. One trivial way to do this is to simply add "It is not the case that..." in front of each assertion. To make this more interesting, fashion the negation into a positive statement that avoids using the word "not" altogether. In each case, make an intuitive guess as to whether the claim or its negation is the true statement.
+    \ea{
+        \item For all real numbers satisfying $a < b$, there exists an $n \in \mathbb{N}$ such that $a + 1/n < b$.
+        \item There exists a real number $x > 0$ such that $x < 1/n$ for all $n \in \mathbb{N}$.
+        \item Between every two distinct real numbers there is a rational number.
+    }
+    \sol{
+        \ea{
+            \item For all $n \in \mathbb{N}$, there exists $a,b \in \mathbb{R}$ such that $a + 1/n < b$. [FALSE]
+            \item For all real number $x > 0$, there exists an $n \in \mathbb{N}$ such that $x \geq 1/n$. [TRUE]
+            \item There exists two real numbers $a < b$ such that if $r < b$ then $r < a$ for all $r \in \mathbb{Q}$. [FALSE]
+        }
+    }
+}
