@@ -223,3 +223,25 @@
         }
     }
 }
+
+\bx{ % Exercise 1.2.12
+    Let $y_1=6$, and for each $n \in \mathbb{N}$ define $y_{n+1} = (2y_n-6)/3$.
+    \ea{
+        \item Use induction to prove that the sequence satisfies $y_n > -6$ for all $n \in \mathbb{N}$.
+        \item Use another induction argument to show the sequence $(y_1, y_2, y_3, \dots)$ is decreasing.
+    }
+    \sol{
+        \ea{
+            \item For $n=1$, $y_1 = 6 > -6$ (Base Case). Suppose $y_n > -6$ for some $n \in \mathbb{N}$. \[
+            y_{n+1}=\frac{2y_n-6}{3} > \frac{2(-6)-6}{3}=-6
+            \]
+            Hence, by induction, $y_n > -6$ for all $n \in \mathbb{N}$.
+            \item Suppose $y_{n+1} < y_n$. The base case works as $y_2 = 2 < 6 =y_1$. Then, \begin{align*}
+                y_{n+1} < y_n \implies& 2y_{n+1} - 6 < 2y_n -6 \\
+                    \implies& \frac{2y_{n+1}-6}{3} < \frac{2y_n-6}{3} \\
+                    \implies& y_{n+2} < y_{n+1}
+            \end{align*}
+            Thus, $y_{n+1}<y_n$ is true for all $n \in \mathbb{N}$.
+        }
+    }
+}
