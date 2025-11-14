@@ -167,3 +167,18 @@
         }
     }
 }
+
+\bx{ % Exercise 1.3.11
+    Decide if the following statements about suprema and infima are true or false. Give a short proof for those that are true. For any that are false, supply an example where the claim in question does not appear to hold. \ea{
+        \item If $A$ and $B$ are nonempty, bounded and satisfy $A \subseteq B$, then $\sup A \leq \sup B$.
+        \item If $\sup A < \inf B$ for sets $A$ and $B$, then there exists a $c \in \mathbb{R}$ satisfying $a < c <b$ for all $a \in A$ and $b \in B$.
+        \item If there exists a $c \in \mathbb{R}$ satisfying $a<c<b$ for all $a \in A$ and $b \in B$, then $\sup A < \inf B$.
+    }
+    \sol{
+        \ea{
+            \item True. We know $a \leq \sup A$, $a \leq \sup B$ since $A \subseteq B$. Since $\sup A$ is the least upper bound on A, we have $\sup A \leq \sup B$.
+            \item True. Let $c = \frac{\sup A + \inf B}{2}$, $c>\sup A$ implies $a<c$ and $c<\inf B$ implies $c<b$, giving $a<c<b$.
+            \item False. Consider $A = (-\infty, 1)$ and $B=(1, \infty)$, $a<1<b$ but $\sup A \nless \inf B$ as $\sup A = \inf B = 1$.
+        }
+    }
+}
