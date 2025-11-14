@@ -14,3 +14,15 @@
         }
     }
 }
+
+\bx{ % Exercise 1.4.2
+    Let $A \subseteq \mathbb{R}$ be nonempty and bounded above, and let $s \in \mathbb{R}$ have the property that for all $n\in \mathbb{N}$, $s+\frac{1}{n}$ is an upper bound for $A$ and $s-\frac1n$ is not an upperbound for $A$. SHow $s=\sup A$.
+
+    \sol{
+        We can rephrase Lemma 1.3.8 using the archimedean property. \er{
+            \item \AFSOC $s<\sup A$, then there exists an $n$ such that $s+1/n < \sup A$, contradicting $\sup A$ being the least upper bound.
+            \item \AFSOC $s>\sup A$, then there exists an $n$ such that $s-1/n > \sup A$ where $s-1/n$ is not an upper bound, contradicting $\sup A$ being an upper bound.
+        }
+        Hence, we can conclude that $\sup A = s$.
+    }
+}
