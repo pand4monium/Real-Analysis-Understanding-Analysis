@@ -1,0 +1,16 @@
+\section{Consequences of Completeness}
+
+\bx{ % Exercise 1.4.1
+    Recall that $\mathbb{I}$ stands for the set of irrational numbers. \ea{
+        \item Show that if $a,b\in\mathbb{Q}$, then $ab$ and $a+b$ are elements of $\mathbb{Q}$ as well.
+        \item Show that if $a\in\mathbb{Q}$ and $t\in\mathbb{I}$, then $a+t\in\mathbb{I}$ and $at\in\mathbb{I}$ as long as $a \neq 0$.
+        \item Part (a) can be summarized by saying that $\mathbb{Q}$ is closed under addition and multiplication. Is $\mathbb{I}$ closed under addition and multiplication? Given two irrational numbers $s$ and $t$, what can we say about $s+t$ and $st$?
+    }
+    \sol{
+        \ea{
+            \item This is trivial. Since $a,b \in \mathbb{Q}$, they can be expressed as a fraction of two integers. Let $a = m/n$ and $b = x/y$ where $m,n,x,y\in\mathbb{Z}$, then $a+b = \frac{my+xn}{ny}$ and $ab = \frac{mx}{ny}$, which are fractions with integer numerators and denominators, hence $a+b$ and $ab$ are elements of $\mathbb{Q}$.
+            \item \AFSOC that $a+t \in \mathbb{Q}$ and $at \in \mathbb{Q}$. Let $a+t=\alpha$ and $at=\beta$, so $t=\alpha-a$ and $t=\beta/a$. Since $\alpha, \beta, -a, 1/a \in \mathbb{Q}$, using part (a) gives use $t \in \mathbb{Q}$ which is a contradiction. Hence $a+t \in \mathbb{I}$ and $at\in \mathbb{I}$.
+            \item $\mathbb{I}$ is not closed under addition or multiplication. Consider $\sqrt2 + (-\sqrt2) = 0$ and $\sqrt2 \cdot \sqrt2 = 2$.
+        }
+    }
+}
