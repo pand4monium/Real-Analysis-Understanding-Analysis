@@ -33,3 +33,13 @@
         \AFSOC the $x \in \bigcap^\infty_{n=1}(0, 1/n)$, so $0< x < 1/n$ for all $n \in \mathbb{N}$ which is impossible by archimedean property.
     }
 }
+
+\bx{ % Exercise 1.4.4
+    Let $a < b$ be real numbers and consider the set $T = \mathbb{Q} \cap [a,b]$. Show $\sup T = b$.
+    \sol{
+        To show that $\sup T =b$, it needs to satify both conditions of supremum: \er{
+            \item Since $x \leq b$ for all $x \in [a,b]$, $y \leq b$ for all $y \in T$ as $T \subseteq [a,b]$.
+            \item \AFSOC $b'$ is also an upper bound such that $b'<b$. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, there exists an $\alpha \in \mathbb{Q} \cap [b', b] \subseteq T$. This implies there exists $t \in T$ satisfying $b' < t$, which is a contradiction.
+        }
+    }
+}
