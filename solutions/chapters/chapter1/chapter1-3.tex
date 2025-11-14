@@ -101,3 +101,13 @@
         }
     }
 }
+
+\bx{ % Exercise 1.3.7
+    Prove that if $a$ is an upper bound for $A$, and if $a$ is also an element of $A$, then it must be that $a = \sup A$.
+    \sol{
+        Since it is given that $a$ is an upper bound for $A$, we just have to show that $a$ is the least upper bound, meaning any number lower than $a$ would have an $a' \in A$ such that $a' > a$.
+        \medskip
+
+        \noindent Suppose $a-\epsilon$ is also an upper bound for $A$ for some $\epsilon > 0$. This is not possible has $a > a'$ and $a \in  A$. Hence by contradiction, $a$ is the lowest upper bound, meaning $a = \sup A$.
+    }
+}
