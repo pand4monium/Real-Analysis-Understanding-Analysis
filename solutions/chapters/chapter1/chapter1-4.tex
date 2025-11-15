@@ -68,3 +68,20 @@
         }
     }
 }
+
+\bx{ % Exercise 1.4.7
+    Finish the proof of Theorem 1.4.5 by showing that the assumption $\alpha^2 > 2$ leads to a contradiction of the fact that $\alpha = \sup T$.
+    \sol{
+        Recall $T = \{t\in \mathbb{R}: t^2 < 2\}$ and $\alpha = \sup T$. \AFSOC $\alpha^2 > 2$, we will show that there exists an $n \in \mathbb{N}$ such that $(\alpha-1/n)^2 > 2$, contradicting the assumption that $\alpha$ is the least upper bound.
+
+        Using $(\alpha - 1/n)^2 > 2$, we can find $n\in \mathbb{N}$ such that $(\alpha^2-1/n)>2$. \[
+            2 < (\alpha - 1/n)^2 = \alpha^2 - \frac{2\alpha}{n} + 1/n^2 < \alpha^2 - \frac{2\alpha-1}{n}
+        \]Then \[
+            2 < \alpha^2 - \frac{2\alpha-1}{n} \implies n(2-\alpha^2) < 1 - 2\alpha
+        \] Since $2-\alpha^2 < 0$, dividing reverses the inequality, giving \[
+            n > \frac{1-2\alpha}{2-\alpha^2}
+        \] 
+
+        Hence we can pick $n \in \mathbb{N}$ such that $(\alpha^2-1/n) > 2$, so $\alpha$ is the the least upper bound which is a contradiction. Hence it is not possible for $\alpha^2 > 2$.
+    }
+}
