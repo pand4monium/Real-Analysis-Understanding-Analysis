@@ -85,3 +85,20 @@
         Hence we can pick $n \in \mathbb{N}$ such that $(\alpha^2-1/n) > 2$, so $\alpha$ is the the least upper bound which is a contradiction. Hence it is not possible for $\alpha^2 > 2$.
     }
 }
+
+\bx{ % Exercise 1.4.8
+    Give an example of each or state that the request is impossible. When a request is impossible, provide a compelling argument for why this is the case. \ea{
+        \item Two sets $A$ and $B$ with $A \cap B \neq \emptyset$, $\sup A = \sup B$, $\sup A \notin A$ and $\sup B \notin B$.
+        \item A sequence of nested open intervals $J_1 \supseteq J_2 \supseteq J_3 \supseteq \dots$ with $\bigcap^\infty_{n=1}J_n$ nonempty but containing only a finite number of elements.
+        \item A sequence of nested unbounded closed intervals $L_1 \supseteq L_2 \supseteq L_3 \supseteq \dots$ with $\bigcap^\infty_{n=1}L_n = \emptyset$. (An unbounded closed interval has the form $[a, \infty) = \{x\in\mathbb{R}:x \geq a\}$.)
+        \item A sequence of closed bounded (not necessarily nested) intervals $I_1, I_2, I_3, \dots$ with the property that $\bigcap^N_{n=1}I_n \neq \emptyset$ for all $N \in \mathbb{N}$, but $\bigcap^\infty_{n=1}I_n = \emptyset$.
+    }
+    \sol{
+        \ea{
+            \item Consider $A = (0, 1) \cap \mathbb{Q}$ and $B = (0,1) \cap \mathbb{I}$. $\sup A = \sup B = 1$ and $1 \in A,B$.
+            \item Consider $J_n = (-1/n, 1/n)$, then $\bigcap^\infty_{n=1}J_n = \{0\}$ which is nonempty and contains a finite number of elements.
+            \item Consider $L_n = [n, \infty)$, then $\bigcap^\infty_{n=1}L_n = \emptyset$.
+            \item Impossible. Let $j_n = \bigcap^n_{k=1} I_k$. Since $\bigcap^N_{n=1}I_n \neq \emptyset$, we have $J_n \neq \emptyset$. Note that $J_n$ is the intersection of closed intervals, making it a closed interval. With $I_{n+1} \cap J_n \subseteq J_n$, we have $J_{n+1} \subseteq J_n$. Since $J_n$ is a series of nested bounded closed intervals, by Nested Interval Property, $\bigcap^\infty_{n=1}J_n = \bigcap^\infty_{n=1}(\bigcap^n_{k=1}I_k) = \bigcap^\infty_{n=1}I_n \neq \emptyset$. 
+        }
+    }
+}
