@@ -21,3 +21,44 @@
         The Nested Interval Property only applies to $\mathbb{R}$ and not $\mathbb{Q}$.
     }
 }
+
+\bx{ % Exercise 1.5.3
+    Use the following proofs for the statements in Theorem 1.5.8.\ea{
+        \item First, prove statement (i) for two countable sets, $A_1$ and $A_2$. Example 1.5.3 (ii) may be a useful reference. Some technicalities can be avoided by first replacing $A_2$ with the set $B_2 = A_2 \backslash A_1 = \{x \in A_2: x \notin A_1 \}$. The point of this is that the union $A_1 \cup B_2$ is equal to $A_1 \cup A_2$ and the sets $A_1$ and $B_2$ are disjoint. (What happens if $B_2$ is finite?)
+        
+        Now, explain how that more general statement in (i) follows.
+        \item Explain why induction cannot be used to prove part (ii) of Theorem 1.5.8 from part(i).
+        \item Show how arranging $\mathbb{N}$ into the two-dimensional array \[ \begin{matrix}
+            1 & 3 & 6 & 10 & 15 & \dots \\
+            2 & 5 & 9 & 14 & \dots \\
+            4 & 8 & 13 & \dots \\
+            7 & 12 & \dots  \\
+            \vdots \\
+        \end{matrix} \] leads to a proof of Theorem 1.5.8 (ii).
+    }
+
+    \sol{\ea{
+        \item Let $B = \{b_1, b_2, b_3, \dots \}$ and $C = \{c_1, c_2, c_3, \dot\}$ be countable, disjoint sets. We can define a function $g: \mathbb{N} \rightarrow B \cup C$ following a similar method of mapping $\mathbb{N}$ onto $\mathbb{Z}$, listing them as follows: \[
+        B \cup C = \{b_1, c_1, b_2, c_2, \dots \}
+        \] Implying that $B \cup C$ is countable. By letting $B = A_1$ and $C = A_2 \backslash A_1$, we can show that $A_1 \cup A_2$ is also countable.
+
+        By using induction, suppose $A_1 \cup \dots \cup A_n$ is countable, $(A_1 \cup \dot \cup A_n) \cup A_{n+1}$ is the unions of two countable sets, which as proven above is also countable.
+
+        \item Induction only shows something for each $n \in \mathbb{N}$, it does not apply in the infinite case. For example, $\bigcap^n_{k=1} [k, \infty) \neq \emptyset$ is true for all $n \in \mathbb{N}$, but the infinite case $\bigcap^\infty_{k=1} [k, \infty) \neq \emptyset$ is false.
+        \item By rearranging $\mathbb{N}$ as in (c) gives us disjoint sets $C_n = \{k\in \mathbb{N}: k \text{ is in the n-th row}\}$, such that $\bigcup^\infty_{n=1}C_n = \mathbb{N}$. Let $B_n$ be disjoint sets, constructed as $B_1 = A_1$, $B_2 = A_2 \backslash A_1$, $\dots$, $B_n = A_n \backslash (A_1 \cup \dots A_{n-1})$. If we can find a function $f: C \rightarrow B$ that is bijective, we can show: \[
+        f(\mathbb{N}) = f(\bigcup^\infty_{n=1}C_n) = \bigcup^\infty_{n=1} f_n(C_n) = \bigcup^\infty_{n=1} B_n = \bigcup^\infty_{n=1} A_n
+        \] 
+
+        Let $f_n: C_n \rightarrow B_n$ be bijective since $B_n$ is countable. Define $f: \mathbb{N} \rightarrow \bigcup_{n=1}^\infty B_n$ as \[
+            f(n) = \begin{cases}
+                f_1(n) & \text{ if } n \in C_1 \\
+                f_2(n) & \text{ if } n \in C_2 \\
+                \vdots \\
+            \end{cases}
+        \] We must now show that $f$ is bijective: \er{
+            \item Since each $C_n$ is disjoint and each $f_n$ is 1-1, $f(n_1) = f(n_2) \implies n_1 = n_2$, meaning $f$ is 1-1.
+            \item SInce any $b \in \bigcup^\infty_{n=1} B_n$ as $b\in B_n$ for some $n$, $b = f_n(x)$ has a solution since $f_n$ is onto. Letting $x = f^{-1}_n(b)$, we have $f(x) = f_n(x) =b$ as $f^{-1}_n(b) \in C_n$, meaning $f$ is onto.
+        }
+        By (i) and (ii), $f$ is bijective, so $\bigcup_{n=1}^\infty B_n$ is countable, implying that $\bigcup_{n=1}^\infty A_n$ is also countable, completing the proof.
+    }}
+}
