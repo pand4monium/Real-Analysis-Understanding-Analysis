@@ -1,1 +1,13 @@
 \section{Cardinality}
+
+\bx{ % Exercise 1.5.1
+    Finish the following proof for Theorem 1.5.7.
+
+    Assume $B$ is a countable set. Thus, there exists $f: \mathbb{N} \rightarrow B$, which is 1-1 and onto. Let $A \subseteq B$ be an infinite subset of $B$. We must show that $A$ is countable.
+
+    Let $n_1=min\{n\in \mathbb{N}: f(n) \in A \}$. As a start to a definition of $g: \mathbb{N} \rightarrow A$, set $g(1) = f(n_1)$. Show how to inductively continue this process to produce a 1-1 function $g$ from $\mathbb{N}$ onto $A$.
+
+    \sol{
+        Let $n_k = min \{n\in \mathbb{N}: f(n) \in A, n \notin \{ n_1, n_2, \dots n_{k-1}\}\}$ and $g(k) = f(n_k)$. Since $g: \mathbb{N} \rightarrow A$ is 1-1 and onto, $A$ is countable.
+    }
+}
