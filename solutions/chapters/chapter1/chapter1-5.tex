@@ -11,3 +11,13 @@
         Let $n_k = min \{n\in \mathbb{N}: f(n) \in A, n \notin \{ n_1, n_2, \dots n_{k-1}\}\}$ and $g(k) = f(n_k)$. Since $g: \mathbb{N} \rightarrow A$ is 1-1 and onto, $A$ is countable.
     }
 }
+
+\bx{ % Exercise 1.5.2
+    Review the proof of Theorem 1.5.6, part (ii) showing that $\mathbb{R}$ is uncountable, and then find the flow in the following erroneous proof that $\mathbb{Q}$ is uncountable:
+
+    Assume, for contradiction, that $\mathbb{Q}$ is countable. Thus we can write $\mathbb{Q} = \{ r_1, r_2, r_3, \dots \}$ and, as before, construct a nested sequence of closed intervals with $r_n \notin I_n$. Our construction implies $\bigcap^\infty_{n=1} I_n = \emptyset$ while NIP implies $\bigcap^\infty_{n=1} \neq \emptyset$. This contradiction implies $\mathbb{Q}$ must therefore be uncountable.
+
+    \sol{
+        The Nested Interval Property only applies to $\mathbb{R}$ and not $\mathbb{Q}$.
+    }
+}
