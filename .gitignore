@@ -1,4 +1,4 @@
-#ignores files produced when generating pdf
+# ignores files produced when generating pdf
 *.aux
 *.fdb_latexmk
 *.fls
@@ -8,3 +8,6 @@
 *.synctex.gz
 *.thm
 *.toc
+
+# ignores all test files
+test*
