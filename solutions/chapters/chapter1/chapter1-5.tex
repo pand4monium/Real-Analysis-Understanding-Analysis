@@ -65,9 +65,9 @@
 
 \bx{ % Exercise 1.5.4
     \ea{
-        \item Show $(a,b)~\mathbb{R}$ for any interval $(a, b)$.
+        \item Show $(a,b) \sim \mathbb{R}$ for any interval $(a, b)$.
         \item Show that an unbounded interval like $(a, \infty) = \{x : x> a\}$ has the same cardinality as $\mathbb{R}$ as well.
-        \item Using open intervals makes it more convenient to produce the required 1-1, onto functions, but it is not really necessary. Show that $[0, 1) ~ (0, 1)$ by exhibiting a 1-1 onto function between the two sets.
+        \item Using open intervals makes it more convenient to produce the required 1-1, onto functions, but it is not really necessary. Show that $[0, 1)  \sim  (0, 1)$ by exhibiting a 1-1 onto function between the two sets.
     }
 
     \sol{
@@ -76,7 +76,7 @@
             g(x) = f(\frac{2x-1}{b-a} - a)
             \] which maps $(a, b)$ onto $\mathbb{R}$ in a 1-1 fashion.
 
-            \item To show that $(a, \infty) ~ \mathbb{R}$, we need to find a function $h$ that maps $\mathbb{R}$ onto $(a, \infty)$. Consider the function $h(x) = e^x + a$, which maps $\mathbb{R}$ onto $(a, \infty)$ in a 1-1 fashion. Hence we are done.
+            \item To show that $(a, \infty)  \sim  \mathbb{R}$, we need to find a function $h$ that maps $\mathbb{R}$ onto $(a, \infty)$. Consider the function $h(x) = e^x + a$, which maps $\mathbb{R}$ onto $(a, \infty)$ in a 1-1 fashion. Hence we are done.
             \item Define $f: [0,1) \rightarrow (0, 1)$ as \[
                 f(x) = \begin{cases}
                     1/2 & \text{ if } x = 0 \\
@@ -98,14 +98,14 @@
 
 \bx{ %Exercise 1.5.5
     \ea{
-        \item Why is $A~A$ for every set $A$?
-        \item Given sets $A$ and $B$, explain why $A~B$ is equivalent to asserting $B~A$.
-        \item For three sets $A$, $B$, and $C$, show that $A~B$ and $B~C$ implies $A~C$. These three properties are hwat is meant by saying that $~$ is an \textit{equivalence relation}.
+        \item Why is $A \sim A$ for every set $A$?
+        \item Given sets $A$ and $B$, explain why $A \sim B$ is equivalent to asserting $B \sim A$.
+        \item For three sets $A$, $B$, and $C$, show that $A \sim B$ and $B \sim C$ implies $A \sim C$. These three properties are hwat is meant by saying that $ \sim $ is an \textit{equivalence relation}.
     }
     \sol{\ea{
         \item The identity function $f(x) = x$ is trivially bijective.
         \item If $f: A \rightarrow B$ is bijective, then the inverse $f^{-1}: B \rightarrow A$ is also bijective.
-        \item If $f: A \rightarrow B$ and $g: B \rightarrow C$, then $g \circ f: A \rightarrow C$ is a bijection, thus $A~C$.
+        \item If $f: A \rightarrow B$ and $g: B \rightarrow C$, then $g \circ f: A \rightarrow C$ is a bijection, thus $A \sim C$.
     }}
 }
 
@@ -128,7 +128,7 @@
     Consider the open interval $(0,1)$, and let $S$ be the set of points in the open unit square; that is, $S = \{(x,y): 0< x,y< 1 \}$. \ea{
         \item Find a 1-1 function that maps $(0,1)$ into, but not necessarily onto, $S$. (This is easy)
         \item Use the fact that every real number has a decimal expansion to produce a 1-1 function that maps $S$ into $(0, 1)$. Discuss whether the formulated function is onto. (Keep in mind that any terminating decimal expansion such as $.235$ represents the same real number as $.234999 \dots$.)
-    } The Schröder-Bernstein Theorem discussed in Exercise 1.5.11 can now be applied to conclude that $(0,1) ~ S$.
+    } The Schröder-Bernstein Theorem discussed in Exercise 1.5.11 can now be applied to conclude that $(0,1)  \sim  S$.
     \sol{\ea{
         \item Consider $f(x) = (\frac14x, \frac13)$.
         \item Let $g: S \rightarrow (0,1)$ be a function that interweaves decimals in the representation without trailing nines, padding with zeros if necessary. $g(0.12, 0.34) = 0.1324$, $g(0.1\bar{9}, 0.2) = g(0.2, 0.2) = 0.22$, $g(0.4, 0.89) = 0.4809$, $g(0.6, 0.\bar{7}) = 0.67\overline{07}$, etc.
