@@ -95,3 +95,16 @@
         }
     }
 }
+
+\bx{ %Exercise 1.5.5
+    \ea{
+        \item Why is $A~A$ for every set $A$?
+        \item Given sets $A$ and $B$, explain why $A~B$ is equivalent to asserting $B~A$.
+        \item For three sets $A$, $B$, and $C$, show that $A~B$ and $B~C$ implies $A~C$. These three properties are hwat is meant by saying that $~$ is an \textit{equivalence relation}.
+    }
+    \sol{\ea{
+        \item The identity function $f(x) = x$ is trivially bijective.
+        \item If $f: A \rightarrow B$ is bijective, then the inverse $f^{-1}: B \rightarrow A$ is also bijective.
+        \item If $f: A \rightarrow B$ and $g: B \rightarrow C$, then $g \circ f: A \rightarrow C$ is a bijection, thus $A~C$.
+    }}
+}
