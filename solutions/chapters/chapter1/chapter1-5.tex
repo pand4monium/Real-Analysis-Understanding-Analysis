@@ -182,3 +182,23 @@
         \item No. Consider $C = \{ 1/n: n \in \mathbb{N}\}$. It has $C \cap [\alpha, 1]$ finite for every $\alpha$, but $C \cap [0,1]$ is infinite.
     }}
 }
+
+\bx{ % Exercise 1.5.11
+    \textbf{(Schröder-Bernstein Theorem)} Assume there exists a 1-1 function $f: X \rightarrow Y$ and another 1-1 function $g: Y \rightarrow X$. Follow the steps to show that there exists a 1-1, onto function $h: X \rightarrow Y$ and hence $X \sim Y$.
+
+    The strategy is to partition $X$ and $Y$ into components \[
+        X = A \cup A' \quad \text{and} \quad Y = B \cup B'
+    \] with $A \cap A' = \emptyset$ and $B \cap B' = \emptyset$, in such a way that $f$ maps $A$ onto $B$, and $g$ maps $B'$ and $A'$. \ea{
+        \item Explain how achieving this would lead to a proof that $X \sim Y$.
+        \item Set $A_1 = X\backslash g(Y)=\{x\in X: x \notin g(Y)\}$ (what happens if $A_1 = \emptyset$?) and inductively define a sequence of sets by letting $A_{n+1} = g(f(A_n))$. Show that $\{A_n: n \in \mathbb{N}\}$ is a pairwise disjoint collection of subsets of $X$, while $\{f(A_n): n\in \mathbb{N}\}$ is a similar collection in $Y$.
+        \item Let $A = \bigcup^\infty_{n=1}A_n$ and $B=\bigcup^\infty_{n=1} f(A_n)$. Show that $f$ maps $A$ onto $B$.
+        \item Let $A'=X \backslash A$ and $B'=Y\backslash B$. Show $g$ maps $B'$ onto $A'$.
+    }
+    \sol{\ea{
+        \item $f: A \rightarrow B$ and $g: B' \rightarrow A'$ are bijective, therefore we can define \[
+        h(x) = \begin{cases}
+            f(x) & \text{if } x \in A \\
+            g^{-1}(x) & \text{if } x \in A'
+        \end{cases}\] which is bijective.
+    }}
+}
