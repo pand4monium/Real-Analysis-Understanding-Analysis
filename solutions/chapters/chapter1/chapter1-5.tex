@@ -129,8 +129,7 @@
         \item Find a 1-1 function that maps $(0,1)$ into, but not necessarily onto, $S$. (This is easy)
         \item Use the fact that every real number has a decimal expansion to produce a 1-1 function that maps $S$ into $(0, 1)$. Discuss whether the formulated function is onto. (Keep in mind that any terminating decimal expansion such as $.235$ represents the same real number as $.234999 \dots$.)
     } The Schröder-Bernstein Theorem discussed in Exercise 1.5.11 can now be applied to conclude that $(0,1) ~ S$.
-
-    \sol{
+    \sol{\ea{
         \item Consider $f(x) = (\frac14x, \frac13)$.
         \item Let $g: S \rightarrow (0,1)$ be a function that interweaves decimals in the representation without trailing nines, padding with zeros if necessary. $g(0.12, 0.34) = 0.1324$, $g(0.1\bar{9}, 0.2) = g(0.2, 0.2) = 0.22$, $g(0.4, 0.89) = 0.4809$, $g(0.6, 0.\bar{7}) = 0.67\overline{07}$, etc.
         \medskip
@@ -139,5 +138,5 @@
         \medskip
 
         \noindent $g$ is not onto since $g(x,y) = 0.1$ has no solutions.
-    }
+    }}
 }
