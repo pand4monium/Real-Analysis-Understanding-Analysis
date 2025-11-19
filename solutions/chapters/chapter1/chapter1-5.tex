@@ -62,3 +62,36 @@
         By (i) and (ii), $f$ is bijective, so $\bigcup_{n=1}^\infty B_n$ is countable, implying that $\bigcup_{n=1}^\infty A_n$ is also countable, completing the proof.
     }}
 }
+
+\bx{ % Exercise 1.5.4
+    \ea{
+        \item Show $(a,b)~\mathbb{R}$ for any interval $(a, b)$.
+        \item Show that an unbounded interval like $(a, \infty) = \{x : x> a\}$ has the same cardinality as $\mathbb{R}$ as well.
+        \item Using open intervals makes it more convenient to produce the required 1-1, onto functions, but it is not really necessary. Show that $[0, 1) ~ (0, 1)$ by exhibiting a 1-1 onto function between the two sets.
+    }
+
+    \sol{
+        \ea{
+            \item Example 1.5.4 provides the function $f(x) = \frac{x}{x^2-1}$ which takes the interval $(-1, 1)$ onto $\mathbb{R}$ in a 1-1 fashion. If we shift $f$ to the interval of $(a, b)$, we get: \[
+            g(x) = f(\frac{2x-1}{b-a} - a)
+            \] which maps $(a, b)$ onto $\mathbb{R}$ in a 1-1 fashion.
+
+            \item To show that $(a, \infty) ~ \mathbb{R}$, we need to find a function $h$ that maps $\mathbb{R}$ onto $(a, \infty)$. Consider the function $h(x) = e^x + a$, which maps $\mathbb{R}$ onto $(a, \infty)$ in a 1-1 fashion. Hence we are done.
+            \item Define $f: [0,1) \rightarrow (0, 1)$ as \[
+                f(x) = \begin{cases}
+                    1/2 & \text{ if } x = 0 \\
+                    1/4 & \text{ if } x = 1/2 \\
+                    1/8 & \text{ if } x = 1/4 \\
+                    \vdots & \\
+                    x & \text{ otherwise }
+                \end{cases}
+            \] To show that both $[0,1)$ and $(0,1)$ have the both cardinality, we need to prove that $f$ is 1-1 and onto.
+
+            \noindent We start by showing that $y = f(x)$ has exactly one solution for all $y \in (0,1)$.
+
+            \noindent If $y = 1/2^n$, then the only solution is $y = f(1/2^{n-1})$ (or $x = 0$ in the special case $n=1$).
+            
+            \noindent Otherwise, the only solution is $y=f(y)$.
+        }
+    }
+}
