@@ -140,3 +140,10 @@
         \noindent $g$ is not onto since $g(x,y) = 0.1$ has no solutions.
     }}
 }
+
+\bx{ % Exercise 1.5.8
+    Let $B$ be a set of positive real numbers with the property that adding together any finite subset of elements from $B$ will always give a sum of 2 or less. Show $B$ must be finite or countable.
+    \sol{
+        It is obvious that $B \cap [a, 2)$ must be finite for some $a \in (0, 2)$, otherwise, we can choose $\lceil \frac2a \rceil$ number of elements from $B \cap [a, 2)$ would result in a sum of more than 2. Since $B$ is the countable union of finite sets $\bigcup^\infty_{n=1} B \cap [\frac1n , 2)$, $B$ must be countable or finite.
+    }
+} 
