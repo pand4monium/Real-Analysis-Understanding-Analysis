@@ -123,3 +123,21 @@
         }
     }
 }
+
+\bx{ % Exercise 1.5.7
+    Consider the open interval $(0,1)$, and let $S$ be the set of points in the open unit square; that is, $S = \{(x,y): 0< x,y< 1 \}$. \ea{
+        \item Find a 1-1 function that maps $(0,1)$ into, but not necessarily onto, $S$. (This is easy)
+        \item Use the fact that every real number has a decimal expansion to produce a 1-1 function that maps $S$ into $(0, 1)$. Discuss whether the formulated function is onto. (Keep in mind that any terminating decimal expansion such as $.235$ represents the same real number as $.234999 \dots$.)
+    } The Schröder-Bernstein Theorem discussed in Exercise 1.5.11 can now be applied to conclude that $(0,1) ~ S$.
+
+    \sol{
+        \item Consider $f(x) = (\frac14x, \frac13)$.
+        \item Let $g: S \rightarrow (0,1)$ be a function that interweaves decimals in the representation without trailing nines, padding with zeros if necessary. $g(0.12, 0.34) = 0.1324$, $g(0.1\bar{9}, 0.2) = g(0.2, 0.2) = 0.22$, $g(0.4, 0.89) = 0.4809$, $g(0.6, 0.\bar{7}) = 0.67\overline{07}$, etc.
+        \medskip
+
+        \noindent To prove that $g$ is 1-1, we need show that there does not exists any solutions for $g(x_1, y_1) = g(x_2, y_2)$. Every real number can be written with tow representations, one with trailing 9's and one without. However, $g(x, y) = 0.d_1d_2d_3\dots \bar{9}$ is impossible as it would imply both $x$ and $y$ has trailing 9's, which contradicts the definition of $g$. Therefore, $g(s)$ is unique and so $g$ is 1-1.
+        \medskip
+
+        \noindent $g$ is not onto since $g(x,y) = 0.1$ has no solutions.
+    }
+}
