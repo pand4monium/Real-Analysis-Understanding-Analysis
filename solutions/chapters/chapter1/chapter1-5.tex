@@ -108,3 +108,18 @@
         \item If $f: A \rightarrow B$ and $g: B \rightarrow C$, then $g \circ f: A \rightarrow C$ is a bijection, thus $A~C$.
     }}
 }
+
+\bx{ % Exercise 1.5.6
+    \ea{
+        \item Give an example of a countable collection of disjoint open intervals.
+        \item Give an example of an uncountable collection of disjoint open intervals, or argue that no such collection exists.
+    }
+    \sol{
+        \ea{
+            \item Consider $I_1 = (1, 2)$, $I_2 = (2, 3)$, $\dots$, $I_n = (n, n+1)$.
+            \item No such collection exists. Let $A$ denote this set. 
+            
+            \noindent For any nonempty interval $I_n$, since $\mathbb{Q}$ is dense in $\mathbb{R}$, we can find an $r\in \mathbb{Q}$ such that $r \in I_n$. Assigning each $I \in A$ a rational number $r \in I$ proves that $I \subseteq \mathbb{Q}$, thus $I$ is countable.
+        }
+    }
+}
