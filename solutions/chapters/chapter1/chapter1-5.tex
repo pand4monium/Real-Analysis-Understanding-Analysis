@@ -147,3 +147,25 @@
         It is obvious that $B \cap [a, 2)$ must be finite for some $a \in (0, 2)$, otherwise, we can choose $\lceil \frac2a \rceil$ number of elements from $B \cap [a, 2)$ would result in a sum of more than 2. Since $B$ is the countable union of finite sets $\bigcup^\infty_{n=1} B \cap [\frac1n , 2)$, $B$ must be countable or finite.
     }
 } 
+
+\bx{ % Exercise 1.5.9
+    A real number $x \in \mathbb{R}$ is called \textit{algebraic} if there exist integers $a_0, a_1, a_2, \dots, a_n \in \mathbb{Z}$, not all zero, such that \[
+        a_nx^n + a_{n-1}^{n-1}+ \dots + a_1x+a_0 = 0.
+    \]Said another way, a real number is algebraic if it is the root of a polynomial with integer coefficients. Real numbers that are not algebraic are called \textit{transcendental} numbers. Reread the last paragraph of Section 1.1. The final question posed here is closely related to the question of whether or not transcendental numbers exist. \ea{
+        \item Show that $\sqrt{2}$, $\sqrt[3]{2}$ and $\sqrt{3} + \sqrt2$ are algebraic.
+        \item Fix $n \in \mathbb{N}$ and let $A_n$ be the algebraic numbers obtained as roots of polynomials with integer coefficients that have degree $n$. Using the fact that every polynomial has a finite number of roots, show that $A_n$ is countable.
+        \item Now, argue that the set of all algebraic numbers is countable. What may we conclude about the set of transcendental numbers?
+    }
+    \sol{\ea{
+        \item The first two are trivial as they are roots of $x^2-2=0$ and $x^3-2=0$. For $\sqrt3+\sqrt2$, we can start working backwards: \begin{align*}
+            x = \sqrt3 + \sqrt2 & \implies x^2 = 5  + 2 \sqrt6 \\
+            & \implies (x^2 - 5)^2 - 24 = 0,
+        \end{align*}thus giving a polynomial, hence $\sqrt2 + \sqrt3$ is algebraic.
+        \item We need to show that $A_n \sim \mathbb{Z}^n \sim \mathbb{N}^n \sim \mathbb{N}$ and hence countable. \er{
+            \item $A_n \sim \mathbb{Z}^n$ since choosing $n$ integer coefficients for a polynomial of degree $n$ is equivilant to an ordered list of $n$ integers.
+            \item $\mathbb{Z}^n \sim \mathbb{N}^n$ since $f: \mathbb{N}^n \rightarrow \mathbb{Z}^n$ is just the piecewise application of $g: \mathbb{N} \rightarrow \mathbb{Z}$.
+            \item $\mathbb{N}^n \sim \mathbb{N}$ since it is the intersection of finite sets $\bigcup^\infty_{k=1} \{(x_1, \dots, x_n): x_1 + \dots + x_n = k\}$.
+        }
+        \item The set of algebraic numbers is countable as it is the union of countable sets $\bigcup^\infty_{n=1} A_n$. The set of transcendental numbers is uncountable, otherwise, it implies that the set of real numbers is countable, which is not possible.
+    }}
+}
