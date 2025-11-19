@@ -169,3 +169,16 @@
         \item The set of algebraic numbers is countable as it is the union of countable sets $\bigcup^\infty_{n=1} A_n$. The set of transcendental numbers is uncountable, otherwise, it implies that the set of real numbers is countable, which is not possible.
     }}
 }
+
+\bx{ % Exercise 1.5.10
+    \ea{
+        \item Let $C \subseteq [0,1]$ be uncountable. Show that there exists $a \in (0,1)$ such that $C \cap [a, 1]$ is countable.
+        \item Now let $A$ be the set of all $a \in (0,1)$ such that $C \cap [a,1]$ is uncountable, and set $\alpha = \sup A$. Is $C \cap [\alpha, 1]$ an uncountable set?
+        \item Does the statement in (a) remain true if "uncountable" is replaced by "infinite"?
+    } 
+    \sol{\ea{
+        \item \AFSOC $a$ does not exists, so $C \cap [a, 1]$ is countable for all $a \in (0,1)$. Therefore $C = \bigcup_{n=1}^\infty C \cap [1/n, 1]$ is also countable, which is a contradiction. Hence, there exist a $a \in (0,1)$ such that $C \cap [a, 1]$ is uncountable.
+        \item Since $\alpha = \sup A$, for any $\epsilon > 0$, $C \cap [\alpha + \epsilon, 1]$ is countable. Therefore, $C \cap [\alpha, 1] = {\alpha} \cup \bigcup_{n=1}^\infty C \cap [1/n,1]$ is countable.
+        \item No. Consider $C = \{ 1/n: n \in \mathbb{N}\}$. It has $C \cap [\alpha, 1]$ finite for every $\alpha$, but $C \cap [0,1]$ is infinite.
+    }}
+}
