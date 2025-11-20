@@ -200,5 +200,25 @@
             f(x) & \text{if } x \in A \\
             g^{-1}(x) & \text{if } x \in A'
         \end{cases}\] which is bijective.
+        \item If $A_1 = \emptyset$, we are done as it implies $g(Y) = X$ so $X \sim Y$
+        
+        Since $A_n \subseteq X$, then $f(A_n) \subseteq Y$, hence $A_n \cap A_1 = \emptyset$ for all $n \in \mathbb{N}$ as $A_1 = X \backslash g(Y)$.
+
+        Note that $g \circ f$ is bijective implies that $g(f(A \cap B)) = g(f(A)) \cap g(f(B))$. We will show that by inclusion both ways. Let $h$ be an arbitrary bijective function. \er{
+            \item Let $y \in h(A \cap B)$, so there exists $x \in A \cap B$ such that $h(x) = y$, then $x \in A$ and $x \in B$. This implies that $h(x) \in h(A)$ and $h(x) \in h(B)$, hence $y = h(x) \in h(A) \cap h(B)$.
+            \item Let $y \in h(A) \cap h(B)$, so $y \in h(A)$ and $y \in h(B)$, then there exist $x \in A$ and $x \in B$ such that $h(x) = y$. This implies $x \in A \cap B$, hence $y \in h(A \cap B)$.
+        }
+
+        Now to show pairwise disjointment for all subsets, consider $i,j \in \mathbb{N}$, with $i<j$. \[
+            A_j \cap A_i = g(f(A_j \cap A_i)) = g(f(A_{j})) \cap g(f(A_i)) = A_{j-1} \cap A_{i-1} = \dots = A_{j-i+1} \cap A_1 = \emptyset
+        \] Similarly, $\{f(A_n): n \in \mathbb{N}\}$ is also pairwise disjoint as \[
+            A_j \cap A_i = \emptyset \implies f(A_j) \cap f(A_i) = f(A_j \cap A_i) = f(\emptyset) = \emptyset
+        \]
+
+        \item $f(A) = B$ as $f(\bigcup^\infty_{n=1} A_n) = \bigcup_{n=1}^\infty f(A_n) = B$. ($B$ is defined to be the range of $f$.)
+        \item To show that $g(B') = A'$, we will show inclusion both ways: \er{
+            \item $g(B') \subseteq A'$. \AFSOC $g(b') \in A$, then since $A_1 \cap g(Y) = \emptyset$, $g(b') \notin A$, implying $g(b') \in \bigcup^\infty_{n=2} A_n = g(B)$, meaning $\exists \vspace{1ex} b \in B$ such that $g(b) = g(b')$, contradicting the fact that $g$ is 1-1.
+            \item $g(B') \supseteq A'$. \AFSOC $\exists \vspace{1ex} a' \in A'$, with $a' \notin g(B')$. Since $A' \subseteq g(Y)$, we have $a' \in g(B)$, since $a' \notin g(B')$, and $g(B) \subseteq A$ contradicting $a' \in A$.
+        }
     }}
 }
