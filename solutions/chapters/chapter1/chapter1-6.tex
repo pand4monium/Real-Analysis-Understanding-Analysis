@@ -9,3 +9,16 @@
         \noindent This proof works as $(0,1)$ is uncountable, implies that $g$ is not bijective, then $(g \circ f): \mathbb{R} \rightarrow \mathbb{N}$ is not bijective, implying that $\mathbb{R}$ is not countable and hence uncountable.
     }
 }
+
+\bx{ % Exercise 1.6.2
+    \ea{
+        \item Explain why the real number $x = .b_1b_2b_3b_4\dots$ cannot be $f(1)$.
+        \item Now, explain why $x \neq f(2)$, and in general why $x \neq f(n)$ for any $n \in \mathbb{N}$.
+        \item Point out the contradiction that arises from these observations and conclude that $(0,1)$ is uncountable.
+    }
+    \sol{\ea{
+        \item Since $b_1 \neq a_{11}$, the first digit of $f(1)$ differ from $x$, hence cannot be equal.
+        \item Since $b_n \neq a_{nn}$, the $n$-th digit of $f(n)$ differ from $x$, hence cannot be equal.
+        \item Since $x$ is not in the list, it is a contradiction.
+    }}
+}
