@@ -1,2 +1,11 @@
 \section{Cantor's Theorem}
 
+\bx{ % Exercise 1.6.1
+    Show that $(0,1)$ is uncountable if and only if $\mathbb{R}$ is uncountable.
+    \sol{
+        In Exercise 1.5.4 (a), we have found a bijection $f: (0,1) \rightarrow \mathbb{R}$. Suppose $g: (0,1) \rightarrow \mathbb{N}$ is some map, we must show $g$ is bijective if and only if $(g \circ f): \mathbb{R} \rightarrow \mathbb{N}$ is bijective. This is true as if $g$ is bijective, then $(g \circ f)$ is bijective as it is the composition of bijective functions. Similarly, if $(g \circ f)$ is bijective, then $(g \circ f) \circ f^{-1} = g$ is bijective.
+        \medskip
+        
+        \noindent This proof works as $(0,1)$ is uncountable, implies that $g$ is not bijective, then $(g \circ f): \mathbb{R} \rightarrow \mathbb{N}$ is not bijective, implying that $\mathbb{R}$ is not countable and hence uncountable.
+    }
+}
