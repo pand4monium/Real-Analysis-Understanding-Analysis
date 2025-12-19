@@ -100,3 +100,15 @@
         }
     }
 }
+
+\bx{ %Exercise 1.6.9
+    Using the various tools and techniques developed in the last two sections (including the exercises from Section 1.5), give a compelling arguement showing that $P(\mathbb{N}) \sim \mathbb{R}$.
+    \sol{
+        We can make a function $f: P(\mathbb{N}) \rightarrow S$, with $S$ following the definition given in Exercise 1.6.4, being a set consisting of all sequences of 0's and 1's. \[
+            f(P_N) = (a_1, a_2, a_3, \dots) \text{ with } a_n = 0 \text{ if } a_n \notin P_N \text{ and } 1 \text{ otherwise}
+        \]
+        $f$ is clearly onto as every element of $S$ can be mapped to by its definiton. To show that is it injective, \AFSOC that there exists $X, Y \in P(\mathbb{N})$, where $X \neq Y$, such that $f(X) = f(Y)$. There will exists $n \in \mathbb{N}$ where $n\in X$ but $n \notin Y$. By definiton, the $n$-th element of $f(X)$ is 1, but for $f(Y)$ is 0, which is a contradiction.
+
+        Using Exercise 1.6.4, $S \sim \mathbb{R}$, hence $P(\mathbb{N}) \sim \mathbb{R}$.
+           }
+}
