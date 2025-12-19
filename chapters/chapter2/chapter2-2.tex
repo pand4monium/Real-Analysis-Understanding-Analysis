@@ -85,3 +85,21 @@
         \] showing that $a = \lim a = b$, which is a contradiction.
     }
 }
+
+\bx{ % Exercise 2.2.7
+    Here are two useful definitions: \er{
+        \item A sequence $(a_n)$ is \textit{eventually} in a set $A \subseteq \mathbb{R}$ if there exists an $N \in \mathbb{N}$ such that $a_n \in A$ for all $n \geq N$.
+        \item A sequence $(a_n)$ is \textit{Frequently} in a set $A \subseteq \mathbb{R}$ if, for every $N \in \mathbb{N}$, there exists an $n \geq N$ such taht $a_n \in A$. \ea{
+            \item Is the sequence $(-1)^n$ eventually or frequently in the set $\{1\}$?
+            \item Which definition is stronger? Does frequently imply eventually or does eventually imply frequently?
+            \item Give an alternate rephrasing of Definition 2.2.3B using either frequently or eventually. Which is the term we want?
+            \item Suppose an infinite number of terms of a sequence $(x_n)$ are equal to 2. Is $(x_n)$ necessarily eventually in the interval $(1.9, 2.1)$? Is it frequently in $(1.9, 2.1)$?
+        }
+    }
+    \sol{\ea{
+        \item $(-1)^n$ is frequently but not eventually in $\{1\}$.
+        \item Eventually implies frequently, but the converse is not true.
+        \item $(x_n) \rightarrow x$ \textit{if and only if} $x_n$ is eventually in any $\epsilon$-neighborhood around $x$.
+        \item $(x_n)$ is frequently in $(1.9, 2.1)$ but not always eventually (considering $x_n = 2(-1)^n$).
+    }}
+}
