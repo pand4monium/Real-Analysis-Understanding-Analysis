@@ -1,0 +1,17 @@
+\section{The Limit of a Sequence}
+
+\bx{ % Exercise 2.2.1
+    What happens if we reverse the order of the quantifiers in Definition 2.2.3?
+
+    \textit{Definition:} A sequence ($x_n$) \textit{verconges} to $x$ if \textit{there exists} an $\epsilon > 0$ such that \textit{for all} $N \in \mathbb{N}$ it is true that $n \geq N$ implies $|x_n - x| < \epsilon$.
+
+    Give an example of a vercongent sequence. Is there an example of a vercongent dequence that is divergent? Can a sequence verconge to two different values? What exactly is being described in this strange definition?
+    \sol{
+        \er{
+            \item Consider the sequence $x_n = \sin x$. $(x_n)$ verconges to $0$ as we can choose $\epsilon = 1$ such that $|x_n - 0| < \epsilon$ for any value of $n \in \mathbb{N}$.
+            \item There is not vercongent sequence that diverges. THe proof is obvious and left as an exercise for the reader.
+            \item The sequence in (i) verconges to $x \in \mathbb{R}$ by choosing $\epsilon = x + 2$.
+            \item The definition of verconges described a bounded sequence.
+        }
+    }
+}
