@@ -103,3 +103,20 @@
         \item $(x_n)$ is frequently in $(1.9, 2.1)$ but not always eventually (considering $x_n = 2(-1)^n$).
     }}
 }
+
+\bx{ % Exercise 2.2.8
+    For some additional practive with nested quantifiers, consider the following invented definition:
+
+    Let's call a sequence $(x_n)$ \textit{zero-heavy} if there exists $M \in \mathbb{N}$ such that for all $N \in \mathbb{N}$ there exists $n$ satisfying $N \leq n \leq N+M$ where $x_n = 0$. \ea{
+        \item Is the sequence $(0,1,0,1,0,1, \dots)$ zero heavy?
+        \item If a sequence is zero-heavy does it necessarily contain an infinite number of zeros? If not, provide a counterexample.
+        \item If a sequence contains an infinite number of zeros, is it necessarily zero-heavy? If not, provide a counterexample.
+        \item From the logical negation of the above definition. That is, complete the sentence: A sequence is \textit{not zero-heavy} if $\dots$.
+    }
+    \sol{
+        \item The sequence is zero-heavy, choosing $M = 1$.
+        \item Yes. If there were a finite number of zeros, with the last zero at $x_K$, then choosing $N > K$ would lead to a contradiction.
+        \item No, consider $(0, 1, 0, 1,1, 0, 1,1,1,0,1,1,1,1,0, \dots)$ where the gap between the $0$'s grows to infinity.
+        \item A sequence is not zero-heavy if for all $M \in \mathbb{N}$, there exists some $N \in \mathbb{N}$ such that for all $n \in \mathbb{N}$, $N \leq n \leq N+ M$, $x_n \neq 0$.
+    }
+}
