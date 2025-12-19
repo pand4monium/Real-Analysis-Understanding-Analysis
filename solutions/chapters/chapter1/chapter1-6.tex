@@ -112,3 +112,22 @@
         Using Exercise 1.6.4, $S \sim \mathbb{R}$, hence $P(\mathbb{N}) \sim \mathbb{R}$.
            }
 }
+
+\bx{ %Exercise 1.6.10
+    As a final exercise, answer each of the following by establishing a 1-1 correspondence with a set of known cardinality.
+    \ea{
+        \item Is the set of all functions from $\{0,1\}$ to $\mathbb{N}$ countable or uncountable?
+        \item Is the set of all functions from $\mathbb{N}$ to $\{0,1\}$ countable or uncountable?
+        \item Given a set $B$, a subset $\mathcal{A}$ of $P(B)$ is called an \textit{antichain} if no element of $A$ is a subset of any other element of $A$. Does $P(\mathbb{N})$ contain an uncountable anitchain?
+    }
+    \sol{
+        \ea{
+            \item Both elements of $\{0,1\}$ can be mapped to an element in $\mathbb{N}$, hence we can find a bijective function to show that this set is the same as $\mathbb{N}^2$ hence countable.
+            \item As shown in Exercise 1.6.9, this set maps to $S \sim \mathbb{R}$ which is uncountable.
+            \item Let $\mathcal{A}$ be an antichain of $P(\mathbb{N})$ and let $\mathcal{A}_l$ be the sets in $\mathcal{A}$ of size $l$. For finite $l$, $\mathcal{A}_l$ is countable since $\mathcal{A}_l \subseteq \mathbb{N}^l$ is countable. Hence the countable union $\bigcup^\infty_{l=0} \mathcal{A}_l = \mathcal{A}$ is countable. 
+            \medskip
+
+            \noindent If $l$ is infinite, only countably many elements of $\mathcal{A}$ can be finite, while there will be uncountably many that myst be infinite, hence forming an uncountable antichain $\mathcal{A}$.
+        }
+    }
+}
