@@ -6,6 +6,7 @@
 *.gz
 *.out
 *.synctex.gz
+*.synctex(busy)
 *.thm
 *.toc
 
