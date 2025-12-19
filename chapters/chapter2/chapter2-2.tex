@@ -74,3 +74,14 @@
     } Some sequences eventually reach their limit, meaning that $N$ no longer has to increase.
     }
 }
+
+\bx{ % Exercise 2.2.6
+    Prove Theorem 2.2.7. To get started assume $(a_n) \rightarrow a$ and also that $(a_n) \rightarrow b$. Now argue $a = b$.
+    \sol{
+        \textbf{Theorem 2.2.7 (Uniqueness of Limits).} The limit of a sequence, when it exists, must be unique.
+
+        \AFSOC that $\lim a_n = a$ and $\lim a_n = b$, such that $a \neq b$. Then for $\epsilon > 0$, choosing $n > N_a$ implies $|a_n - a| < \epsilon/2$ and choosing $n> N_b$ implies $|a_n - b| < \epsilon/2$. Let $N = max(N_a, N_b)$, hence $|a_n - a| < \epsilon/2$ and $|a_n - b| < \epsilon/2$. By triangle inequality, \[
+            \epsilon = \epsilon/2 + \epsilon/2 > |a_n - a| + |a_n - b| = |a - a_n| + |a_n - b| \leq |a - b|      
+        \] showing that $a = \lim a = b$, which is a contradiction.
+    }
+}
