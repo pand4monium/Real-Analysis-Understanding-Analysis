@@ -27,3 +27,13 @@
         \]
     }}
 }
+
+\bx{ % Exercise 2.3.3
+    \textbf{(Squeeze Theorem)} Show that if $x_n \leq y_n \leq z_n$ for all $n \in \mathbb{N}$, and if $\lim x_n = \lim z_n = l$, then $\lim y_n = l$ as well.
+    \sol{
+        Let $\epsilon > 0$, set $N>0$ so that $|x_n - l| < \epsilon/3$ and $|z_n - l| < \epsilon/3$. By triangle inequality, we get \[
+        |z_n - x_n| \leq |z_n - l| + |l - x_n| < 2\epsilon/3
+        \]Since $z_n \geq y_n \geq x_n$, $|y_n - x_n| = y_n - x_n \leq z_n - x_n$. So by triangle inequality, \[
+        |y_n - l| \leq |y_n - x_n| + |x_n - l| \leq |z_n - x_n| + |x_n - l| < 2\epsilon/3 + \epsilon/3 = \epsilon\]
+    }
+}
