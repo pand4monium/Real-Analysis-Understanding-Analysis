@@ -123,3 +123,21 @@
         where $(x_n) \rightarrow x$ but $f(x_n) \rightarrow 1 \neq f(x) = 0$.
     }}
 }
+
+\bx{ % Exercise 2.3.9
+    \ea{
+        \item Let \seq{a}{n} be a bounded (not necessarily convergent) sequence, and assume $\lim b_n = 0$. Show that $\lim (a_nb_n) = 0$. Why are we not allowed to use the Algebraic Limit Theorem to prove this?
+        \item Can we conclude anything about the convergence of $(a_nb_n)$ if we assume that \seq{b}{n} converges to some nonzero limit $b$?
+        \item Use (a) to prove Theorem 2.3.3, part (iii), for the case when $a=0$.
+    }
+    \sol{\ea{
+        \item Since $(a_n)$ is bounded, let $|a_n| \leq M_a$. Consider \[
+            |a_nb_n| = |a_n||b_n| \leq M |b_n|  
+        \]For $\epsilon>0$, we can set $N>0$ such that $|b_n| < \epsilon / M$, giving us $|a_nb_n|<\epsilon$, hence $\lim (a_nb_n) = 0$.
+        \medskip
+
+        \noindent ALT does not hold as \seq{a}{n} does not converge.
+        \item If \seq{a}{n} converges, then $(a_nb_n)$ converges by ALT. Otherwise, $(a_nb_n)$ does not converge.
+        \item Shown in (a), $\lim (a_nb_n) = 0 =ab$ for $b= 0$, proving part (iii) of the ALT.
+    }}
+}   
