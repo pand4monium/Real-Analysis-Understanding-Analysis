@@ -14,3 +14,16 @@
         \]thus completing the proof.
     }}
 }
+
+\bx{ % Exercise 2.3.2
+    Using only Definition 2.2.3, prove that if $(x_n) \rightarrow 2$, then \ea{
+        \item $(\frac{2x_n - 1}{3}) \rightarrow 1$;
+        \item $(1/x_n) \rightarrow 1/2$;
+    } (For this exercise the Algebraic Limit Theorem is off-limits, so to speak.)
+    \sol{\ea{
+        \item We have $|\frac{2x_n - 1}{3} - 1| = |\frac{2}{3}x_n - \frac43| = \frac23 |x_n - 2|$. Setting $|x_n - 2| < \frac32\epsilon$ for all $n > N$, we get $|\frac{2x_n-1}{3} - 1| < \epsilon$.
+        \item We set $N$ such that $|x_n - 2| < $. Since $x_n$ is at least 1, we can bound $|1/x_n| \leq 1$, giving \[
+        |1/x_n - 1/2| = \frac{|2 - x_n|}{|2x_n|} \leq \frac{|x_n - 2|}{2} \leq \frac\epsilon2 < \epsilon.
+        \]
+    }}
+}
