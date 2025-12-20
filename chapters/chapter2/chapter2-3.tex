@@ -38,7 +38,7 @@
     }
 }
 
-\bx{
+\bx{ % Exercise 2.3.4
     Let $(a_n) \rightarrow 0$, and use the Algebraic Limit Theorem to compute each of the following limits (assuming the fractions are always defined): \ea{
         \item $\lim \left( \frac{1+2a_n}{1+3a_n-4a_n^2} \right)$
         \item $\lim \left( \frac{(a_n + 2)^2 - 4}{a_n}\right)$
@@ -60,4 +60,13 @@
             & = \frac{2 + 3\lim a_n}{1 + 5 \lim a_n} = 2
         \end{align*}
     }}
+}
+
+\bx{ % Exercise 2.3.5
+    Let $(x_n)$ and $(y_n)$ be given, and define $(z_n)$ to be the "shuffled" sequence $(x_1, y_1, x_2, y_2, x_3, y_3, \dots, x_n, y_n, \dots)$. Prove that $(z_n)$ is convergent if and only if $(x_n)$ and $(y_n)$ are both convergent with $\lim x_n = \lim y_n$.
+    \sol{
+        Obviously, if $\lim x_n = \lim y_n = l$, then for $\epsilon>0$, we can set $N>0$ such that $|x_n - l|< \epsilon$ and $|y_n - l|< \epsilon$ for $n > N$, thus for all $n > 2N$, $|z_n - l|< \epsilon$ will be true.
+
+        Conversely, if $(z_n) \rightarrow l$, for $\epsilon > 0$, we can set $2N > 0$ such that for all $n > 2N$, $|z_n - l| < \epsilon$, implying that for $n > N$, $|x_n - l| < \epsilon$ and $|y_n - l| < \epsilon$ will also be true.
+    }
 }
