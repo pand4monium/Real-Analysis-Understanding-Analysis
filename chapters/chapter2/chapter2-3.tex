@@ -141,3 +141,20 @@
         \item Shown in (a), $\lim (a_nb_n) = 0 =ab$ for $b= 0$, proving part (iii) of the ALT.
     }}
 }   
+
+\bx{
+    Consider the following list of conjectures. Provide a short proof for those that are true and a counterexample for any that are false. \ea{
+        \item If $\lim(a_n - b_n) = 0$, then $\lim a_n = \lim b_n$.
+        \item If $(b_n) \rightarrow b$, then $|b_n| \rightarrow |b|$.
+        \item If $(a_n) \rightarrow a$ and $(b_n - a_n) \rightarrow 0$, then $(b_n) \rightarrow a$.
+        \item If $(a_n) \rightarrow 0$ and $|b_n - b| \leq a_n$ for all $n \in \mathbb{N}$, then $(b_n) \rightarrow b$.
+    }
+    \sol{\ea{
+        \item False. Consider $a_n = n$ and $b_n = -n$, then $\lim (a_n - b_n) = 0$ but $\infty = \lim a_n \neq \lim b_n = - \infty$.
+        \item True. Since $|b_n -b| < \epsilon$, then without loss of generality, we assume $|b_n| > |b|$, so \[
+        ||b_n|-|b|| = |b_n| - |b| = |b_n - b + b| - |b| \leq |b_n - b| + |b| - |b| = |b_n - b| < \epsilon
+        \]
+        \item True. By ALT, $\lim b_n = \lim a_n + \lim (b_n - a_n) = a + 0 = a$.
+        \item True. Note that $0 \leq |b_n - b| \leq a_n$. Since $(a_n) \rightarrow 0$, by Squeeze Theorem in Exercise 2.3.3, $\lim |b_n - b| = 0$, hence $\lim b_n = b$.
+    }}
+}
