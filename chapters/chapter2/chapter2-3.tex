@@ -70,3 +70,18 @@
         Conversely, if $(z_n) \rightarrow l$, for $\epsilon > 0$, we can set $2N > 0$ such that for all $n > 2N$, $|z_n - l| < \epsilon$, implying that for $n > N$, $|x_n - l| < \epsilon$ and $|y_n - l| < \epsilon$ will also be true.
     }
 }
+
+\bx{ % Exercise 2.3.6
+    Consider the sequence given by $b_n = n - \sqrt{n^2 + 2n}$. Taking $(1/n) \rightarrow 0$ as given, and using both the Algebraic Limit Theorem and the result in Exercise 2.3.1, show $\lim b_n$ exists and find the value of the limit.
+    \sol{
+        Let $(b_n) \rightarrow b$. To remove the radical from the term, consider: \[
+        (n - \sqrt{n^2+2n})(n + \sqrt{n^2+2n}) = n^2 -(n^2+2n) = -2n 
+        \] By ALT, \begin{align*}
+        b = \lim \left( \frac{-2n}{n + \sqrt{n^2 + 2n}}\right)
+        = \lim \frac{-2}{1 + \sqrt{1 +2/n}}
+        = \frac{-2}{1 +\sqrt{1 + 2 \lim(1/n)}}
+        = \frac{-2}{1+ \sqrt{1+ 0}}
+        = -1
+        \end{align*}thus showing that the limit exists and $(b_n) \rightarrow 1$.
+    }
+}
