@@ -85,3 +85,22 @@
         \end{align*}thus showing that the limit exists and $(b_n) \rightarrow 1$.
     }
 }
+
+\bx{ % Exercise 2.3.7
+    Give an example of each of the following, or state that such a request is impossible by referencing the proper theorem(s): \ea{
+        \item sequences $(x_n)$ and $(y_n)$, which both diverge but whose sum $(x_n + y_n)$ converges;
+        \item sequences $(x_n)$ and $(y_n)$, where $(x_n)$ converges, $(y_n)$ diverges, and $(x_n + y_n)$ converges;
+        \item a convergent sequence $(b_n)$ with $b_n \neq 0$ for all $n$ such that $(1/b_n)$ diverges;
+        \item an unbounded sequence $(a_n)$ and a convergent sequence $(b_n)$ with $(a_n-b_n)$ bounded;
+        \item two sequences $(a_n)$ and $(b_n)$, where $(a_nb_n)$ and $(a_n)$ converge but $(b_n)$ does not.
+    }
+    \sol{\ea{
+        \item Consider $x_n = n$ and $y_n = -n$ but $x_n + y_n = 0$ for all $n \in \mathbb{N}$.
+        \item Impossible. By ALT, $\lim y_n = \lim (x_n + y_n) - \lim x_n$ must converge, which is a contradiction.
+        \item Consider $b_n = 1/n$, then $1/b_n = n$, so $(1/b_n) \rightarrow \infty$.
+        \item Impossible. Let $|b_n| \leq M$ and $|a_n - b_n| \leq N$. By triangle inequality, \[
+            |a_n| \leq |a_n - b_n| + | b_n| \leq M+N
+        \], hence is also bounded, which is a contradiction.
+        \item  Consider $a_n = 1/n$ and $b_n = n$, then $a_nb_n = 1$.
+    }}
+}
