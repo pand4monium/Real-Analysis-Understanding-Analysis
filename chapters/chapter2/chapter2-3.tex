@@ -158,3 +158,29 @@
         \item True. Note that $0 \leq |b_n - b| \leq a_n$. Since $(a_n) \rightarrow 0$, by Squeeze Theorem in Exercise 2.3.3, $\lim |b_n - b| = 0$, hence $\lim b_n = b$.
     }}
 }
+
+\bx{ % Exercise 2.3.11
+    \textbf{(Cesaro Means).} \ea{
+        \item Show that if \seq{x}{n} is a convergent sequence, then the sequence given by the averages \[
+        y_n = \frac{x_1+x_2+\dots+x_n}{n}\]
+        also converges to the same limit.
+        \item Give an example to show that it is possible for the sequence \seq{y}{n} of averages to converge even if \seq{x}{n} does not.
+    }
+    \sol{\ea{
+        \item Let $D = \sup \{|x_n - x|: n \in \mathbb{N}\}$ and $0 < \epsilon < D$, we have
+        \[
+            |y_n - x| = \left|\frac{x_1 + x_2 + \dots + x_n}{n} - \frac{xn}{n}\right| \leq \left|\frac{|x_1 - x| + |x_2 -x| + \dots + |x_n - x|}{n} \right| \leq D
+        \]
+        Set $N_1>0$ such that $|x_n - x| < \epsilon/2$ for $n > N_1$, giving \[
+            |y_n - x| = \left|\frac{|x_1 - x| + \dots |x_{N_1}-x|+\dots + |x_n - x|}{n}\right| \leq \left|\frac{N_1D + (n-N_1)\epsilon/2}{n}\right|
+        \]
+        Set $N_2 > 0$ such that for all $n > N_2$, \[
+            0 < \frac{N_1 (D - \epsilon/2)}{n} < \epsilon/2
+        \]
+        Therefore \[
+            |y_n - x| \leq \left|\frac{N_1(D-\epsilon/2)}{n} + \epsilon / 2\right| \leq \left| \frac{N_1(D -\epsilon/2)}{n}\right| + \epsilon/2 < \epsilon
+        \]
+        Setting $N = max\{N_1, N_2\}$ completes the proof.
+        \item $x_n = (-1)^n$ diverges but $(y_n) \rightarrow 0$.
+    }}
+}
