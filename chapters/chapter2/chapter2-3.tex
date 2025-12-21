@@ -197,3 +197,19 @@
         \item False. Consider the sequence $(1, 1.4, 1.41, 1.414, \dots) \rightarrow \sqrt2$.
     }}
 }
+
+\bx{ % Exercise 2.3.13
+    \textbf{(Iterated Limits).} Given a doubly indexed array $a_{mn}$ where $m,n \in \mathbb{N}$, what should $\lim_{m,n\rightarrow\infty} a_{mn}$ represent? \ea{
+        \item Let $a_{mn} = m / (m+n)$ and compute the \textit{iterated} limits \[
+        \lim_{n\rightarrow\infty}\left(\lim_{m\rightarrow\infty}a_{mn}\right) \quad \text{and} \quad \lim_{m\rightarrow\infty}\left(\lim_{n\rightarrow\infty}a_{mn}\right).
+        \]
+        Define $\lim_{m,n \rightarrow \infty} a_{mn} = a$ to mean that all $\epsilon>0$ there exists an $N \in \mathbb{N}$ such that if both $m,n \geq N$, then $|a_{mn} - a| < \epsilon$.
+        \item Let $a_{mn} = 1/(m+n)$. Does $\lim_{m,n\rightarrow\infty}a_{mn}$ exist in this case? Do the two iterated limits exist? How do these three values compare? Answer these same questions for $a_{mn} = mn/(m^2+n^2)$.
+        \item Produce an example where $\lim_{m,n \rightarrow \infty}a_{mn}$ exists but neither iterated limit can be computed.
+        \item Assume $\lim_{m,n\rightarrow\infty}a_{mn} = a$, and assume that for each fixed $m \in \mathbb{N}$, $\lim_{n\rightarrow\infty}(a_{mn}) \rightarrow b_m$. Show $\lim_{m\rightarrow\infty}b_m = a$.
+        \item Prove that if $\lim_{m,n\rightarrow\infty}a_{mn}$ exists and the iterated limits both exists, then all three limits must be equal.
+    }
+    \sol{
+        
+    }
+}
