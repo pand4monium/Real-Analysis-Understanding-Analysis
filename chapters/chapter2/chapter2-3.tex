@@ -184,3 +184,16 @@
         \item $x_n = (-1)^n$ diverges but $(y_n) \rightarrow 0$.
     }}
 }
+
+\bx{ % Exercise 2.3.12
+    A typical task in analysis is to decipher whether a property possessed by every term in a convergent sequence is necessarily inherited by the limit. Assume $(a_n) \rightarrow a$, and determine the validity of each claim. Try to produce a counterexample for any that are false. \ea{
+        \item If every $a_n$ is an upper bound for a set $B$, then $a$ is also an upper bound for $B$.
+        \item If every $a_n$ is in the complement of the interval $(0,1)$, then $a$ is also in the complement of $(0,1)$.
+        \item If every $a_n$ is rational, then $a$ is rational.
+    }
+    \sol{\ea{
+        \item True. For all $n\in \mathbb{N}$, $a_n \geq \sup B$, by Order Limit Theorem, $a = \lim a_n \geq \sup B$.
+        \item True. If $a \in (0,1)$, then there would exists an $\epsilon$-neighborhood inside $(0,1)$ that $a_n$ would have to fall in, contradicting the fact the $a \notin (0,1)$.
+        \item False. Consider the sequence $(1, 1.4, 1.41, 1.414, \dots) \rightarrow \sqrt2$.
+    }}
+}
