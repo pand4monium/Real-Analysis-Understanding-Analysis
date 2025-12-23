@@ -209,7 +209,20 @@
         \item Assume $\lim_{m,n\rightarrow\infty}a_{mn} = a$, and assume that for each fixed $m \in \mathbb{N}$, $\lim_{n\rightarrow\infty}(a_{mn}) \rightarrow b_m$. Show $\lim_{m\rightarrow\infty}b_m = a$.
         \item Prove that if $\lim_{m,n\rightarrow\infty}a_{mn}$ exists and the iterated limits both exists, then all three limits must be equal.
     }
-    \sol{
-        
-    }
+    \sol{\ea{
+        \item \[
+        \lim_{n\rightarrow\infty}\left(\lim_{m\rightarrow\infty} a_{mn}\right) = 1 \quad \text{and} \quad \lim_{m\rightarrow\infty}\left(\lim_{n\rightarrow\infty} a_{mn}\right)=0
+        \]
+        \item For $a_{mn}=a/(m+n)$, both iterated limits exists and equal to $\lim_{m,n\rightarrow\infty}a_{mn} = 0$.
+        \medskip
+
+        \noindent For $a_{mn}=mn/(m^2+n^2)$, both iterated limits equal to zero. However, $\lim_{m,n\rightarrow\infty}a_{mn}$ does not exists.
+        \item Consider $b_{mn} = 1/\min\{m,n\}$. WLOG, we can fix $m$ and as $n$ approaches infinity, $n > m$ causing the limit to be $1/m$. To ensure that the limit does not exists, we can introduce the term $(-1)^{n+m}$, giving \[
+        a_{mn} = \frac{(-1)^{m+n}}{\min\{m,n\}}
+        \]This works as the inner limits of the iterated limits are not defined since it is oscillating between $1/m$ and $-1/m$. However, if both $m,n \geq N$ for some $N>0$, the limit equals zero as $0 < \lim|a_{mn}| \leq \lim |1/(m+n)| \leq \lim |1/2N| = 0$.
+        \item For $\epsilon > 0$, we can choose $N>0$ such that for all $m,n > N_0$, $|a_{mn} - a| < \epsilon/2$. For each fixed $m \in \mathbb{N}$, we can choose $N_m>0$ such that for $n > N_m$, $|a_{mn} - b_m| < \epsilon/2$. By triangle inequality, \[
+        |b_m - a| = |b_m - a_{mn} + a_{mn} -a| \leq |b_m - a_{mn}| + |a_{mn} - a| \leq \epsilon/2 + \epsilon/2 = \epsilon
+        \] Hence we can choose $N = \max\{N_0, N_m\}$ and we are done.
+        \item Let $b_m = \lim_{n\rightarrow\infty}(a_{mn})$, $c_n = \lim_{m\rightarrow\infty}(a_{mn})$, and $a = \lim_{m,n\rightarrow\infty}(a_{mn})$. In (d), we have shown that $(b_m) \rightarrow a$. A similar argument shows $(c_n) \rightarrow a$. Thus all three limits are equal to $a$.
+    }}
 }
