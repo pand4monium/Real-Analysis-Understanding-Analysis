@@ -102,3 +102,20 @@
         Proof of this is similar to (a) and left as an exercise for the reader.
     }}
 }
+
+\bx{ % 2.4.6
+    \textbf{(Arithmetic-Geometric Mean)} \ea{
+        \item Explain why $\sqrt{xy} \leq (x+y) / 2$ for any two positive real numbers $x$ and $y$. (The geometric mean is always less than the arithmetic mean.)
+        \item Now let $0 \leq x_1 \leq y_1$ and define \[
+        x_{n+1} = \sqrt{x_ny_n} \quad \text{and} \quad y_{n+1} = \frac{x_n + y_n}{2}\] Show $\lim x_n$ and $\lim y_n$ both exist and are equal.
+    }
+    \sol{\ea{
+        \item We have \[
+        \sqrt{xy} \leq \frac{x+y}{2} \iff 4xy \leq x^2 + 2xy + y^2 \iff 0 \leq (x-y)^2\]
+        \item As shown above, if $\lim x_n = x$ and $\lim y_n = y$, then $x_n = y_n$ is the only fixed point, hence $x = y$. Thus we only need to show both sequences converge.
+        
+        The inequality $0 \leq x_n \leq y_n$ is always true. It is obvious both terms will always be positive. Suppose $x_n \leq y_n$, then by (a), $x_{n+1} \leq y_{n+1}$ true.
+
+        To continue, $x_n \leq y_n$ implies $(x_n +y_n)/2 = y_{n+1} \leq y_n$. Similarly, $\sqrt{x_ny_n} = x_{n+1} \geq x_n$. This means both sequences are monotone and bounded by each other, hence Monotone Convergence Theorem tells us both sequences converge.
+    }}
+}
