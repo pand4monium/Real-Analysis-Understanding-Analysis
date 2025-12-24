@@ -119,3 +119,28 @@
         To continue, $x_n \leq y_n$ implies $(x_n +y_n)/2 = y_{n+1} \leq y_n$. Similarly, $\sqrt{x_ny_n} = x_{n+1} \geq x_n$. This means both sequences are monotone and bounded by each other, hence Monotone Convergence Theorem tells us both sequences converge.
     }}
 }
+
+\bx{ % 2.4.7
+    \textbf{(Limit Superior)} Let \seq{a}{n} be a bounded sequence. \ea{
+        \item Prove that the sequence defined by $y_n = \sup \{a_k : k \geq n\}$ converges.
+        \item The \textit{limit superior} of \seq{a}{n}, or $\lim \sup a_n$, is defined by \[
+        \lim \sup a_n = \lim y_n,
+        \] where $y_n$ is the sequence from part (a) of this exercise. Provide a reasonable definition for $\lim \inf a_n$ and briefly explain why it always exists for any bounded sequence.
+        \item Prove that $\lim \inf a_n \leq \lim \sup a_n$ for every bounded sequence, and give an example of a sequence for which the inequality is strict.
+        \item Show that $\lim\inf a_n = \lim \sup a_n$ \itiff $\lim a_n$ exists. In this case, all three share the same value.
+    }
+    \sol{ \ea{
+        \item \seq{y}{n} is decreasing, hence MCT tells us it converges.
+        \item The \textit{limit inferior} of \seq{a}{n}, or $\lim \inf a_n$, is defined by $\lim\inf a_n = \lim x_n$, where $x_n = \inf\{a_k: k \geq n\}$.
+        
+        Since \seq{x}{n} is increasing, MCT tells us it converges, hence the limit inferior exists.
+        \item Obviously, $\inf\{a_k : k \geq n\} \leq \sup\{a_k : k \geq n\}$, so Order Limit Theorem implies $\lim\inf a_n \leq \lim\sup a_n$. 
+        
+        The equality is strict when the series does not converge, for example $a_n = (-1)^n$.\
+        \item $(\Rightarrow)$ If $\lim \inf a_n = \lim \sup a_n$, then Squeeze Theorem implies that $a_n$ converges to the same value, since $\inf\{a_{k\geq n}\} \leq a_n \leq \sup\{a_{k\geq n}\}$.
+        
+        $(\Leftarrow)$ Assume that $\lim a_n = a$. For $\epsilon > 0$, we can find $N > 0$ such that for all $k > N$, $|a_k - a| < \epsilon$. This means \[
+        a - \epsilon < x_N \leq x_k \leq y_k \leq y_N < a + \epsilon\]
+        implying that both $x_n$ and $y_n$ converge to $a$.
+        }}
+}
