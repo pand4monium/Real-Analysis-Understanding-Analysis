@@ -166,3 +166,15 @@
         \sum_{n=1}^{\infty} \log \left(\frac{n+1}{n}\right) = \log (n+1)\]which does not converge.
     }}
 }
+
+\bx{ % 2.4.9
+    Complete the proof of Theorem 2.4.6 by showing that if the series $\sum^\infty_{n=0} 2^nb_{2^n}$ diverges, then so does $\sum_{n=1}^\infty b_n$. Example 2.4.5 may be a useful reference.
+    \sol{
+        The conditions given state that \seq{b}{n} is decreasing and $b_n \geq 0$ for all $n \in \mathbb{N}$. Suppose $\sum_{n=1}^{\infty} 2^n b_{2^n}$ diverges, let $s_k = \sum_{n=1}^{k} n_n$ and $t_k = \sum_{n=1}^{k} 2^n b_{2^n}$, then \begin{align*}
+            s_{2^k} & = b_1 + b_2 + (b_3 + b_4) + \dots + (b_{2^{k-1}+1} + \dots + b_{2^k}) \\
+            & \geq b_1 + b_2 + (b_4 + b_4) + \dots + 2^{k-1}b_2^k
+        \end{align*} We define $t'_k$ to be our new series $b_1 + b_2 + 2b_4 + \dots + 2^{k-1}b_{2^k}$. Then, \[
+        t'_k = \frac12 (b_1 + 2b_2 + 4b_4 + \dots + 2^kb_k) + \frac12 b_1 = \frac12 t_k + \frac12 b_1\] Therefore, \[
+        s_{2^k} \geq t'_k \geq \frac12 t_k\]By Order Limit Theorem, since $t_k$ diverges, $s_n$ must also diverge.
+    }
+}
