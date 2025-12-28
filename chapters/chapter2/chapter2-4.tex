@@ -149,7 +149,7 @@
     For each series, find an explicit formula for the sequence of partial sums and determine if the series converges.
     \[\text{(a)}\sum_{n=1}^{\infty}\frac{1}{2^n} \quad \text{(b)}\sum_{n=1}^{\infty}\frac{1}{n(n+1)} \quad \text{(c)} \sum_{n=1}^{\infty}\log\left(\frac{n+1}{n}\right)\]
     (In (c), $\log(x)$ refers to the natural logarithm function from calculus.)
-    \sol{
+    \sol{\ea{
         \item This is a geometric series, allowing us to use the usal trick to determine $s_n$. \begin{align*}
             s_n & = 1 + \frac12 + \frac14 + \dots + \frac{1}{2^n} \\
             \frac12 s_n & = \frac12 + \frac14 + \dots + \frac{1}{2^{n+1}} \\
@@ -164,5 +164,5 @@
         \item Similar to (b), we can use telescoping sum since \[
         \log\left(\frac{n+1}{n}\right) = \log (n+1) - \log(n)\] Hence, we get \[
         \sum_{n=1}^{\infty} \log \left(\frac{n+1}{n}\right) = \log (n+1)\]which does not converge.
-    }
+    }}
 }
