@@ -144,3 +144,25 @@
         implying that both $x_n$ and $y_n$ converge to $a$.
         }}
 }
+
+\bx{ % 2.4.8
+    For each series, find an explicit formula for the sequence of partial sums and determine if the series converges.
+    \[\text{(a)}\sum_{n=1}^{\infty}\frac{1}{2^n} \quad \text{(b)}\sum_{n=1}^{\infty}\frac{1}{n(n+1)} \quad \text{(c)} \sum_{n=1}^{\infty}\log\left(\frac{n+1}{n}\right)\]
+    (In (c), $\log(x)$ refers to the natural logarithm function from calculus.)
+    \sol{
+        \item This is a geometric series, allowing us to use the usal trick to determine $s_n$. \begin{align*}
+            s_n & = 1 + \frac12 + \frac14 + \dots + \frac{1}{2^n} \\
+            \frac12 s_n & = \frac12 + \frac14 + \dots + \frac{1}{2^{n+1}} \\
+            \frac12 s_n - s_n & = \frac1{2^{n+1}} - 1 \implies s_n = \frac{2^{-n-1}-1}{2^{-1}-1}
+        \end{align*} As $n$ tends to infinity, \[
+        \sum_{n=1}^{\infty}\frac1{2^n} = - 1 + \sum_{n=1}^{\infty}\frac1{2^n} = -1 + \lim_{n\rightarrow\infty}\frac{2^{-n-1}-1}{2^{-1}-1} = 1\]
+
+        \item We can use partial fractions to get  \[
+        \frac{1}{n(n+1)} = \frac1n - \frac1{n+1}\]which gives a telescoping sum \[
+        s_n = 1 - \frac1{n+1}\] Therefore, \[
+        \sum_{n=1}^{\infty}\frac{1}{n(n+1)} = \lim_{n\rightarrow \infty}\left(1 - \frac{1}{n+1}\right) = 1\]
+        \item Similar to (b), we can use telescoping sum since \[
+        \log\left(\frac{n+1}{n}\right) = \log (n+1) - \log(n)\] Hence, we get \[
+        \sum_{n=1}^{\infty} \log \left(\frac{n+1}{n}\right) = \log (n+1)\]which does not converge.
+    }
+}
