@@ -178,3 +178,28 @@
         s_{2^k} \geq t'_k \geq \frac12 t_k\]By Order Limit Theorem, since $t_k$ diverges, $s_n$ must also diverge.
     }
 }
+
+\bx{ % 2.4.10
+    \textbf{(Infinite Products).} A close relative of infinite series is the \textit{infinite product} \[
+    \prod_{n=1}^\infty b_n = b_1b_2b_3 \dots\] which is understood in terms of its sequence of \textit{partial products} \[
+    p_m = \prod_{n=1}^{m} b_n = b_1b_2b_3 \dots b_m\] Consider the special class of infinite products of the form \[
+    \prod_{n=1}^{\infty}(1 + a_n) = (1+a_1)(1+a_2)(1+a_3) \dots, \quad \text{where } a_n \geq 0\] \ea{
+        \item Find an explicit formula for the sequence of partial products in the case where $a_n = 1/n$ and decide whether the sequence converges. Write out the first few terms in the sequence of partial products in the case where $a_n = 1/n^2$ and make a conjecture about the convergence of this sequence.
+        \item Show, in general, that the sequence of partial products converges if and only if $\sum_{n=1}^{\infty} a_n$ converges. (The inequality $1 _ x \leq 3^x$ for positive $x$ will be useful in one direction.)
+    }
+    \sol{\ea{
+        \item This is a telescoping product as most terms cancel each other \[
+        p_m = \prod_{n=1}^{m} \left(1+\frac1n\right) = \prod_{n=1}^{m} \frac{n+1}{n} = \frac21 \cdot \frac32\cdot\frac43\cdot \dots \cdot\frac{m+1}{m} = m+1\] therefore, \seq{p}{m} diverges.
+
+        For the case $a_n = 1/n^2$, \[
+        \prod_{n=1}^\infty \left(1 + \frac1{n^2}\right) = \frac21\cdot\frac54\cdot\frac{10}9\cdot\dots\] I conjecture that the series converges as the growth seems slower.
+        \item Let $p_m$ be the series of partial product and $s_n$ be the series of partial sums.
+        
+        $(\Rightarrow)$ We will show this using induction. It is obvious that $p_1 \leq s_1 + 1$. By distributing the terms, we get $p_2 = (1+a_1)(1+a_2) = 1 + a_1a_2 + a_1 + a_2 > a_1 + a_2 + 1 = s_2 + 1$, hence $p_2 > s_2 + 1$. Suppose $p_n > s_n + 1$, then \[
+        p_{n+1} = (1+a_{n+1})p_n > (1+ a_{n+1})(s_n + 1) = s_n + s_na_{n+1} + a_{n+1} + 1 > s_{n+1} + 1 \]By Order Limit Theorem, if \seq{p}{m} converge, \seq{s}{n} converges.
+
+        $(\Leftarrow)$ Using the inequality $1+x \leq 3^x$, we get \[
+        p_n = (1+a_1)(1+a_2) \dots (1 + a_n) = 3^{a_1} \cdot 3^{a_2} \cdot \dots \cdot 3^{a_n} = 3^{s_n}\] Since $s_n$ converges, it is bounded, hence $s_n \leq M$. Hence we get \[
+        p_n \leq 3^{s_n} \leq 3^M\] Monotone Convergence Theorem tells us that \seq{p}{m} converges as it is monotone increasing (since $(1+a_n)\geq 1$) and bounded. 
+    }}
+}
