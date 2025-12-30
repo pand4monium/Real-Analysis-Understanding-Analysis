@@ -20,3 +20,18 @@
         \]therefore we have found a number $b_m$ in the sequence $a_m$ with $|b_m| < \epsilon$. Repeating this process for any $\epsilon$ allows us to construct a subsequence that converges to zero.
     }}
 }
+
+\bx{ % 2.5.2
+    Decide whether the following propositions are true or false, providing a short justification for each conclusion. \ea{
+        \item If every proper subsequence of \seq{x}{n} converges, then \seq{x}{n} converges as well.
+        \item If \seq{x}{n} contains a divergent subsequence, then \seq{x}{n} diverges.
+        \item If \seq{x}{n} is bounded and diverges, then there exist two subsequences of \seq{x}{n} that converge to different limits.
+        \item If \seq{x}{n} is monotone and contains a convergent subsequence, then \seq{x}{n} converges.
+    }
+    \sol{\ea{
+        \item True, removing the first term gives us the proper subsequence $(x_2, x_3, \dots)$ which converges. This implies that \seq{x}{n} converges to the same value, since changing the index of the terms does not change the limit behaviour of the sequence.
+        \item True, the contrapositive of the statement is "If $(x_n)$ converges, then every subsequence converges to the same value", which is true.
+        \item True. By BWT, the bounded sequence $(x_n)$ has a convergent subsequence as it is bounded. Let $(a_n)$ be one such subsequence with limit $a$. Since $(x_n)$ does not converge to $a$, there exists $\epsilon > 0$ such that there are infinitely many terms of $(x_n)$ that lie outside the interval $(a-\epsilon, a + \epsilon)$. Let \seq{b}{n} be the sequence of those terms, and since it is bounded, BWT tells us we can find another convergent subsequence \seq{c}{n} with limit of c. Since the terms of \seq{c}{n} lie outside the $\epsilon$-neighbourhood of $a$, $c \neq a$. Hence we have found two subsequences that converge to different limits.
+        \item True. The subsequence \seq{x}{n_k} converges, means that it is bounded $|x_{n_k}| \leq M$. Suppose $(x_n)$ is increasing, then $x_n$ is bounded since we can pick a $k$ so that $n_k > n$, we have $x_n \leq x_{n_k} \leq M$, thus converging. A similar argument can done if \seq{x}{n} is decreasing by taking the negative of each terms as a new sequence. 
+    }}
+}
