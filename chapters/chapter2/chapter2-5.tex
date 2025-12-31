@@ -63,3 +63,10 @@
         The assumption that $(1/2^n) \rightarrow 0$ is necessary because the Archimedian Property was proved using the Axiom of Completeness.
     }
 }
+
+\bx{ % 2.5.5
+    Assume \seq{a}{n} is a bounded sequence with the property that every convergent subsequence of \seq{a}{n} converges to the same limit $a \in \mathbb{R}$. Show that \seq{a}{n} must converge to $a$.
+    \sol{
+        Suppose \seq{a}{n} does not converge to $a$. For some $\epsilon > 0$ wee can find a subsequence \seq{b}{n} satisfying $|b_n - a| \geq \epsilon$ for all $n\in \mathbb{N}$. Since \seq{a}{n} is bounded, so must \seq{b}{n}. BWT tells us there must be a convergent subsequence of \seq{b}{n} that converges to $b$. Evidently, $b \neq a$ as $|b_n - a| \geq \epsilon$, leading to a contradiction as not every convergent subsequence of \seq{a}{n} converges to the same limit.
+    }
+}
