@@ -35,3 +35,15 @@
         \item True. The subsequence \seq{x}{n_k} converges, means that it is bounded $|x_{n_k}| \leq M$. Suppose $(x_n)$ is increasing, then $x_n$ is bounded since we can pick a $k$ so that $n_k > n$, we have $x_n \leq x_{n_k} \leq M$, thus converging. A similar argument can done if \seq{x}{n} is decreasing by taking the negative of each terms as a new sequence. 
     }}
 }
+
+\bx{ % 2.5.3
+    \ea{
+        \item Prove that if an infinite series converges, then the associative property holds. Assume $a_1+a_2+a_3+a_4+a_5 + \dots$ converges to a limit $L$ (i.e., the sequence of partial sums $(s_n) \rightarrow L$). Show that any regrouping of the terms \[
+        (a_1 + a_2 + \dots + a_{n_1}) + (a_{n_1+1}+\dots+a_{n_2}) + (a_{n_2+1}+ \dots + a_{n_3})+\dots\] leads to a series that also converges to $L$.
+        \item Compare this result to the example discussed at the end of Section 2.1 where the infinite addition was not to be associative. Why doesn't our proof in (a) apply to this example?
+    }
+    \sol{\ea{
+        \item Let $s_n$ be the original partial sums and $s'_m$ be the regrouping. Since \seq{s'}{m} is a subsequence of \seq{s}{n}, $(s_n) \rightarrow L$ implies $(s'_n) \rightarrow L$.
+        \item The converse is not true. $(s'_m)$ converging does not imply that $(s_n)$ converges.
+    }}
+}
