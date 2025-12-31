@@ -47,3 +47,19 @@
         \item The converse is not true. $(s'_m)$ converging does not imply that $(s_n)$ converges.
     }}
 }
+
+\bx{ % 2.5.4
+    The Bolzano-Weierstrass Theorem is extremely important, and so is the strategy employed in the proof. TO gain some more experience with this technique, assume the Nested Interval Property is true an duse it to provide a proof of the Axiom of Completeness. TO prevent the argument from being circular, assume also that $(1/2^n)\rightarrow 0$. (Why precisely is this last assumption needed to avoid circularity?)
+    \sol{
+        Let $A$ be a bounded set. We are going to conduct a binary search for $\sup A$ and then use NIP to prove the limit exists.
+
+
+        Let $M$ be an upper bound on A, and pick any $L \in A$ as our starting lower bound for $\sup A$. We define $I_1 = [L, M]$. Doing a binary search, gives us $I_{n+1} \subseteq I_n$ with length proportional to $(1/2)^n$. Applying NIP gives us $\bigcap^\infty_{n=1} I_n \neq \emptyset$. As the length goes to zero, there exists a single $s \in \bigcap^\infty_{n=1}I_n$, which must be the least upper bound since, \er{
+            \item $s \geq L_n$ implies $s$ is an upper bound
+            \item $s \leq M_n$ implies $s$ is the least upper bound
+        }
+
+
+        The assumption that $(1/2^n) \rightarrow 0$ is necessary because the Archimedian Property was proved using the Axiom of Completeness.
+    }
+}
