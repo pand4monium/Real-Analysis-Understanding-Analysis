@@ -70,3 +70,17 @@
         Suppose \seq{a}{n} does not converge to $a$. For some $\epsilon > 0$ wee can find a subsequence \seq{b}{n} satisfying $|b_n - a| \geq \epsilon$ for all $n\in \mathbb{N}$. Since \seq{a}{n} is bounded, so must \seq{b}{n}. BWT tells us there must be a convergent subsequence of \seq{b}{n} that converges to $b$. Evidently, $b \neq a$ as $|b_n - a| \geq \epsilon$, leading to a contradiction as not every convergent subsequence of \seq{a}{n} converges to the same limit.
     }
 }
+
+\bx{ % 2.5.6
+    Use a similar strategy to the one in Example 2.5.3 to show that $\lim b^{1/n}$ exists for all $b \geq 0$ and find the value of the limit. (The results in Exercise 2.3.1 may be assumed.)
+    \sol{
+        To show that the limit exists, we need to apply the Monotone Convergence Theorem. Consider the three cases \er{
+            \item Case 1: $b > 1$, then $b^{1/n}$ is decreasing as $\frac1{n+1} < \frac1n$ implies $\frac{\ln b}{n+1} < \frac{\ln b}{n}$ hence $b^{1/(n+1)} < b^{1/n}$. Also, $b^{1/n} \iff b > 1^n$, hence bounded.
+            \item Case 2: $b < 1$, then MCT applies for similar reason as Case 1.
+            \item Case 3: $b=1$. This case is trivial.
+        }
+        Monotone Convergence Theorem applies, hence we know the limit exists, then $\lim b^{1/n} = c$. Consider the subsequence: \[
+        b^\frac{1}{2n} = \sqrt{b^{1/n}}\] Using Exercise 2.3.1, we know $\lim \sqrt{b^{1/n}} = \sqrt{c}$ and since subsequences converge to the same limit:\[
+        c = \sqrt{c}\] Hence $c=0$ or $1$. For $b >1$, the only possible limit is $c=1$. For $b<1$, the increasing sequence is bounded by $b^{1/n} \geq b$. Hence, for $0<b<1$, $c = 1$. For the case when $b = 0$, $c=0$ is trivial.
+    }
+}
