@@ -84,3 +84,12 @@
         c = \sqrt{c}\] Hence $c=0$ or $1$. For $b >1$, the only possible limit is $c=1$. For $b<1$, the increasing sequence is bounded by $b^{1/n} \geq b$. Hence, for $0<b<1$, $c = 1$. For the case when $b = 0$, $c=0$ is trivial.
     }
 }
+
+\bx{ %  2.5.7
+    Extend the result proved in Example 2.5.3 to the case $|b| < 1$; that is, show $\lim (b^n)$ if and only if $-1<b<1$.
+    \sol{
+        ($\Rightarrow$) Given $\lim (b^n) = 0$, \AFSOC $|b| \geq 1$. Then $\lim b^n \neq b$. (Diverges for $b \neq 1$)
+        
+        ($\Leftarrow$) If $|b| < 1$, the  $|b^n|<1$, thus $b^n$ is bounded. By Exercise 2.5.3, it is decreasing and monotone convergence theorem applies. To find the limit, equating the terms gives us $b^{n+1} = b^n$, thus $b=0$ or $b=1$. Since $b$ is strictly decreasing, we have $b = 0$.
+    }
+}
