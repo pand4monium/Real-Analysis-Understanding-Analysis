@@ -93,3 +93,18 @@
         ($\Leftarrow$) If $|b| < 1$, the  $|b^n|<1$, thus $b^n$ is bounded. By Exercise 2.5.3, it is decreasing and monotone convergence theorem applies. To find the limit, equating the terms gives us $b^{n+1} = b^n$, thus $b=0$ or $b=1$. Since $b$ is strictly decreasing, we have $b = 0$.
     }
 }
+
+\bx{ % 2.5.8
+    Another way to prove the Bolzano-Weierstrass Theorem is to show that every sequence contains a monotone subsequence. A useful device in this endeavor is the notion of \textit{peak term}. Given a sequence \seq{x}{n}, a particular $x_m$ is a peak term if no later term in the sequence exceeds it; i.e., if $x_m \geq x_n$ for all $n \geq m$. \ea{
+        \item Find examples of sequences with zero, one and two peak terms. Find an example of a sequnce with infinitely many peak terms that is not monotone. 
+        \item Show that every sequence contains a monotone subsequence and explain how this furnishes a new proof of the Bolzano-Weierstrass Theorem.
+    }
+    \sol{\ea{
+        \item $(1, 2, 3, \dots )$, $(1, 1/2, 2/3, \dots)$ and $(2, 1, 1/2, 2/3 \dots )$ has zero, one and two peak terms respectively. The sequence $(1, -1/2, 1/3, -1/4, \dots)$ has infinitely many peak terms, but is not montone.
+        \item If there is an infinite number of peak terms. Each peak term is, by definition, lower than the last. We can take the subsequence of peak terms, which is strictly increasing, to find a monotone subsequence.
+        
+        If there is a finite number of peak term, let the last peak term be at the index $k$. Consider the subsequence of terms after the last peak term. Since there is no peak terms after $x_k$, then $x_m \geq x_n$ for any $m > n > k$. Hence, the subsequence is monotone increasing.
+
+        If the original sequence is bounded, and we can find a monotone subsequence, MCT tells us that this subsequence converges, proving BWT.
+    }}
+}
