@@ -7,3 +7,18 @@
         |x_n - x_m| \leq |x_n - x| + |x - x_m| < \epsilon/2 + \epsilon/2 = \epsilon\]
     }
 }
+
+\bx{ % 2.6.2
+    Give an example of each of the following, or argue that such a request is impossible. \ea{
+        \item A Cauchy sequence that is not monotone.
+        \item A Cauchy sequence with an unbounded subsequence.
+        \item A divergent monotone sequence with a Cauchy subsequence.
+        \item An unbounded sequence containing a subsequence that is Cauchy.
+    }
+    \sol{\ea{
+        \item $x_n = (-1)^n/n$ converges and hence Cauchy but not monotone.
+        \item Impossible. Cauchy sequences must converge and hence bounded.
+        \item Impossible. A Cauchy subsequence will converge, implying that it is bounded. Since the sequence is montone, it is also bounded, thus MCT tells us it converges.
+        \item $(2, 1/2, 3, 1/3, \dots)$ has the subsequence $(1/2, 1/3, \dots)$ which is Cauchy.
+    }}
+}
