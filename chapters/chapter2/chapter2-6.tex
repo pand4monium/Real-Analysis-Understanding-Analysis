@@ -37,3 +37,20 @@
         \end{align*}After setting $|x_n -x_m| < \epsilon / (2M_y)$ and $|y_n -y_m| < \epsilon/(2M_x)$.
     }}
 }
+
+\bx{ % 2.6.4
+    Let \seq{a}{n} and \seq{b}{n} be Cauchy sequences. Decide whether each of the following sequences is a Cauchy sequence, justifying each conclusion. \ea{
+        \item $c_n = |a_n - b_n|$
+        \item $c_n = (-1)^n a_n$
+        \item $c_n = [[a_n]]$, where $[[x]]$ refers to the greatest integer less than or equal to $x$.
+    }
+    \sol{\ea{
+        \item By Triangle Inequality and that $||x| - |y|| \leq |x-y|$ as proven in earlier Exercises, \begin{align*}
+            |c_n - c_m| & = ||a_n - b_n| - |a_m - b_m|| \\
+            &\leq |a_n - b_n -a_m + b_m| = |a_n - a_m + b_m - b_n| \\
+            &\leq |a_n - a_m| + |b_m -b_n| < \epsilon / 2 + \epsilon / 2 = \epsilon
+        \end{align*}
+        \item No. If $a_n = 1$, then $(-1)^n$ diverges and thus not Cauchy.
+        \item No. If $a_n = 1 - (-1)^n/n$, then $c_n$ oscillate between 0 and 1, thus not Cauchy.
+    }}
+}
