@@ -22,3 +22,18 @@
         \item $(2, 1/2, 3, 1/3, \dots)$ has the subsequence $(1/2, 1/3, \dots)$ which is Cauchy.
     }}
 }
+
+\bx{ % 2.6.3
+    If \seq{x}{n} and \seq{y}{n} are Cauchy sequences, then one easy way to prove that $(x_n + y_n)$ is Cauchy is to use the Cauchy Criterion. By Theorem 2.6.4, \seq{x}{n} and \seq{y}{n} must be convergent, and the Algebraic Limit Theorem then implies $(x_n + y_n)$ is convergent and hence Cauchy. \ea{
+        \item Give a direct argument that $(x_n + y_n)$ is a Cauchy sequence that does not use the Cauchy Criterion or the Algebraic Limit Theorem.
+        \item Do the same for the product $(x_ny_n)$.
+    }
+    \sol{\ea{
+        \item $|(x_n + y_n) - (x_m + y_m)| = |(x_n - x_m) + (y_n - y_m)| \leq |x_n - x_m| + |y_n -y_m| < \epsilon /2 + \epsilon /2 = \epsilon$.
+        \item Let $|x_n| \leq M_x$ and $|y_n| \leq M_y$ for all $n \in \mathbb{N}$. \begin{align*}
+            |x_ny_n - x_my_m| &= |x_ny_n - x_ny_m + x_ny_m - x_my_m| \\
+            &\leq |x_n (y_n - y_m)| + |y_m (x_n - x_m)|= |x_n||y_n - y_m| + |y_m||x_n-x_m| \\
+            &\leq M_x |y_n - y_m| + M_y |x_n - x_m| = M_x (\frac{\epsilon}{2M_x}) + M_y (\frac{\epsilon}{2M_y}) = \epsilon
+        \end{align*}After setting $|x_n -x_m| < \epsilon / (2M_y)$ and $|y_n -y_m| < \epsilon/(2M_x)$.
+    }}
+}
