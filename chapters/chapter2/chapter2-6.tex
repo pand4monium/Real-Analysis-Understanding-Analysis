@@ -54,3 +54,18 @@
         \item No. If $a_n = 1 - (-1)^n/n$, then $c_n$ oscillate between 0 and 1, thus not Cauchy.
     }}
 }
+
+\bx{ % 2.6.5
+    Consider the following (invented) definition: A sequence $(s_n)$ is \textit{pseudo-Cauchy} if, for all $\epsilon > 0$, there exists an $N$ such that if $n \geq N$, then $|s_{n+1} - s_n| < \epsilon$.
+
+
+    Decide which one of the following two propositions is actually true. Supply a proof for the valid statement and a counterexample for the other. \er{
+        \item Pseudo-Cauchy sequences are bounded.
+        \item If $(x_n)$ and $(y_n)$ are pseudo-Cauchy, then $(x_n + y_n)$ is pseudo-Cauchy as well.
+    }
+    \sol{\er{
+        \item False. Let $s_n = \sum_{i=1}^{n} 1/i$. For any $\epsilon>0$, we can choose $N > 1/\epsilon$, such that when $n> N$, $|s_{n+1} - s_n| = 1/(n+1) < \epsilon$. However, $(s_n) \rightarrow \infty$.
+        \item For $\epsilon > 0$, if $n > N$, then \[
+        |(x_{n+1} + y_{n+1}) - (x_n + y_n)| = |(x_{n+1} - x_n) + (y_{n+1} - y_n)| \leq |x_{n+1} - x_n| + |y_{n+1} - y_n| < \epsilon/2 + \epsilon/2 = \epsilon\]
+    }}
+}
