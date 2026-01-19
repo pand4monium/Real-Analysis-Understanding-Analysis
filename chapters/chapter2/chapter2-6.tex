@@ -91,3 +91,20 @@
         }
     }
 }
+
+\bx{ % 2.6.7
+    Exercises 2.4.4 and 2.5.4 establish the equivalence of the Axiom of Completeness and the Monotone Convergence Theorem. They also show the Nested Interval Property is equivalent to these other two in the presence of the Archimedean Property. \ea{
+        \item Assume the Bolzano-Weierstrass Theorem is true and use it to construct a proof of the Monotone Convergence Theorem without making any appeal to the Archimedean Property. This shows that BW, AoC and MCT are all equivalent.
+        \item Use the Cauchy Criterion to prove the Bolzano-Weierstrass Theorem, and find the point in the argument where the Archimedean Property is implicitly required. This establishes the final link in the equivalence of the five characterizations of completeness discussed at the end of Section 2.6.
+        \item How do we know it is impossible to prove the Axiom of Completeness starting from the Archimedean Property?
+    }
+    \sol{\ea{
+        \item Suppose $(x_n)$ is increasing and bounded, BW tells us there exists a convergent subsequence $(x_{n_k}) \rightarrow x$. We will show that $(x_n) \rightarrow x$. Note the $x_k \leq x_{n_k}$ implies $x_n \leq x$ by Order Limit Theorem.
+        
+        Pick $K$ such that for $k \geq K$, we have $|x_{n_k} - x | < \epsilon$. Since $(x_n)$ is increasing and $x_n \leq x$, every $n \geq n_K$ satisfies $|x_n - x| < \epsilon$ as well. Thus $(x_n)$ converges, completing the proof.
+        \item We are going to use the Cauchy Criterion to replace NIP in the proof of BW. We have $I_0$ being of length $M$ and $I_{n+1} \subseteq I_n$ and being half of its length with $a_{n_k} \in I_k$. We will show $a_{n_k}$ is Cauchy.
+        
+        The length of $I_k$ is $M(1/2)^{k-1}$, so $|a_{n_k} - a_{n_j}| < M(1/2)^{N-1}$ for $k,j \geq N$, implying that $(a_{n_k})$ converges. This uses the Archimedean Property to conclude $M(1/2)^{N-1} \in \mathbb{Q}$ can be made smaller than any $\epsilon>0$.
+        \item The Archimedean Property is true for $\mathbb{Q}$ does not prove AoC which is only true for $\mathbb{R}$.
+        }}
+}
