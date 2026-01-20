@@ -1,1 +1,20 @@
 \section{Properties of Infinite Series}
+
+\bx{ % 2.7.1
+    Proving tha Alternating Series Test (Theorem 2.7.7) amounts to showing that the sequence of partial sums \[
+    s_n = a_1 - a_2 +a_3 - \dots \pm a_n\] converges. (The opening example in Section 2.1 includes a typical illustration of $(s_n)$.) Different characterizations of completeness lead to different proofs. \ea{
+        \item Prove the Alternating Series Test by showing that $(s_n)$ is a Cauchy sequence.
+        \item Supply another proof for this result using the Nested Interval Property (Theorem 1.4.1).
+        \item Consider the subsequences $(s_{2n})$ and $(s_{2n+1})$, and show how the Monotone Convergence Theorem leads to a third proof for the Alternating Series Test.
+    }
+    \sol{\ea{
+        \item Let $N \in \mathbb{N}$ be even and let $n > N$. Since the series is alternating, we have \[
+        s_N \leq s_n \leq s_{N+1}\] A similar statement can be made if $N$ is odd. Obviously, $|s_{N+1} - s_N| = |a_{N+1}|$ can be made as small as we want by increasing $N$. Hence we can set $N$ large enough so that $|a_N| < \epsilon/2$, giving \[
+        |s_m - s_n| \leq |s_m - s_N| + |s_n - s_N| < \epsilon/2 + \epsilon/2 = \epsilon\] showing that $(s_n)$ is Cauchy, hence converges.
+
+        \item Let $I_1 = [s_2, s_1]$ and in general, $I_n = [s_{2n}, s_{2n-1}]$. Since $a_n$ is decreasing and it is an alternating series, we get $I_{n+1} \subseteq I_n$. Considering the length of $I_n$, which equals to the length $|s_{2n} - s_{2n-1}| = a_{2n}$. If we set $N$ large enough, we can get $|a_{2n}| < \epsilon$. By NIP, there exists $x \in \bigcap^\infty_{n=1} I_n$. By order limit theorem, $\lim s_{2n} \leq x \leq \lim s_{2n-1}$, hence $\lim s_n = x$, showing that the series converges.
+        \item We can regroup the elements in the partial sum. Consider \[
+        s_{2n+1} = a_1 - (a_2 - a_3) - \dots - (a_{2n} - a_{2n+1}) \leq a_1\] Thus $s_{2n+1} \rightarrow s$ by MCT. To show this hold true for $(s_{2n})$, note that $s_{2n} = s{2n+1} - a_{2n+1}$ with $(a_{2n+1}) \rightarrow 0$, by triangle inequality \[
+        |s_{2n} - s| \leq |s_{2n} - s{2n+1}| + |s_{2n+1} - s| < \epsilon/2 + \epsilon/2 = \epsilon\]And we are done.
+    }}
+}
