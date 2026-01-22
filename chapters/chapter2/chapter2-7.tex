@@ -84,3 +84,18 @@
         \] converges. This is a geometric series that converges if and only if $2^{1-p} < 1 \implies p > 1$.
     }
 }
+
+\bx{ % 2.7.6
+    Let's say that a series \textit{subverges} if the sequence of partial sums contains a subsequence that converges. Consider the (invented) definition for a moment, and then decide which of the following statements are valid propositions about subvergent series: \ea{
+        \item If $(a_n)$ is bounded, then $\sum a_n$ subverges.
+        \item All convergent series are subvergent.
+        \item If $\sum |a_n|$ subverges, then $\sum a_n$ subverges as well.
+        \item If $\sum a_n$ subverges, then $(a_n)$ has a convergent subsequence.
+    }
+    \sol{\ea{
+        \item False. Let $a_n = 1$, then $\sum a_n = n$ which does not subverge.
+        \item True. Every subsequence will converge to the same limit.
+        \item True. Since $|a_n| \geq 0$, then $s_n = \sum_{i=1}^{n} |a_i|$ is increasing and contains a converging subsequence. Hence $s_n \leq M$ is bounded. By triangle inequality, $|\sum a_n| \leq \sum |a_n| = s_n \leq M$, then $\sum a_n$ is bounded. By BWT, we can find a convergent subsequence, thus subverging.
+        \item False. Consider the sequence $(1, -1, 2, -2, \dots)$ which every even partial sum converges to zero, but the series does not converge.
+    }}
+}
