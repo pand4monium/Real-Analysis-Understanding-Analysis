@@ -40,3 +40,16 @@
         s_{2n} = \sum_{k=1}^{\infty} \frac{1}{2k-1} + \sum_{k=1}^{\infty} \frac1{(2n)^2} > 1 + \frac12 \sum_{n=1}^{\infty} \frac1n + \frac{\pi^2}{24}\] which diverges by comparison test.
     }}
 }
+
+\bx{ % 2.7.3
+    \ea{
+        \item Provide the details for the proof of the Comparison Test (Theorem 2.7.4) using the Cauchy Criterion for Series.
+        \item Give another proof for the Comparison Test, this time using the Monotone Convergence Theorem.
+    }
+    \sol{
+        Suppose $a_n, b_n \geq 0$, $a_n \leq b_n$ and define $s_n = a_1 + \dots + a_n$, $t_n = b_1 + \dots + b_n$. \ea{
+            \item We have $|a_m + \dots a_n| \leq |b_m + \dots + a_n| < \epsilon$, implying that $\sum_{n=1}^{\infty}a_n$ converges by Cauchy criterion. The other direction is similar, with $ |b_m + \dots + b_n | \geq |a_m + \dots + a_n | > \epsilon$, showing that $(s_n)$ diverges implies $(t_n)$ mst also diverge.
+            \item Since $(t_n) \rightarrow t$. This implies that $s_n$ is bounded since $s_n \leq t_n < t$. With $a_n \geq 0$, MCT tells us that $(s_n)$ converges. The other direction can be proven by contradiction, assuming that $(t_n)$ is bounded tells us $(s_n)$ is bounded by MCT, which contradicts the fact that $(s_n)$ diverges.
+        }
+    }
+}
