@@ -110,3 +110,16 @@
         \item Similarly, we get $n^2a_n \in (l-\epsilon, l+\epsilon)$ so $a_n < \frac{l+\epsilon}{n^2}$. By comparison test, $\sum a_n < (l + \epsilon)\sum \frac{1}{n^2}$, thus converging.
     }}
 }
+
+\bx{ %2.7.8
+    Consider each of the following propositions. Provide short proofs for those that are true and counterexamples for any that are not. \ea{
+        \item If $\sum a_n$ converges absolutely, then $\sum a_n^2$ also converges absolutely.
+        \item If $\sum a_n$ converges and $(b_n)$ converges, then $\sum a_nb_n$ converges.
+        \item If $\sum a_n$ converges conditionally, then $\sum n^2a_n$ diverges.
+    }
+    \sol{\ea{
+        \item True. Since $\sum |a_n|$ converges, there exists $N>0$ such that for $n>N$, $0< a_n^2 < |a_n| < 1$. By comparison test, $\sum a_n^2$ also converges absolutely.
+        \item False. Let $a_n = b_n = (-1)^n / \sqrt{n}$, with $\sum a_n$ converging by Alternating Series Test, but $\sum a_nb_n = \sum 1/n$ which diverges.
+        \item True. Suppose $\sum n^2 a_n$ converges, since $(n^2a_n) \rightarrow 0$, we have $|n^2a_n| < \epsilon$ for $n > N$, implying $|a_n| < 1/n^2$. By comparsion test, $\sum |a_n| < \sum 1/n^2$ converges, implying $\sum a_n$ converges absolutely, which is a contradiction. Therefore $\sum n^2 a_n$ must diverge.
+    }}
+}
