@@ -72,3 +72,15 @@
         \end{cases*}\] then $\sum (-1)^n x_n = \sum 1/(2n)$ which diverges by Comparison Test with harmonic series.
     }}
 }
+
+\bx{ % 2.7.5
+    Now that we have proved the basic facts about geometric series, supply a proof for Corollary 2.4.7.
+    \sol{
+        Corollary 2.4.7 states that the series $\sum_{n=1}^{\infty} 1/n^p$ \textit{converges if and only if } $p>1$.
+
+        
+        \noindent Using the Cauchy Condensation Test, the series $\sum_{n=1}^{\infty} 1/n^p$ converges if and only if the series \[
+        \sum_{n=0}^{\infty} 2^n \frac{1}{(2^n)^p} = \sum_{n=0}^{\infty} 2^{n-np} = \sum_{n=0}^{\infty} \left(2^{1-p}\right)^n 
+        \] converges. This is a geometric series that converges if and only if $2^{1-p} < 1 \implies p > 1$.
+    }
+}
