@@ -99,3 +99,14 @@
         \item False. Consider the sequence $(1, -1, 2, -2, \dots)$ which every even partial sum converges to zero, but the series does not converge.
     }}
 }
+
+\bx{ % 2.7.7
+    \ea{
+        \item Show that if $a_n > 0$ and $\lim (na_n) = l$ with $l \neq 0$, then the series $\sum a_n$ diverges.
+        \item Assume $a_n > 0$ and $\lim (n^2a_n)$ exists. Show that $\sum a_n$ converges.
+    }
+    \sol{\ea{
+        \item For $\epsilon > 0$, we get $na_n \in (l - \epsilon, l + \epsilon)$ implying $a_n > (l - \epsilon)(1/n)$. Using comparison text, we get $\sum a_n > (l-\epsilon) \sum 1/n$ which diverges, thus $\sum a_n$ diverges.
+        \item Similarly, we get $n^2a_n \in (l-\epsilon, l+\epsilon)$ so $a_n < \frac{l+\epsilon}{n^2}$. By comparison test, $\sum a_n < (l + \epsilon)\sum \frac{1}{n^2}$, thus converging.
+    }}
+}
