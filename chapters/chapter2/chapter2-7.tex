@@ -53,3 +53,22 @@
         }
     }
 }
+
+\bx{ % 2.7.4
+    Give an example of each or explain why the request is impossible, referencing the proper theorem(s). \ea{
+        \item Two series $\sum x_n$ and $\sum y_n$ that both diverge but where $\sum x_ny_n$ converges.
+        \item A convergent series $\sum x_n$ and a bounded sequence $(y_n)$ such taht $\sum x_ny_n$ diverges.
+        \item Two sequences $(x_n)$ and $(y_n)$ where $\sum x_n$ and $\sum (x_n + y_n)$ both converge but $\sum y_n$ diverges.
+        \item A sequence $(x_n)$ satisfying $0 \leq x_n \leq 1/n$ where $\sum (-1)^n x_n$ diverges.
+    }
+    \sol{\ea{
+        \item Let $x_n = y_n = 1/n$, hence $\sum x_n = \sum y_n = \sum 1/n$ which diverges, but $\sum x_ny_n = \sum 1/n^2 = \pi^2 / 6$ which converges.
+        \item Let $x_n = (-1)^n 1/n$, then $\sum x_n$ converges by Alternating Series Test, and $y_n = (-1)^n$ which is bounded. Hence $\sum x_ny_n = \sum 1/n$ which diverges.
+        \item Impossible. By Algebraic Limit Theorem, $\sum y_n = \sum (x_n + y_n) - \sum x_n$ must converge.
+        \item Let \[
+        x_n = \begin{cases*}
+            \frac1n &\text{ if } n \text{ is even} \\
+            0 &\text{ otherwise}
+        \end{cases*}\] then $\sum (-1)^n x_n = \sum 1/(2n)$ which diverges by Comparison Test with harmonic series.
+    }}
+}
