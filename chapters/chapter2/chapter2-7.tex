@@ -144,3 +144,22 @@
         \sum_{k =N}^{n} |a_k| \leq |a_N| \sum_{k=0}^{n-1}(r')^k\] which converges as $n\rightarrow \infty$ by part (b). Hence implying that the sum converges absolutely.
     }}
 }
+
+\bx{
+    \textbf{(Infinite Products)} Review Exercise 2.4.10 about infinite products and then answer the following questions: \ea{
+        \item Does $\frac21 \cdot \frac32 \cdot\frac54\cdot\frac98\cdot\frac{17}{16}\dots$ converge?
+        \item The infinite product $\frac12\cdot\frac34\cdot\frac56\cdot\frac78\cdot\frac{9}{10}\dots$ certainly converges. (Why?) Does it converge to zero?
+        \item In 1655, John Wallis famously derived the formula \[
+        \left(\frac{2\cdot2}{1\cdot3}\right) \left(\frac{4\cdot4}{3\cdot5}\right) \left(\frac{6\cdot6}{5\cdot7}\right) \left(\frac{8\cdot8}{7\cdot9}\right) \dots = \frac{\pi}{2}\]Show that the left side of this identity at least converges to something. (A complete proof of this result is taken up in Section 8.3)
+    }
+    \sol{\ea{
+        \item Using Exercise 2.4.10, \[
+        \frac21 \cdot \frac32 \cdot\frac54\cdot\frac98\cdot\frac{17}{16}\dots = \prod_{n=0}^{\infty} \frac{2^n + 1}{2^n} = \prod_{n=0}^\infty \left(1 + \frac{1}{2^n}\right)\]converges as $\sum 2^{-n}$ converges by geometric series.
+        \item Each term is positive and less than one, causing the product to be monotone decreasing and bounded below by zero, converging by MCT.
+        
+        Let $p_n = \prod_{n=1}^{\infty} \frac{2n-1}{2n}$ and $(p_n) \rightarrow p$. Suppose $p \neq 0$, then $(1/p_n) \rightarrow p^{-1}$. \[
+        p_n^{-1} = \prod_{n=1}^{\infty} \frac{2n}{2n-1} = \prod_{n=1}^{\infty} (1 + \frac{1}{2n-1})\] Since $\sum 1/(2n-1)$ diverges by comparison test with the harmonic series, $(1/p_n)$ diverges. This is a contradiction, showing that $p = 0$.
+        \item Rewriting the terms as a partial fraction, \[
+        \frac{(2n)(2n)}{(2n-1)(2n+1)} = \frac{4n^2}{4n^2 - 1} = 1+\frac{1}{4n^2 - 1}\] By Exercise 2.4.10, $\sum 1/(4n^2-1)$ converges by comparison test with $\sum 1/n^2$. Hence the product converges.
+    }}
+}
