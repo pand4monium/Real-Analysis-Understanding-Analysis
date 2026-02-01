@@ -212,3 +212,24 @@
         \end{align*}
     }
 }
+
+\bx{ % 2.7.13
+    \textbf{(Abel's Test)} Abel's Test for convergence states that if the series $\sum_{k=1}^{\infty} x_k$ converges, and if $(y_k)$ is a sequence satisfying \[
+    y_1 \geq y_2 \geq y_3 \geq \dots \geq 0\]then the series $\sum_{k=1}^{\infty} x_ky_k$ converges. \ea{
+        \item Use Exercise 2.7.12 to show that \[
+        \sum_{k=1}^{n} x_ky_k = s_ny_{n+1} + \sum_{k=1}^{n} s_k(y_k-y_{k+1})\]where $s_n = x_1 + x_2 + \dots x_n$.
+        \item Use the Comparison Test to argue that $\sum_{k=1}^{\infty} s_n (y_k - y_{k+1})$ converges absolutely, and show how this leads directly to a proof of Abel's Test.
+    }
+    \sol{\ea{
+        \item From Exercise 2.7.12,\begin{align*}
+            \sum_{k=1}^{n}x_ky_k &= s_ny_{n+1} - s_{0}y_1 + \sum_{k=1}^{n} s_j(y_k - y_{k+1}) \\
+            &= s_ny_{n+1} + \sum_{k=1}^{n} s_j(y_k - y_{k+1})
+        \end{align*}
+        \item Since $\sum x_k$ converges, we can bound $s_n \leq M$. By Comparison Test, we get \begin{align*}
+        \sum_{k=1}^{\infty} |s_n (y_k - y_{k+1})| & \leq |M| \sum_{k=1}^{\infty} (y_k - y_{k+1}) \\
+        & \leq |M| (y_1 - \lim y_n) = |M|(y_1-y)
+        \end{align*}where $(y_n) \rightarrow y$. 
+
+        Since both $s_ny_{n+1}$ and $\sum s_k (y_k - y_{k+1})$ converge, then $\sum_{k=1}^{\infty} x_ky_k$ also converge by algebraic limit theorem.
+    }}
+}
