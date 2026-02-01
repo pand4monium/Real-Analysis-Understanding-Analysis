@@ -233,3 +233,19 @@
         Since both $s_ny_{n+1}$ and $\sum s_k (y_k - y_{k+1})$ converge, then $\sum_{k=1}^{\infty} x_ky_k$ also converge by algebraic limit theorem.
     }}
 }
+
+\bx{ % 2.7.14
+    \textbf{(Dirichlet's Test)} Dirichlet's Test for convergence states that if the partial sums of $\sum_{k=1}^{\infty}x_k$ are bounded (but not necessarily convergent), and if $(y_k)$ is a sequence satisfying $y_1 \geq y_2 \geq y_3 \geq \dots \geq 0$ with $\lim y_k = 0$, then the series $\sum_{k=1}^{\infty} x_ky_k$ converges. \ea{
+        \item Point out how the hypothesis of Dirichlet's Test differs from that of Abel's Test in Exercise 2.7.13, but show that essentially the same strategy can be used to provide a proof.
+        \item Show how the Alternating Series Test (Theorem 2.7.7) can be derived as a special case of Dirichlet's Test.
+    }
+    \sol{\ea{
+        \item Dirichlet's Test has the $(y_n)$ being convergent, while Abel's Test has $\sum x_n$ being convergent.
+        
+        To recall, Abel's Test uses the convergence of $\sum x_n$, to bound it. In addition, MCT tells us that $(y_n)$ converges as it is decreasing and bounded above. These two criteria help show that $\sum x_ky_k$ converges. 
+
+        The conditions of Dirichlet's Test also lead to the same to criteria. Firstly, it is given that $\sum x_k$ is bounded. Secondly, it is given that $(y_k)$ converges to zero. Hence the same strategy can be used to provide a proof, thus left as an exercise to the reader.
+
+        \item Letting $x_n = (-1)^n$ results in $\sum x_ky_k = \sum (-1)^k y_k$ converging, which satisfies the conditions of Alternating Series Test.
+    }}
+}
