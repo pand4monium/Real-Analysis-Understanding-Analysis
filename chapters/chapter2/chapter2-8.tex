@@ -13,3 +13,12 @@
         \end{bmatrix}\] Doing some calculations, $s_{nn} = -2 + 1/2^{n-1}$, so $\lim s_{nn} = -2$. This is the same as when fixing $j$ and summing down each column, since each column has finitely many non-zero elements.
     }
 }
+
+\bx{ % 2.8.2
+    Show that if the iterated series \[
+    \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |a_{ij}|\]converges (meaning that for each fixed $i \in \mathbb{N}$ the series $\sum_{j=1}^{\infty} |a_{ij}|$ converges to some real number $b_i$, and the series $\sum_{i=1}^{\infty} b_i$ converges as well), then the iterated series \[
+    \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{ij}\]converges. 
+    \sol{
+        This is obvious. We can use triangle inequality on the countable infinite terms in the double summation. To be more rigourous, let $c_i = \sum_{j=1}^\infty a_{ij}$. Since $\sum_{j=1}^\infty |a_{ij}|$ converges, $c_o$ converges as well. With $|c_i| \leq |b_i|$, then $\sum_{i=1}^{\infty} c_i$ converges by comparison text with $\sum_{i=1}^\infty |b_i|$. 
+    }
+}
