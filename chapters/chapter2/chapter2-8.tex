@@ -1,1 +1,15 @@
 \section{Double Summations and Products of Infinite Series}
+
+\bx{ % 2.8.1
+    Using tha particular array $(a_{ij})$ from Section 2.1, compute $\lim_{n \rightarrow \infty} s_{nn}$. How does this compare to the two iterated values for the sum already computed?
+    \sol{
+        To recall, the particular array in Section 2.1 is \[\begin{bmatrix}
+            -1 & \frac12 & \frac14 & \frac18 & \frac1{16} & \dots \\[4pt] 
+            0 & -1 & \frac12 & \frac14 & \frac18 & \dots \\[4pt]
+            0 & 0 & -1 & \frac12 & \frac14 & \dots \\[4pt]
+            0 & 0 & 0 & -1 & \frac12 & \dots \\[4pt]
+            0 & 0 & 0 & 0 & -1 & \dots \\
+            \vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\
+        \end{bmatrix}\] Doing some calculations, $s_{nn} = -2 + 1/2^{n-1}$, so $\lim s_{nn} = -2$. This is the same as when fixing $j$ and summing down each column, since each column has finitely many non-zero elements.
+    }
+}
