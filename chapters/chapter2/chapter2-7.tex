@@ -163,3 +163,38 @@
         \frac{(2n)(2n)}{(2n-1)(2n+1)} = \frac{4n^2}{4n^2 - 1} = 1+\frac{1}{4n^2 - 1}\] By Exercise 2.4.10, $\sum 1/(4n^2-1)$ converges by comparison test with $\sum 1/n^2$. Hence the product converges.
     }}
 }
+
+\bx{ % 2.7.11
+    Find an example of two series $\sum a_n$ and $\sum b_n$ both of which diverge for which $\sum \min \{a_n, b_n\}$ converges. To make it more challenging, produce examples where $(a_n)$ and $(b_n)$ are strictly positive and decreasing.
+    \sol{
+        Let $m_n = \min \{a_n, b_n\}$. Intuitively, $(m_n)$ must take an infinite amount of $(a_n)$ and $(b_n)$ terms, as removing the finite terms would imply that either $\sum a_n$ or $\sum b_n$ would converge.
+
+        We will begin by trying to obtain $m_n = 1/2^n$ to ensure that $\sum m_n$ converges. To have $\sum a_n$ and $\sum b_n$ diverging, we can simply repeat values when it is the greater value of the two.
+
+        \begin{center}
+            \begin{tabular}{ | c | c | c | c | c | c | c | c |}
+                \hline
+                $n$ & $1$ & $2$ & $3$ & $[4, 4+8 = 12)$ & $[12, 12+2^{11})$ & $[12 + 2^{11}, 12 + 2^{11} + 2^{12+2^11})$ & $\dots$\\
+                \hline
+                $m_n$ & $1/2$ & $1/4$ & $1/8$ & $1/2^n$ & $1/2^n$ & $1/2^n$ & $\dots$\\
+                \hline
+                $\min \{a_n, b_n\}$ & $a_n$ & $b_n$ & $b_n$ & $a_n$ & $b_n$ & $a_n$ & $\dots$ \\
+                \hline
+                $a_n$ & $1/2$ & $1/2$ & $1/2$ & $1/2^n$ & $1/2^{11}$ & $1/2^n$ & $\dots$ \\
+                \hline
+                $b_n$ & $1$ & $1/4$ & $1/8$ & $1/8$ & $1/2^n$ & $1/2^{12 + 2^{11}}$ & $\dots$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        Now we show that this construction satisfies the conditions. It is obvious that $\sum \min\{a_n, b_n\}$ converges as stated above. For $\sum a_n$ and $\sum b_n$, we have to group the terms as shown above. Let $k_1 = 1$, $k_n = k_{n-1} + 2^{k_{n-1}-1}$ Then \[
+        a_n = \begin{cases}
+            1/2^n & \text{if } n \in [k_{2p-1}, k_{2p}) \\
+            1/2^{k_{2p} -1} & \text{if } n \in [k_{2p} , k_{2p+1})
+        \end{cases} \text{ and } b_n = \begin{cases}
+            1/2^n & \text{if } n \in [k_{2p}, k_{2p+1}) \\
+            1/2^{k_{2p-1} -1} & \text{if } n \in [k_{2p-1} , k_{2p})
+        \end{cases}
+        \]Hence both $\sum a_n$ and $\sum b_n$ diverges as the first case has its blocks sum to one, causing the sum to approach infinity.
+    }
+}
