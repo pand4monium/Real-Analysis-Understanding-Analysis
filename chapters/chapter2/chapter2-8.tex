@@ -22,3 +22,24 @@
         This is obvious. We can use triangle inequality on the countable infinite terms in the double summation. To be more rigourous, let $c_i = \sum_{j=1}^\infty a_{ij}$. Since $\sum_{j=1}^\infty |a_{ij}|$ converges, $c_o$ converges as well. With $|c_i| \leq |b_i|$, then $\sum_{i=1}^{\infty} c_i$ converges by comparison text with $\sum_{i=1}^\infty |b_i|$. 
     }
 }
+
+\bx{ % 2.8.3
+    \ea{
+        \item Prove that $(t_{nn})$ converges.
+        \item Now, use the fact that $(t_{nn})$ is a Cauchy Sequence to argue that $(s_{nn})$ converges.
+    }
+    \sol{\ea{
+        \item Since $|a_{ij}| > 0$, $t_{nn}$ is monotone increasing. Hence for MCT to tell us it converges, we just need to show that the sequence is bounded.\[
+        \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |a_{ij}| \geq \sum_{i=1}^{\infty} \sum_{j=1}^{n} |a_{ij}| \geq \sum_{i=1}^{n} \sum_{j=1}^n |a_{ij}| = t_{nn}\]
+        
+        \item Since $(t_{nn})$ is a Cauchy Sequence, for any $\epsilon > 0$ there exists $N$ such that if $p>q>N$, \begin{align*}
+            \epsilon > |t_{pp} - t_{qq}| & = \left|\sum_{i=1}^{p} \sum_{j=1}^{p} |a_{ij}| - \sum_{i=1}^{q} \sum_{j=1}^{q} |a_{ij}| \right| \\
+            & = \left| \sum_{i=q+1}^{p} \sum_{j=1}^{p} |a_{ij}| + \sum_{i=1}^{q} \sum_{j=q+1}^{p} |a_{ij}| + \sum_{i=1}^q \sum_{j=1}^{q} |a_{ij}| - \sum_{i=1}^{q} \sum_{j=1}^q  |a_{ij}| \right| \\
+            & = \left| \sum_{i=q+1}^{p} \sum_{j=1}^{p} |a_{ij}| + \sum_{i=1}^{q} \sum_{j=q+1}^{p} |a_{ij}| \right| \\
+            & \geq \left| \sum_{i=q+1}^{p} \sum_{j=1}^{p} a_{ij} + \sum_{i=1}^{q} \sum_{j=q+1}^{p} a_{ij} \right| \\
+            & = \left| \sum_{i=q+1}^{p} \sum_{j=1}^{p} a_{ij} + \sum_{i=1}^{q} \sum_{j=q+1}^{p} a_{ij} + \sum_{i=1}^q \sum_{j=1}^{q} a_{ij} - \sum_{i=1}^{q} \sum_{j=1}^q  a_{ij} \right| \\
+            & = \left|\sum_{i=1}^{p} \sum_{j=1}^{p} a_{ij} - \sum_{i=1}^{q} \sum_{j=1}^{q} a_{ij} \right| \\
+            & = |s_{pp} - s_{qq}|
+        \end{align*}thus $s_{nn}$ is also a Cauchy Sequence, hence converging.
+    }}
+}
