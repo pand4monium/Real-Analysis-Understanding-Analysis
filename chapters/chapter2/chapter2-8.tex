@@ -53,6 +53,6 @@
     \sol{\ea{
         \item With $B$ being the upper bound on $\{t_{mn} : m,n\in \mathbb{N}\}$, we get $t_{mn} \leq B$. Lemma 1.3.8 tells us that there exists some $p,q$ such that $t_{pq} > B - \epsilon/2$. And since $p_1 \leq p_2$ and $q_1 \leq q_2 \implies t_{p_1q_1} \leq t_{p_2q_2}$, we can choose $N_1 = \max \{p,q\}$.
         \item By triangle inequality, $|s_{mn} - S| \leq |s_{mn} - s{nn}| + |s_{nn} - S|$. WLOG, let $m > n$, \[
-        |s_{mn} - s{nn}| = \left|\sum_{i = n}^{m} \sum_{j=1}^{n} a_{ij}\right| \leq \sum_{i=n}^{m} \sum_{j-1}^{n} |a_{ij}| = |t_{mn} - t{nn}| \leq \frac\epsilon2 \]from part (a), as long as $m,n \geq N_1$. Since $S= \lim s_{nn}$ there exists $N_2$ such that for $n \geq N_2$, $|s_{nn} - S| < \epsilon/2$, thus picking $N = \max \{N_1, N_2\}$ satisfies that condition.
+        |s_{mn} - s{nn}| = \left|\sum_{i = n}^{m} \sum_{j=1}^{n} a_{ij}\right| \leq \sum_{i=n}^{m} \sum_{j-1}^{n} |a_{ij}| = |t_{mn} - t_{nn}| \leq \frac\epsilon2 \]from part (a), as long as $m,n \geq N_1$. Since $S= \lim s_{nn}$ there exists $N_2$ such that for $n \geq N_2$, $|s_{nn} - S| < \epsilon/2$, thus picking $N = \max \{N_1, N_2\}$ satisfies that condition.
     }}
 }
