@@ -56,3 +56,23 @@
         |s_{mn} - s{nn}| = \left|\sum_{i = n}^{m} \sum_{j=1}^{n} a_{ij}\right| \leq \sum_{i=n}^{m} \sum_{j-1}^{n} |a_{ij}| = |t_{mn} - t_{nn}| \leq \frac\epsilon2 \]from part (a), as long as $m,n \geq N_1$. Since $S= \lim s_{nn}$ there exists $N_2$ such that for $n \geq N_2$, $|s_{nn} - S| < \epsilon/2$, thus picking $N = \max \{N_1, N_2\}$ satisfies that condition.
     }}
 }
+
+\bx{ % 2.8.5
+    \ea{
+        \item Show that for all $m \geq N$ \[
+        |(r_1 + r_2 + \dots + r_m) - S| \leq \epsilon\]Conclude that the iterated sum $\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{ij}$ converges to $S$.
+        \item Finish the proof by showing that the other iterated sum, $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$, converges to $S$ as well. Notice the same argument can be used once it is established that, for each fixed column $j$, the sum $\sum_{i=1}^{\infty} a_{ij}$ converges to some real number $c_j$.
+    }
+    \sol{\ea{
+        \item Suppose $\sum_{j=1}^{\infty} a_{ij}$ converges tosome value $r_i$. We can choose $N_3$ large enough such that when $n> N_3$ and $k \leq m$, we get \[
+        \left|r_k - \sum_{j=1}^{n} a_{kj}\right| \leq \frac{\epsilon}{2m}\] Then there must exists some $N > N_3$ such that when $m,n \geq N$, \begin{align*}
+            \left| \sum_{i=1}^{m}r_i - S\right| & \leq \left| \sum_{i=1}^{m} - \sum_{i=1}^{m} r_i \sum_{j=1}^{n} a_{ij}\right| + \left| \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij} - S \right| \\
+            & = \left| \sum_{i=1}^{m} \left( r_i - \sum_{j=1}^{n} a_{ij} \right) \right| + |s_{mn} - S| \\
+            & \leq \sum_{i=1}^{m} \left| r_i - \sum_{j=1}^{n} a_{ij} \right| + | s_{mn} - S| \\
+            & < \sum_{i=1}^{m} \left( \frac{\epsilon}{2m} \right) + \frac{\epsilon}{2} = \epsilon
+        \end{align*} and thus $\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{ij}$ converges to $S$.
+
+        \item To show that $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$ converges to the same value $S$, we will use the same arguement. Our hypothesis guarentees that for each fixed column $j$, the series $\sum_{i=1}^{\infty} a_{ij}$ converges absolutely to some real number $c_j$. Using the same arguement as in (a), we can show that \[
+        \left| (c_1 + c_2 + \dots + c_m) - S\right| \leq \epsilon\] for all $m \geq N$. Hence, the iterated sum $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$ converges to the same value of $S$.
+    }}
+}
