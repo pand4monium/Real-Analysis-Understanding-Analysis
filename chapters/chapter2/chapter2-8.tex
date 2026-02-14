@@ -100,3 +100,17 @@
         \end{align*} thus completing the proof.
     }}
 }
+
+\bx{ % 2.8.7
+    Assume that $\sum_{i=1}^{\infty} a_i$ converges absolutely to $A$, and $\sum_{j=1}^{\infty} b_j$ converges absolutely to $B$. \ea{
+        \item Show that the iterated sum $\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |a_ib_j|$ converges so that we may apply Theorem 2.8.1.
+        \item Let $s_{nn} = \sum_{i=1}^{n} \sum_{j=1}^{n} a_ib_j$, and prove that $\lim_{n\rightarrow\infty} s_{nn} = AB$. Conclude that \[
+        \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_i b_j = \sum_{j=1}^{\infty}  \sum_{i=1}^{\infty} a_i b_j = \sum_{k=2}^{\infty} d_k = AB\] where, as before, $d_k = a_1 b_{k-1} + a_2 b_{k-2} + \dots + a_{k-1} b_1$.
+    }
+    \sol{\ea{
+        \item Let $\sum_{i=1}^{\infty} |a_i| = A'$ and $\sum_{j=1}^{\infty} |b_j| = B'$. By Algebraic Limit Theorem for Series, \[
+        \sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |a_i b_j| = \sum_{i=1}^{\infty} \left(|a_i| \sum_{j=1}^{\infty} |b_j|\right) = \left(\sum_{i=1}^{\infty} |a_i| \right) \left( \sum_{j=1}^{\infty} |b_j| \right) = A'B'\]
+
+        \item Theorem 2.8.1 tells us the different iterated sums have the same limit. Using the same manipulation as above, the limit is $AB$.
+    }}
+}
