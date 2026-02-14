@@ -64,7 +64,7 @@
         \item Finish the proof by showing that the other iterated sum, $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$, converges to $S$ as well. Notice the same argument can be used once it is established that, for each fixed column $j$, the sum $\sum_{i=1}^{\infty} a_{ij}$ converges to some real number $c_j$.
     }
     \sol{\ea{
-        \item Suppose $\sum_{j=1}^{\infty} a_{ij}$ converges tosome value $r_i$. We can choose $N_3$ large enough such that when $n> N_3$ and $k \leq m$, we get \[
+        \item Suppose $\sum_{j=1}^{\infty} a_{ij}$ converges to some value $r_i$. We can choose $N_3$ large enough such that when $n> N_3$ and $k \leq m$, we get \[
         \left|r_k - \sum_{j=1}^{n} a_{kj}\right| \leq \frac{\epsilon}{2m}\] Then there must exists some $N > N_3$ such that when $m,n \geq N$, \begin{align*}
             \left| \sum_{i=1}^{m}r_i - S\right| & \leq \left| \sum_{i=1}^{m} - \sum_{i=1}^{m} r_i \sum_{j=1}^{n} a_{ij}\right| + \left| \sum_{i=1}^{m} \sum_{j=1}^{n} a_{ij} - S \right| \\
             & = \left| \sum_{i=1}^{m} \left( r_i - \sum_{j=1}^{n} a_{ij} \right) \right| + |s_{mn} - S| \\
@@ -72,7 +72,7 @@
             & < \sum_{i=1}^{m} \left( \frac{\epsilon}{2m} \right) + \frac{\epsilon}{2} = \epsilon
         \end{align*} and thus $\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{ij}$ converges to $S$.
 
-        \item To show that $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$ converges to the same value $S$, we will use the same arguement. Our hypothesis guarentees that for each fixed column $j$, the series $\sum_{i=1}^{\infty} a_{ij}$ converges absolutely to some real number $c_j$. Using the same arguement as in (a), we can show that \[
+        \item To show that $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$ converges to the same value $S$, we will use the same argument. Our hypothesis guarantees that for each fixed column $j$, the series $\sum_{i=1}^{\infty} a_{ij}$ converges absolutely to some real number $c_j$. Using the same argument as in (a), we can show that \[
         \left| (c_1 + c_2 + \dots + c_m) - S\right| \leq \epsilon\] for all $m \geq N$. Hence, the iterated sum $\sum_{j=1}^{\infty} \sum_{i=1}^{\infty} a_{ij}$ converges to the same value of $S$.
     }}
 }
@@ -87,7 +87,7 @@
 
         It is easy to see that $\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} a_{ij}$ contains all the terms of $\sum_{k=2}^{\infty} a_{ij}$. By comparison to $\sum_{i=1}^{\infty} \sum_{j=1}^{\infty} |a_{ij}|$, $\sum_{k=2}^{\infty}$ must converge.
 
-        \item We will first note that $\sum_{k=2}^{n} d_k$ contains all the terms of $s_{pp}$ when $p \leq n/2$, and $s_{qq}$ contains all the terms of $\sum_{k=2}^{n} d_k$ when $q \geq n-1$. Intuitively, we can use Squeeze Theorem to show our desired sum converges to $S$. However, we will be following a more rigourous path to form our proof as desired by the question.
+        \item We will first note that $\sum_{k=2}^{n} d_k$ contains all the terms of $s_{pp}$ when $p \leq n/2$, and $s_{qq}$ contains all the terms of $\sum_{k=2}^{n} d_k$ when $q \geq n-1$. Intuitively, we can use Squeeze Theorem to show our desired sum converges to $S$. However, we will be following a more rigorous path to form our proof as desired by the question.
         
         We will need to show that for all $\epsilon > 0$ there exists $N>0$ such that for all $n> N$, $|S - \sum_{k=2}^{\infty} d_k | < \epsilon$. Since $(s_{nn}) \rightarrow S$, for an arbitrary $\epsilon_1 > 0$, we can choose $n_1$ large enough such that $|s_{n_1n_1} - S| < \epsilon_1$. If we choose $N > n_1$, then whenever $n > N$, $\sum_{k=2}^{n} d_k$ will contain all the terms in $s_{n_1n_1}$, and if we choose $m = n-1$, then $s_{mm}$ will contain all terms in $\sum_{k=2}^{n} d_k$. Thus we get \[
         \sum_{k=2}^{n} |d_k| - t_{n_1n_1} \leq t_{mm} - t_{n_1n_1}\] As shown in Exercise 2.8.3a, $t_{nn}$ converges and is hence a Cauchy Sequence. For an arbitrary $\epsilon_2 > 0$, we can choose $n_2$ large enough to ensure that for any $m_1 > n_1$, $t_{m_1m_1} - t_{n_1n_1} < \epsilon_2$.
