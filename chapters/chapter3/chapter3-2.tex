@@ -27,3 +27,20 @@
         \item $\overline{A} = A \cup \{-1\}$. $\overline{B} = [0,1]$.
     }}
 }
+
+\bx{ % 3.2.3
+    Decide whether the following sets are open, closed, or neither. If a set is not open, find a point in the set for which there is no $\epsilon$-neighborhood contained in the set. If a set is not closed, find a limmit point that is not contained n the set. \ea{
+        \item $\mathbb{Q}$.
+        \item $\mathbb{N}$.
+        \item $\{x \in \mathbb{R}: x \neq 0\}$.
+        \item $\{1 + 1/4 + 1/9 + \dots + 1/n^2 : n \in \mathbb{N}\}$.
+        \item $\{1 + 1/2 + 1/3 + \dots + 1/n : n \in \mathbb{N}\}$.
+    }
+    \sol{\ea{
+        \item $\mathbb{Q}$ is not open and not closed. Since $\mathbb{Q}$ is dense in $\mathbb{R}$, we can find a rational number between any two rational numbers. Hence any $(a, b) \nsubseteqq \mathbb{Q}$, hence not open. We can find any irrational number to be a limit point, ie $\sqrt{2}$, hence not closed.
+        \item $\mathbb{N}$ is closed as there are not limit points. $\mathbb{N}$ is not open as we can find any interval, ie $(1.5, 2.5) \nsubseteqq \mathbb{N}$.
+        \item This set is not closed as $0$ is a limit point, considering the sequence of $(1/n)$ which is fully contained within the set. This set is open since every $x \in \{x \in \mathbb{R} : x \neq 0\}$ has an $\epsilon$-neighborhood around it except for zero.
+        \item This set is not closed as the limit point $\pi^2 / 6$ is not contained within the set. The set is not open as it does not contain any irrationals.
+        \item This set is closed as there are not limit points, but not open as it des not contain any irrationals. 
+    }}
+}
