@@ -66,3 +66,20 @@
         $(\Leftarrow)$ Let set $F \subseteq \mathbb{R}$ is closed. Suppose we have a Cauchy sequence $(x_n)$, then $(x_n) \rightarrow x$ as Cauchy sequences converge, making $x$ a limit point. Thus the limit point $x \in F$ since it is closed.
         }
 }
+
+\bx{ % 3.2.6
+    Decide whether the following statements are true or false. Provide counterexamples for those that are false, and supply proofs for those that are true. \ea{
+        \item An open set contains every rational number must necessarily be all of $\mathbb{R}$. 
+        \item The Nested Interval Property remains true if the term "closed interval" is replaced by "closed set".
+        \item Every nonempty open set contains a rational number.
+        \item Every bounded infinite closed set contains a rational number.
+        \item The Cantor set is closed.
+    }
+    \sol{\ea{
+        \item False. Let $A = \mathbb{R} \backslash \{\sqrt{2}\}$, which contains every rational number and is open.
+        \item False. Let $C_n = [n, \infty)$, then $\bigcap_{n=1}^\infty C_n = \emptyset$.
+        \item True. Let $O$ be a nonempty open set and $x \in O$. By definition, $(x - \epsilon, x+\epsilon) \subseteq O$ and must contain a rational number since $\mathbb{Q}$ is dense in $\mathbb{R}$.
+        \item False. Let $B = \{ \sqrt2 + 1/n : n \in \mathbb{N} \} \cap \{\sqrt{2}\}$, which is infinite and closed while containing only irrational numbers.
+        \item True, as it is the intersection of countably many closed intervals.
+    }}
+}
