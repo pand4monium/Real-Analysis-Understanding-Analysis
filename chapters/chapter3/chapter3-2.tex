@@ -11,3 +11,19 @@
     }}
 }
 
+\bx{ % 3.2.2
+    Let \[
+        A = \left\{ (-1)^n + \frac2n: n=1, 2, 3, \dots \right\} \quad \text{and} \quad B = \{x \in \mathbb{Q}: 0 < x < 1\}.
+    \]Answer the following questions for each set: \ea{
+        \item What are the limit points?
+        \item Is the set open? Closed?
+        \item Does the set contain any isolated points?
+        \item Find the closure of the set.
+    }
+    \sol{\ea{
+        \item The set of limit points of $A$ is $\{-1, 1\}$, while that of $B$ is $[0, 1]$.
+        \item Both sets are not closed as the limit point of each set is not a subset of the set. To be more specific, $\{-1, 1\} \nsubseteqq A$ and $[0,1] \nsubseteqq B$. Both sets are not open. Every interval $(a, b) \nsubseteqq A, B$
+        \item Every limit point of $A$ except $1$ is isolated. $B$ has no isolated points since $B \backslash [0,1] = \emptyset$.
+        \item $\overline{A} = A \cup \{-1\}$. $\overline{B} = [0,1]$.
+    }}
+}
