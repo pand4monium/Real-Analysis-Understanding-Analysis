@@ -55,3 +55,14 @@
         \item No. Suppose an open set contains its supremum. Then for $\epsilon > 0$, the interval $V_\epsilon(s) = (s - \epsilon, s + \epsilon)$ is contained within the set $A$. This contradicts the fact that $s$ is the supremum as there exists elements $s' \in (s, s + \epsilon) \subseteq A$, where $s' > s$. Hence, an open set cannot contain its supremum.
     }}
 }
+
+\bx{ % 3.2.5
+    Prove Theorem 3.2.8.
+    \sol{
+        To recall, Theorem 3.2.8 states that a set $F \subseteq \mathbb{R}$ is closed \textit{if and only if every Cauchy sequence contained in F has a limit that is also an element of F}.
+    
+        $(\Rightarrow)$ Suppose that $F \subseteq \mathbb{R}$ and that every Cauchy sequence in $F$ has a limit that is also an element in $F$. Then we have the Cauchy sequence $(x_n) \rightarrow x$ as every Cauchy sequence converges. Hence $x$ is a limit point and is contained in $F$, thus $F$ is closed.
+
+        $(\Leftarrow)$ Let set $F \subseteq \mathbb{R}$ is closed. Suppose we have a Cauchy sequence $(x_n)$, then $(x_n) \rightarrow x$ as Cauchy sequences converge, making $x$ a limit point. Thus the limit point $x \in F$ since it is closed.
+        }
+}
