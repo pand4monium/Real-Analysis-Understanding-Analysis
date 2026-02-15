@@ -12,3 +12,4 @@
 
 # ignores all test files
 test*
+.vscode
