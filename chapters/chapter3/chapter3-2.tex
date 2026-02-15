@@ -44,3 +44,14 @@
         \item This set is closed as there are not limit points, but not open as it des not contain any irrationals. 
     }}
 }
+
+\bx{ % 3.2.4
+    Let $A$ be nonempty and bounded above so that $s = \sup A$ exists. \ea{
+        \item Show that $s \in \overline{A}$.
+        \item Can an open set contain its supremum?
+    }
+    \sol{\ea{
+        \item If $s \in A$, then $s \in \overline{A}$ and we are done. Suppose $s \notin A$, then by definition, for any $\epsilon > 0$, we can find $a \in A \cap (s - \epsilon, s)$. Setting $\epsilon = 1/n$, we can construct a sequence with a limit of $s$, thus $s \in \overline{A}$.
+        \item No. Suppose an open set contains its supremum. Then for $\epsilon > 0$, the interval $V_\epsilon(s) = (s - \epsilon, s + \epsilon)$ is contained within the set $A$. This contradicts the fact that $s$ is the supremum as there exists elements $s' \in (s, s + \epsilon) \subseteq A$, where $s' > s$. Hence, an open set cannot contain its supremum.
+    }}
+}
