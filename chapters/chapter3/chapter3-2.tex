@@ -98,3 +98,20 @@
         \item Suppose $x$ is a limit point of $A \cup L$, then we can find a sequence $(x_n) \rightarrow x$ that is contained in $A \cup L$. We can find a subsequence of $(x_n)$ that is entirely contained within $A$ or $L$. If $(x_{n_k})$ is contained within $L$, then by part (a), $x \in L$ and hence a limit point of $A$. Otherwise, if $(x_n)$ is entirely contained within $A$, then $x$ is a limit point.
     }}
 }
+
+\bx{ % 3.2.8
+    Assume $A$ is an open set and $B$ is a closed set. Determine if the following sets are definitely open, definitely closed, both, or neither. \ea{
+        \item $\overline{A \cup B}$
+        \item $A \backslash B = \{x \in A: x \notin B\}$
+        \item $(A^c \cup B)^c$
+        \item $(A \cap B) \cup (A^c \cap B)$
+        \item $\overline{A}^c \cap \overline{A^c}$
+    }
+    \sol{\ea{
+        \item Definitely closed as the closure of a set is always closed.
+        \item $A \backslash B = A \cap B^c$ is definitely open as $B^c$ is open and the intersection of 2 open sets is always open.
+        \item Definitely open as both $A$ and $B^c$ is closed, so the intersection is closed and the complement of the intersection will be open.
+        \item Definitely closed as $(A \cap B) \cup (A^c \cap B) = B$.
+        \item Open. $A^c$ is closed, so $\overline{A^c} = A^c$. Also, $\overline{A} \supseteq A$, so $\overline{A}^c \subseteq A^c$. Hence $\overline{A}^c \cap \overline{A^c} = \overline{A}^c$ is open.
+    }}
+}
