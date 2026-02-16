@@ -150,3 +150,19 @@
         \item Not possible. Let $X = \{x_1, x_2, x_3, \dots\}$ be the set of all isolated points. Hence for each isolated point, there exists $V_\epsilon(x) = (x - \epsilon, x + \epsilon)$ where $V_\epsilon(x) \cap A = \{x\}$. However, in Exercise 1.5.6, we have proved that there cannot exists an uncountable collection of disjoint open intervals, meaning we cannot have an uncountable set of isolated points.
     }}
 }
+
+\bx{ % 3.2.11
+    \ea{
+        \item Prove that $\overline{A \cup B} = \overline{A} \cup \overline{B}$.
+        \item Does this result about closures extend to infinite unions of sets.
+    }
+    \sol{\ea{
+        \item Let $L$ be the set of limit points of $A \cup B$ and let $L_a$, $L_b$ be the set of limit points for $A$ and $B$ respectively.
+        
+        Let $x \in L$, thus there exists a converging sequence $(x_n) \rightarrow x$ that s contained within $A \cup B$. Since $(x_n)$ has infinite terms, there exists a subsequence $(x_{n_k})$ where every term is in $A$ or $B$. Thus this limit $\lim x_{n_k} = x$ must also be a limit point of $A$ or $B$, meaning $x \in L_a \cup L_b$. This shows that $\overline{A \cup B} \subseteq \overline{A} \cup \overline{B}$.
+
+        Now let $x \in L_a$ (WLOG). There exists a sequence $(x_n) \rightarrow x$ that is entirely contained within in $A$. Now since $x_n \in A$, then $x_n \in A \cup B$, so $x \in L$, showing $\overline{A} \cup \overline{B} = \overline{A \cup B}$ completing the proof.
+
+        \item This does not extend to infinity. Consider $A_n = \{1/n\}$, then $\bigcup A_n = \{1/n : n \in \mathbb{N}\}$. However, $\bigcup \overline{A_n} = \bigcup A_n = \{1/n ; n \in \mathbb{N}\} \neq \overline{\bigcap A_n} = \{1/n: n \in \mathbb{N}\} \cup \{0\}$.
+    }}
+}
