@@ -83,3 +83,18 @@
         \item True, as it is the intersection of countably many closed intervals.
     }}
 }
+
+\bx{ % 3.2.7
+    Given $A \subseteq \mathbb{R}$, let $L$ be a set of all limit points of $A$. \ea{
+        \item Show that the set $L$ is closed.
+        \item Argue that if $x$ is a limit point of $A \cup L$, then $x$ is a limit point of $A$. Use this observation to furnish a proof for Theorem 3.2.12.
+    }
+    \sol{\ea{
+        \item Let $(x_n) \rightarrow x$ be a sequence contained within the set $L$. Since each $x_n$ is a limit point, there must exists a sequence $(x_{n,m})$ such that $\lim_{m \rightarrow \infty} x_{n,m} = x_n$ with $x_{n,m} \in A$. We will now show that $x \in L$. 
+        
+        For some $\epsilon > 0$, we can find $N>0$ such that when $n > N$, $|x - x_n| < \epsilon /2$ and when $m > N$, $|x_{n,m} - x_n| < \epsilon / 2$. \[
+        |x_{n,m} - x| \leq |x_{n,m} - x_n| + |x_n - x| < \epsilon/2 + \epsilon/2 = \epsilon\] and thus $x$ is also a limit point o $A$ so $x \in L$.
+
+        \item Suppose $x$ is a limit point of $A \cup L$, then we can find a sequence $(x_n) \rightarrow x$ that is contained in $A \cup L$. We can find a subsequence of $(x_n)$ that is entirely contained within $A$ or $L$. If $(x_{n_k})$ is contained within $L$, then by part (a), $x \in L$ and hence a limit point of $A$. Otherwise, if $(x_n)$ is entirely contained within $A$, then $x$ is a limit point.
+    }}
+}
