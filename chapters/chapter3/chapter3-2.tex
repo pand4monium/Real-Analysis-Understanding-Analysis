@@ -137,3 +137,16 @@
         Let $E_\lambda$ be closed for all $\lambda \in\Lambda$ so $E_\lambda^c$ is open. From Theorem 3.2.3, $\bigcap_{\lambda\in\Lambda} E_\lambda^c$ and $\bigcup_{\lambda\in\Lambda} E_\lambda^c$ are open, hence showing that the intersection and union of finite collection of closed sets is closed.
     }}
 }
+
+\bx{ %3.2.10
+    Only one of the following three descriptions can be realized. Provide an example that illustrates the viable description, and explain why the other two cannot exist. \er{
+        \item A countable \textbf{infinite} set contained in $[0,1]$ with no limit points.
+        \item A countable set contained in $[0,1]$ with no isolated points.
+        \item A set with an uncountable number of isolated points.
+    }
+    \sol{\er{
+        \item Not possible as BWT states that there exists a convergent subsequence as long as the sequence is bounded.
+        \item Possible. Let $A = [0,1] \cap \mathbb{Q}$.
+        \item Not possible. Let $X = \{x_1, x_2, x_3, \dots\}$ be the set of all isolated points. Hence for each isolated point, there exists $V_\epsilon(x) = (x - \epsilon, x + \epsilon)$ where $V_\epsilon(x) \cap A = \{x\}$. However, in Exercise 1.5.6, we have proved that there cannot exists an uncountable collection of disjoint open intervals, meaning we cannot have an uncountable set of isolated points.
+    }}
+}
