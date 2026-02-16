@@ -115,3 +115,25 @@
         \item Open. $A^c$ is closed, so $\overline{A^c} = A^c$. Also, $\overline{A} \supseteq A$, so $\overline{A}^c \subseteq A^c$. Hence $\overline{A}^c \cap \overline{A^c} = \overline{A}^c$ is open.
     }}
 }
+
+\bx{ % 3.2.9
+    \textbf{(De Morgan's Laws)} A proof of De Morgan's Laws in the case of two sets is outlined in Exercise 1.2.5. The general argument is similar. \ea{
+        \item Given a collection of sets $\{E_\lambda: \lambda \in \Lambda\}$, show that \[
+        \left(\bigcup_{\lambda \in \Lambda} E_\lambda\right) ^ c = \bigcap_{\lambda \in \Lambda} E_\lambda^c    \quad \text{and} \quad \left(\bigcap_{\lambda \in \Lambda} E_\lambda\right)^c = \bigcup_{\lambda \in \Lambda} E_\lambda^c\]
+        \item Now, provide the details for the proof of Theorem 3.2.14.
+    }
+    \sol{\ea{
+        \item If $x \in (\bigcup_{\lambda \in \Lambda} E_\lambda)^c$, then $x \notin \bigcup_{\lambda \in \Lambda} E_\lambda$, so $x \notin E_\lambda$ for all $\lambda \in \Lambda$. Hence, $x \in E_\lambda^c$ for all $\lambda \in \Lambda$, then $x \in \bigcap_{\lambda \in \Lambda} E_\lambda^c$, giving \[
+        \left(\bigcup_{\lambda \in \Lambda} E_\lambda\right)^c \subseteq \bigcap_{\lambda \in \Lambda} E_\lambda^c\]
+        For the other direction, if $x \in \bigcap_{\lambda \in \Lambda} E_\lambda^c$, then $x \in E_\lambda^c$ for all $\lambda \in \Lambda$, so $x \notin E_\lambda$ for all $\lambda \in \Lambda$. Hence $x \notin \bigcup_{\lambda \in \Lambda} E_\lambda$, then $x \in (\bigcup_{\lambda \in \Lambda} E_\lambda)^c$, giving \[
+        \left(\bigcup_{\lambda \in \Lambda} E_\lambda\right)^c \supseteq \bigcap_{\lambda \in \Lambda} E_\lambda^c\]
+
+        By showing inclusion both ways, we have shown that both sets are equal. The other relation is left as an exercise to the reader as the argument is very similar.
+
+        \item To recall, Theorem 3.2.14 states the following: \er{
+            \item The union of a finite collection of closed sets is closed.
+            \item The intersection of an arbitrary collection of closed sets is closed.
+        }
+        Let $E_\lambda$ be closed for all $\lambda \in\Lambda$ so $E_\lambda^c$ is open. From Theorem 3.2.3, $\bigcap_{\lambda\in\Lambda} E_\lambda^c$ and $\bigcup_{\lambda\in\Lambda} E_\lambda^c$ are open, hence showing that the intersection and union of finite collection of closed sets is closed.
+    }}
+}
