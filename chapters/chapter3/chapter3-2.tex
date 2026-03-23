@@ -182,3 +182,17 @@
         Note that $B_1 \cup B_2 = \mathbb{R}$ as if $(- \infty, x) \cap A$ is countable, then $(x, \infty) \cap A$ must be uncountable and vice verse, hence $x \notin B_1 \implies x \in B_2$ and $x \notin B_2 \implies x \in B_1$. So $B = B_1 \cap B_2 \neq \emptyset$. Since both $B_1$ and $B_2$ are both open, $B$ is also open.
    }
 }
+
+\bx{ % 3.2.13
+    Prove that the only sets that are both open and closed are $\mathbb{R}$ and $\emptyset$.
+
+    \sol{
+        Let $A$ be a set that is both open and close, such that $A \neq \emptyset$. \AFSOC $A \neq \mathbb{R}$, then we can find an $r \in \mathbb{R}$ satisfying $r \notin A$. Since open sets cannot contain its infimum and supremum but closed sets contain its infimum and supremum, we can deduce $A$ is unbounded.
+
+        Consider $A^* = (-\infty, r) \cap A$. $A^*$ is open as it is the intersection of two open sets. $A^*$ is also closed as it is equivalent to $(-\infty, r] \cap A$ which is the intersection of closed sets; this is true as $r \notin A$. Since $A^*$ is unbounded below, $A^* \neq \emptyset$.
+
+        Now for the contradiction. Let $s = \sup A^*$. Since $A^*$ is closed and bounded above, $s \in A^*$. However, w can find $\epsilon>0$, with $V_\epsilon(s) \subseteq A^*$ since $A^*$ is open, contradicting the fact that $s$ is the supremum. 
+
+        Therefore, $A \neq \emptyset \implies A = \mathbb{R}$. Since the complement of an open set is closed and vice verse, $\emptyset$ is the complement of $\mathbb{R}$, hence being both open and closed.
+    }
+}
