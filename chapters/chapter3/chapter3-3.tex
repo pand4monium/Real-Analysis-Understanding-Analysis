@@ -27,3 +27,10 @@
         \item Compact, since it is bounded and closed as every subsequence converges to $1$, which is contained in the set.
     }}
 }
+
+\bx{ % 3.3.3
+    Prove the converse of Theorem 3.3.4 by showing that if a set $K \subseteq \mathbb{R}$ is closed and bounded, then it is compact.
+    \sol{
+        Let $K \subseteq \mathbb{R}$ be closed and bounded, and let $(x_n)$ be a sequence contained within $K$. By Bolzano-Weierstrass Theorem, since $(x_n)$ is bounded; as $K$ is bounded, we can find a convergent subsequence $(x_{n_k}) \rightarrow x$. Since $K$ is closed, $x \in K$. Thus every sequence in $K$ contains a subsequence converging to a limit in $K$, which is the definition of being compact.
+    }
+}
