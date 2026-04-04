@@ -217,3 +217,20 @@
         With $\overline{E}^c = (E^c)^\circ$ proven, letting $D = E^c$, gives $(\overline{D^c})^c = ((D^c)^c)^\circ$, taking complement on both sides gives us $\overline{D^c} = (D^\circ)^c$. 
     }}
 }  
+
+\bx{ % 3.2.15
+    A set $A$ is called an $F_\sigma$ set if it can be written as the countable union of closed sets. A set $B$ is called a $G_\delta$ set if it can be written as the countable intersection of open sets. \ea{
+        \item Show that a closed interval $[a, b]$ is a $G_\delta$ set.
+        \item Show that the half-open interval $(a, b]$ is both a $G_\delta$ and $F_\sigma$ set.
+        \item Show that $\mathbb{Q}$ is an $F_\sigma$ set and the set of irrational $\mathbb{I}$ forms a $G_\delta$ set.
+    }
+    \sol{
+        \ea{
+            \item $[a, b] = \bigcap_{n=1}^\infty (a + 1/n, b - 1/n)$.
+            \item $(a, b] = \bigcap_{n=1}^\infty (a, b-1/n) = \bigcup_{n=1}^\infty [a - 1/n, b]$.
+            \item Let ${r_n}$ be the enumeration of $\mathbb{Q}$. Then \[ 
+            \mathbb{Q} = \bigcup_{n=1}^\infty [r_n, r_n]\] Similarly, \[
+            \mathbb{I} = \bigcap_{n=1}^\infty \mathbb{R} \backslash [r_n, r_n]\]
+        }
+    }
+}
