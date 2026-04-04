@@ -9,3 +9,21 @@
         A similar arguement can be used to prove the $\inf K \in K$.
     }
 }
+
+\bx{ % 3.3.2
+    Decide which of the following sets are compact. For those that are not compact, show how Definition 3.3.1 breaks down. In other words, give an example of a sequence contained in the given set that does not possess a subsequence converging to a limit in the set.
+    \ea{
+        \item $\mathbb{N}$.
+        \item $\mathbb{Q} \cap [0,1]$.
+        \item The Cantor set.
+        \item $\{1 + 1/2^2 + 1/3^2 + \dots + 1/n^2 : n \in \mathbb{N}\}$.
+        \item ${1, 1/2, 2/3, 3/4, 4/5, \dots}$.
+    }
+    \sol{\ea{
+        \item Not compact, as $\mathbb{N}$ is unbounded.
+        \item Not compact, as we can find the sequence of first $n$ decimals of $\sqrt2 - 1$, ie. $\{0, 0.4, 0.41, 0.414, \dots\} \rightarrow \sqrt2 - 1 \notin \mathbb{Q} \cap [0,1]$.
+        \item Compact, as it the countable intersection of compact sets.
+        \item Not compact, as $\frac{\pi^2}{6}$ is not contained in the set, despite being a limit point.
+        \item Compact, since it is bounded and closed as every subsequence converges to $1$, which is contained in the set.
+    }}
+}
