@@ -34,3 +34,18 @@
         Let $K \subseteq \mathbb{R}$ be closed and bounded, and let $(x_n)$ be a sequence contained within $K$. By Bolzano-Weierstrass Theorem, since $(x_n)$ is bounded; as $K$ is bounded, we can find a convergent subsequence $(x_{n_k}) \rightarrow x$. Since $K$ is closed, $x \in K$. Thus every sequence in $K$ contains a subsequence converging to a limit in $K$, which is the definition of being compact.
     }
 }
+
+\bx{ % 3.3.4
+    Assume $K$ is compact and $F$ is closed. Decide if the following sets are definitely compact, definitely closed, both or neither.\ea{
+        \item $K \cap F$
+        \item $\overline{F^c \cup K^c}$
+        \item $K \backslash F = \{x \in K : x \notin F\}$
+        \item $\overline{K \cap F^c}$
+    }
+    \sol{\ea{
+        \item Definitely closed and compact. Since $K$ is bounded, $K \cap F \subseteq K$ is also bounded. $K \cap F$ is the intersection of two closed set, hence also closed.
+        \item Definitely closed and not compact. The closure of any set is always closed. However, it is definitely not compact as $K$ is bounded, so $K^c$ is unbounded, implying that $\overline{F^c \cup K^c}$ is unbounded.
+        \item $K \backslash F = K \cap F^c$ could be either. While it is definitely bounded since it is the subset of $F$ which is bounded, it could be either open and closed.
+        \item Definitely closed and compact. The closure of any set is always closed. The set is a subset of $K$ which is bounded, thus also being bounded.
+    }}
+}
