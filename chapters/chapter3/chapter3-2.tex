@@ -196,3 +196,24 @@
         Therefore, $A \neq \emptyset \implies A = \mathbb{R}$. Since the complement of an open set is closed and vice verse, $\emptyset$ is the complement of $\mathbb{R}$, hence being both open and closed.
     }
 }
+
+\bx{ % 3.2.14
+    A dual notion to the closure of a set is the interior of a set. The \textit{interior} of $E$ is denoted $E ^{\circ}$ and is defined as \[
+        E ^{\circ} = \{x \in E: \text{ there exists } V_\epsilon(x) \subseteq E\}.
+    \]Results about closures and interiors possess a useful symmetry.
+    \ea{
+        \item Show that $E$ is closed if and only if $\overline{E} = E$. Show that $E$ is open if and only if $E^\circ = E$.
+        \item Show that $\overline{E}^c = (E^c)^\circ$, and Similarly that $(E^\circ)^c = \overline{E^c}$.
+    }
+
+    \sol{\ea{
+        \item \er{
+            \item By definition, if $E$ is closed, it contains all limit points of $E$, hence $E = \overline{E}$. Similarly, if $E = \overline{E}$, then $E$ is closed by definition.
+            \item By definition, if $E$ is open, any $x \in E$ exists $V_\epsilon(x) \subseteq E$, hence $E = E^\circ$. Similarly, if$E = E^\circ$, then $E$ is open by definition.
+        }
+
+        \item $x \in \overline{E}^c$ if and only if $x \notin \overline{E} \implies x \notin E$ and $x$ is not a limit point of $E$; as $E \subseteq \overline{E}$. Similarly, $x \in (E^c)^\circ$ if and only if $x \notin E$ and there exists $V_\epsilon(x) \subseteq E$; as suppose $x \in E$, then $x \notin E^c \supseteq (E^c)^\circ$. Both statements are equivalent as "$x$ is not a limit point of $E$" and "here exists $V_\epsilon(x) \subseteq E$ are the same.
+        
+        With $\overline{E}^c = (E^c)^\circ$ proven, letting $D = E^c$, gives $(\overline{D^c})^c = ((D^c)^c)^\circ$, taking complement on both sides gives us $\overline{D^c} = (D^\circ)^c$. 
+    }}
+}  
