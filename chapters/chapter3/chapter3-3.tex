@@ -49,3 +49,18 @@
         \item Definitely closed and compact. The closure of any set is always closed. The set is a subset of $K$ which is bounded, thus also being bounded.
     }}
 }
+
+\bx{ % 3.3.5
+    Decide wheteher the following propositions are true or false. If the claim is valid, supply a short proof, and if the claim is false, provide a counterexample. \ea{
+        \item The arbituary intersection of compact sets is compact. 
+        \item The arbitrary union of compact sets is compact.
+        \item Let $A$ be arbitrary, and let $K$ bere compact. Then, the intersection $A \cap K$ is compact.
+        \item If $F_1 \supseteq F_2 \supseteq F_3 \supseteq F_4 \supseteq \cdots$ is a nested sequence of nonempty closed sets, then the intersection $\bigcap_{n=1}^\infty F_n \ne \emptyset$.
+    }
+    \sol{\ea{
+        \item True. The arbitrary intersection of closed sets is closed, and the arbitrary intersection of bounded sets is also bounded. Thus, the arbitrary intersection of compact sets is both bounded and closed, hence compact.
+        \item False. Consider the sets $I_n = [0,n]$, which is all closed and bounded for all $n \in \mathbb{N}$. However, the arbitrary union, $\bigcup_{i=1}^\infty I_n = [0, \infty)$, which is not bounded and hence not compact.
+        \item False. Consider $A = (\frac12, 1)$ and $K = \mathbb R$, then the intersection $A \cap K = A $  which is open, thus not compact.
+        \item False. Considering $F_n = [n, \infty)$ a sequence of closed sets, however, $\bigcap_{n=1}^\infty F_n = \emptyset$.
+    }}
+}
