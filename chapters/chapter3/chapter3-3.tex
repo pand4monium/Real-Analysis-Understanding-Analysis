@@ -105,7 +105,7 @@
             & = [0, 2/3] \cup [2/3, 4/3] \cup [4/3, 2] = [0,2] 
         \end{align*}
 
-        With the base case now proven, we will prove the remaining using induction. We will first observe that $C_{n+1}$ is made up of 2 identical copies of $C_n$. Define $c \cdot A = \{ ca : a \in A\}$ for $c \in \mathbb R$ and $A + c = \{ a+c : a \in A\}$ for $c\ in\mathbb R$. Then we get $C_{n+1} = \frac13 C_n \cup (\frac 13 C_n + \frac 23)$, which we simplify to $3 C_{n+1} = C_n \cup (C_n + 2)$. Under the induction hypothesis of $C_n +C_n = [0,2]$,
+        With the base case now proven, we will prove the remaining using induction. We will first observe that $C_{n+1}$ is made up of 2 identical copies of $C_n$. Define $c \cdot A = \{ ca : a \in A\}$ for $c \in \mathbb R$ and $A + c = \{ a+c : a \in A\}$ for $c\in\mathbb R$. Then we get $C_{n+1} = \frac13 C_n \cup (\frac 13 C_n + \frac 23)$, which we simplify to $3 C_{n+1} = C_n \cup (C_n + 2)$. Under the induction hypothesis of $C_n +C_n = [0,2]$,
         \begin{align*}
             3C_{n+1} + 3C_{n+1} & = (C_n +C_n) \cup (C_n + (C_n + 2)) \cup ((C_n + 2) + (C_n + 2))  \\ 
             & = [0,2] \cup [2, 4] \cup [4, 6] = [0,6] \\ 
