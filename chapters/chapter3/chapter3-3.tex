@@ -64,3 +64,28 @@
         \item False. Considering $F_n = [n, \infty)$ a sequence of closed sets, however, $\bigcap_{n=1}^\infty F_n = \emptyset$.
     }}
 }
+
+\bx{ % 3.3.6
+    This exercise is meant to illustrate the point made in the opening paragraph to Section 3.3. Verify that the following statements are true if every blank is filled with the word "finite". Which are true if every blank is filled with the word "compact"? Which are ture if every blank is filled with the word "closed"?  \ea{
+        \item Every \_\_\_\_ set has a maximum.
+        \item If $A$ and $B$ are \_\_\_\_, then $A + B = \{ a+b: a\in A, b\in B\}$ is also \_\_\_\_.
+        \item If $\{ A_n : n \in\mathbb N \}$ is a collection of  \_\_\_\_ sets with the property that every finite subcollection has a nonempty intersection, then $\bigcap_{n=1}^\infty A_n $ is nonempty as well.
+    }
+    \sol{\ea{
+        \item \er{
+            \item Every finite set has a maximum. This is trivial as we can choose the largest term to be the maximum.
+            \item Every compact set has a maximum. The set is bounded and closed. Hence the supremum is the maximum of the set.
+            \item Not every closed set has a maximum. The set $\mathbb R$ is closed, but does not have a maximum as it is unbounded above.
+        }
+        \item \er{
+            \item Finite is true, as we can just enumerate the terms of $A$, $B$ and $A+B$.
+            \item For compact sets, the bounded property is preserved as $\sup A _+ \sup B = \sup (A+B)$. We will now show that $A+B$ is also closed. Suppose we have $c \in A+B$, then we can find a convergent sequence $(a_n + b_n) \rightarrow c$. Since $A$ is closed and bounded, we can find $(a_n)$ that is bounded and converges to some $a \in A$,, and taking the corresponding elements in $(b_n)$, we have a new bounded sequence that converges to some $b \in B$. Taking the corresponding elemetns in $(a_n + b_n)$ shows that $a+b = c$, thus is also closed.
+            \item This is not true for only closed functions. Consider the sets $A = \{ n : n\in \mathbb N\}$ and $B = \{ -n + 1/n : n \in \mathbb N\}$, then the sequence $(1/n) \rightarrow  0 \notin A + B$.
+        }
+        \item \er{
+            \item Finite is true, as the only way for every finite subcollection to have a nonempty intersection is if there is one element that is included in every set.
+            \item Compact is true. We can have a series of nested compact sets $K_n =\bigcap_{n=1}^\infty A_k$, giving $K_n \subseteq K_{n-1}$, with each $K_n$ being nonempty. Then by Nested Compact Set Property, the intersection is nonempty.
+            \item Closed is false, using the sets $A_n = [n, \infty)$
+        }
+    }}
+}
