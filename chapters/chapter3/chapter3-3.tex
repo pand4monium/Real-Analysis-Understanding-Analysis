@@ -115,3 +115,16 @@
         \item Since $C$ is compact, there exists a subsequence $(x_{n_k} ) \rightarrow x$ with $x \in C$ by BWT. Now since $x_{n_k} + y_{n_k} = s $ for all $k$, we have $\lim y_{n_k} = \lim s-x_{n_k} = s-x$. Now since $y_{n_k} \in C$, $y \in C$. Thus we have found $x, y \in C$, such that $x + y = s$.
     }}
 }
+
+\bx{ % 3.3.8
+    Let $K$ and $L$ be nonempty compact sets, and define \[
+    d = \inf \{ |x-y|: x \in K \text{ and } y \in L\}.\]
+    This turns out to be a reasonable definition for the \textit{distance} between $K$ and $L$.\ea{
+        \item If $K$ and $L$ are disjoint, show $d > 0$ and that $d = | x_0 - y_0 |$ for some $x_0 \in K$ and $ y_0 \in L$.
+        \item Show that it's possible to have $d = 0$  if we assume that the disjoint sets $K$ and $L$ are closed.
+    }
+    \sol{\ea{
+        \item The set $|K-L| = \{ |x-y|: x\in K, y\in L\}$ is compact as $K-L$ is compact and compactness is preserved through continuous functions such as $| \cdot |$. Thus $d = \inf |K-L|$ and $d = |x_0 - y_0|$ for some $x_0 \in K$ and $y_0 \in L$.
+        \item Consider the set $K = \{ n : n \in \mathbb N \}$ and $ L = \{ n + 1/n : n \in \mathbb N \}$, which has $ d = 0$. Both sets are closed as the limits diverge.
+    }}
+} 
